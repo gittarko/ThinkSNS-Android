@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+  <FrameLayout
+      android:id="@+id/container"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      >
+
+    <fragment
+        android:id="@+id/photoPagerFragment"
+        android:name="me.nereo.multi_image_selector.ImagePagerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+  </FrameLayout>
+  <!--顶部栏 -->
+  <include
+      android:id="@+id/title_bar"
+      android:layout_width="match_parent"
+      android:layout_height="?android:attr/actionBarSize"
+      layout="@layout/preview_toolbar" />
+
+
+  <RelativeLayout
+      android:clickable="true"
+      android:id="@+id/footer"
+      android:layout_alignParentBottom="true"
+      android:layout_width="match_parent"
+      android:layout_height="?android:attr/actionBarSize"
+      android:background="#7f000000">
+    <LinearLayout
+        android:id="@+id/ll_original"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:gravity="center"
+        android:layout_centerVertical="true">
+      <RadioButton
+          android:clickable="false"
+          android:id="@+id/original_btn"
+          android:layout_width="16dp"
+          android:layout_height="16dp"
+          android:checked="false"
+          android:button="@null"
+          android:background="@drawable/selector_radiobtn" />
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="14sp"
+          android:layout_marginLeft="5dp"
+          android:text="原图"
+          android:textColor="#999999"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:id="@+id/ok_btn"
+        android:text="确定(1)"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:textColor="@color/blue"
+        android:textSize="14sp" />
+  </RelativeLayout>
+
+</RelativeLayout>

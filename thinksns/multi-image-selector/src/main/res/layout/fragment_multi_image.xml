@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <GridView
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:horizontalSpacing="@dimen/space_size"
+        android:verticalSpacing="@dimen/space_size"
+        android:paddingBottom="?android:attr/actionBarSize"
+        android:clipToPadding="false"
+        android:numColumns="3"/>
+
+    <RelativeLayout
+        android:clickable="true"
+        android:id="@+id/footer"
+        android:background="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize">
+
+        <View android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#cccccc" />
+        <Button
+            android:visibility="visible"
+            android:id="@+id/category_btn"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_centerVertical="true"
+            android:textColor="#999999"
+            tools:text="所有图片"
+            android:textSize="14sp"
+            android:gravity="center_vertical"
+            android:drawableRight="@drawable/text_indicator"
+            android:drawablePadding="5dp"
+            android:background="@null"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_original"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="12dp"
+            android:paddingRight="15dp"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+            <RadioButton
+                android:clickable="false"
+                android:id="@+id/original_btn"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:checked="false"
+                android:button="@null"
+                android:background="@drawable/selector_radiobtn" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_marginLeft="5dp"
+                android:text="原图"
+                android:textColor="#999999"/>
+        </LinearLayout>
+
+        <Button
+            android:visibility="visible"
+            android:id="@+id/preview"
+            tools:text="预览(1)"
+            android:layout_toLeftOf="@id/ll_original"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:textColor="#999999"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        </RelativeLayout>
+
+</RelativeLayout>
