@@ -1,0 +1,29 @@
+<resources>
+    <string name="loading">加载中…</string>
+    <string name="loading_no_more">已加载全部</string>
+
+    <!-- Error View -->
+    <string name="error_view_click_to_refresh">点击屏幕,重新加载</string>
+    <string name="error_view_no_data">暂无内容</string>
+    <string name="error_view_loading">加载中…</string>
+    <string name="error_view_load_error_click_to_refresh">内容加载失败\r\n点击重新加载</string>
+    <string name="error_view_network_error_click_to_refresh">没有可用的网络</string>
+
+    <string name="comment">评论</string>
+    <string name="digg">赞</string>
+    <!--聊天详情页 -->
+    <string name="sendMessage">发送</string>
+    <string name="attach_picture">相册</string>
+    <string name="attach_take_pic">拍照</string>
+    <string name="attach_location">位置</string>
+    <string name="attach_file">名片</string>
+    
+    <string name="net_work_error">无法连接到服务器，请检查您的网络设置...</string>
+    <string name="move_up_to_cancel">手指上滑，取消发送</string>
+    <string name="please_wait">请稍后...</string>
+    <string name="inputing">正在输入...</string>
+    <string name="speaking">正在说话...</string>
+    <string name="empty_message">还没有聊天信息</string>
+    <string name="empty_friends">暂无联系人</string>
+    <string name="empty_intro">这个人很懒，什么也没留下</string>
+</resources>

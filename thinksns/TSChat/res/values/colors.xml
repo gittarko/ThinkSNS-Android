@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">@android:color/white</color>
+    <color name="bar">#99202020</color>
+    <color name="bg_listview_divider">#ffeaeae9</color>
+    <color name="middlebar">#ff202020</color>
+    <color name="black">#bb000000</color>
+    <color name="bg_chat_color">#F5F5F5</color>
+    <color name="bg_edit_color">#f9f9f9</color>
+    <color name="chat_edit_bg">#f9f9f9</color>
+    <color name="gray">#999999</color>
+    <color name="gray0.4">#4f999999</color>
+    <color name="empty_color">#cbcbd4</color>
+    <!--列表点击颜色-->
+    <color name="weiboListPressed">#CDDDE9</color>
+    <color name="blacktransbg">#999999</color>
+    <color name="weibo_app_bar_text">#dddddd</color>
+    <color name="title_background">#0096E5</color>
+    <color name="circleButtonPressed">#FF8112</color>
+    <color name="bg_ios">#F3F3F3</color>
+    <color name="default_bg">#fefefe</color>
+    <color name="ge_line">#4a4a4a</color>
+    <!--消息红点颜色-->
+    <color name="remind_color">#ffF40C0A</color>
+    <!--消息网络连接失败提示背景色-->
+    <color name="Mercury">#E5E5E5</color>
+    <color name="cerulean">#0196E6</color>
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#70000000" >
+
+    <LinearLayout
+        android:id="@+id/ll_popup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_listview_divider"
+        android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/item_popupwindows_camera"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_size_35"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="退出群聊"
+                android:textColor="@color/gray"
+                android:textSize="14sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="@color/bg_listview_divider"/>
+
+            <TextView
+                android:id="@+id/item_popupwindows_Photo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_size_40"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="16sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:background="@color/bg_listview_divider"/>
+        <TextView
+            android:id="@+id/item_popupwindows_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_size_40"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

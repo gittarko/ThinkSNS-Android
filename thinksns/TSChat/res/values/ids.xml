@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="tag_chat" type="id"/>
+    <item name="tag_chat_message" type="id"/>
+    <item name="tag_position" type="id"/>
+    <item name="tag_image_path" type="id"/>
+    <item name="tag_search_user" type="id"/>
+    <item name="tag_information" type="id"/>
+</resources>

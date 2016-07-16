@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/chat_item_img"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:orientation="vertical" >
+
+    <include
+        layout="@layout/chat_item_time"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_marginTop="@dimen/dimen_size_9"
+        android:layout_marginBottom="@dimen/dimen_size_9" >
+
+        <RelativeLayout
+            android:layout_width="65dp"
+            android:layout_height="match_parent">
+            <include layout="@layout/chat_item_error"
+                android:id="@+id/layout_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_chat_card"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_weight="1"
+            android:layout_toLeftOf="@id/chat_item_head"
+            android:layout_toRightOf="@id/layout_progress"
+            android:layout_alignTop="@id/chat_item_head"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="15dp"
+            android:background="@drawable/bg_chat_card_send" >
+
+            <TextView
+                android:id="@+id/tv_card_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="名片"
+                android:textColor="@color/bar"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/divider_line"
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/tv_card_title"
+                android:layout_alignLeft="@id/tv_card_title"
+                android:background="@color/weibo_app_bar_text" />
+
+                <com.thinksns.tschat.widget.roundimageview.RoundedImageView
+                    android:id="@+id/iv_card_pic"
+                    android:layout_width="@dimen/dimen_size_45"
+                    android:layout_height="@dimen/dimen_size_45"
+                    android:layout_below="@id/divider_line"
+                    android:layout_marginTop="6dp"
+                    android:scaleType="centerCrop"
+                    android:visibility="visible"
+                    android:src="@drawable/default_user"
+                    app:riv_corner_radius="3dip"/>
+
+                    <TextView
+                        android:id="@+id/tv_chat_card_uname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/iv_card_pic"
+                        android:layout_alignTop="@id/iv_card_pic"
+                        android:ellipsize="end"
+                        android:minEms="10"
+                        android:singleLine="true"
+                        android:text="Zoey"
+                        android:textColor="@color/bar"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_chat_card_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/tv_chat_card_uname"
+                        android:layout_below="@id/tv_chat_card_uname"
+                        android:ellipsize="end"
+                        android:layout_marginTop="3dp"
+                        android:singleLine="true"
+                        android:text="beauty"
+                        android:textColor="@color/middlebar"
+                        android:textSize="13sp" />
+            </RelativeLayout>
+
+
+        <com.thinksns.tschat.widget.roundimageview.RoundedImageView
+            android:id="@+id/chat_item_head"
+            android:layout_width="@dimen/dimen_size_35"
+            android:layout_height="@dimen/dimen_size_35"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right|top"
+            android:src="@drawable/default_user"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="30dip"
+            app:riv_oval="true"
+            />
+
+    </LinearLayout>
+</LinearLayout>

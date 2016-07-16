@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/chat_item_img"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <include layout="@layout/chat_item_time"/>
++
+    <LinearLayout
+        android:id="@+id/rl_chat_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_marginTop="@dimen/dimen_size_9"
+        android:layout_marginBottom="@dimen/dimen_size_9" >
+
+        <include layout="@layout/chat_item_error"
+            android:id="@+id/layout_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+        <FrameLayout
+            android:id="@+id/fl_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp">
+            <ImageView
+                android:id="@+id/iv_chat_pic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@color/bg_chat_color"
+                android:scaleType="centerCrop"
+                android:layout_gravity="right"
+                android:adjustViewBounds="true"/>
+
+            <ImageView
+                android:id="@+id/iv_chat_pic_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/bg_chat_pic_send"
+                android:scaleType="fitXY"
+                android:layout_gravity="right"/>
+
+            <ProgressBar
+                android:id="@+id/progress_pic"
+                style="@style/CustomProgressStyle"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:indeterminateDrawable="@drawable/my_progress"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <com.thinksns.tschat.widget.roundimageview.RoundedImageView
+            android:id="@+id/chat_item_head"
+            android:layout_width="@dimen/dimen_size_35"
+            android:layout_height="@dimen/dimen_size_35"
+            android:src="@drawable/default_user"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="30dip"
+            app:riv_oval="true"
+            />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="dimen_size_8">8dp</dimen>
+    <dimen name="dimen_size_9">9dp</dimen>
+    <dimen name="dimen_size_10">10dp</dimen>
+    <dimen name="dimen_size_11">11dp</dimen>
+    <dimen name="dimen_size_12">12dp</dimen>
+    <dimen name="dimen_size_13">13dp</dimen>
+    <dimen name="dimen_size_14">14dp</dimen>
+    <dimen name="dimen_size_15">15dp</dimen>
+    <dimen name="dimen_size_16">16dp</dimen>
+    <dimen name="dimen_size_18">18dp</dimen>
+    <dimen name="dimen_size_20">20dp</dimen>
+    <dimen name="dimen_size_25">25dp</dimen>
+    <dimen name="dimen_size_30">30dp</dimen>
+    <dimen name="dimen_size_32">32dp</dimen>
+    <dimen name="dimen_size_35">35dp</dimen>
+    <dimen name="dimen_size_38">38dp</dimen>
+    <dimen name="dimen_size_22">22dp</dimen>
+    <dimen name="dimen_size_40">40dp</dimen>
+    <dimen name="dimen_size_42">42dp</dimen>
+    <dimen name="dimen_size_45">45dp</dimen>
+    <dimen name="dimen_size_60">60dp</dimen>
+    <dimen name="dimen_size_70">70dp</dimen>
+
+    <dimen name="room_header">40dp</dimen>
+    <dimen name="dimen_size_220">220dp</dimen>
+
+    <dimen name="chat_text_margin">65dp</dimen>
+
+</resources>
