@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="title_bar_divider_line">#ffcccccc</color>
+    <!--<color name="title_background">#333333</color>-->
+    <color name="font">#999999</color>
+    <color name="StormDust">#606060</color>
+    <color name="empty_color">#cbcbd4</color>
+    <color name="bg_ios">#F3F3F3</color>
+    <color name="dark_title_bar">#e6e6e6</color>
+    <!--可分段点击的文本框字体颜色-->
+    <color name="clickspan_color">#ff3C3C3C</color>
+    <color name="red">#FF0000</color>
+    <!--消息红点颜色-->
+    <color name="remind_color">#ffF40C0A</color>
+</resources>

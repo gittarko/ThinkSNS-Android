@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="site_url">
+        <!-- host 注意不需要"http：//" ,不管任何url，在initApi之后会自动截取"http：//"到第一个"/"之间的内容作为host -->
+        <!--<item>192.168.1.52</item>              //建议使用IP地址，减少域名解析时间-->
+        <item>demo.thinksns.com</item>              //建议使用IP地址，减少域名解析时间
+        <!--<item>thinksns_mobile/api.php</item>-->
+        <item>ts4/api.php</item>
+        <item>ws://demo.thinksns.com:2346</item>    <!-- 聊天服务端所在地址 -->
+    </string-array>
+</resources>

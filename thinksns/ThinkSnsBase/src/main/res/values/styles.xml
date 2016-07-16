@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--顶部标题栏样式-->
+    <style name="titleTheme" parent="android:Theme">
+        <item name="android:windowTitleSize">49dp</item>
+        <item name="android:windowContentOverlay">@android:color/transparent</item>
+        <item name="android:windowTitleBackgroundStyle">@style/titleBackground</item>
+    </style>
+
+    <style name="titleBackground">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="CustomProgressStyle" parent="@android:style/Widget.ProgressBar.Large">
+        <item name="android:minWidth">30px</item>
+        <item name="android:maxWidth">30px</item>
+        <item name="android:minHeight">30px</item>
+        <item name="android:maxHeight">30px</item>
+    </style>
+
+    <!-- 加载滚动条样式 -->
+    <style name="loading">
+        <item name="android:indeterminate">true</item>
+        <item name="android:indeterminateDrawable">@drawable/my_progress</item>
+        <item name="android:indeterminateDuration">1000</item>
+        <item name="android:indeterminateOnly">true</item>
+    </style>
+
+</resources>
