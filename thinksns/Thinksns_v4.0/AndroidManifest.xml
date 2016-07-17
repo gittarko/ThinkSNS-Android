@@ -619,12 +619,6 @@
             android:name="com.thinksns.sociax.t4.android.user.ActivityFollowUser"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
-        <!--
-        <activity
-            android:name="com.thinksns.sociax.t4.android.findpeople.ActivitySelectUsertySelectUser"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden|adjustResize" />
-            -->
         <activity
             android:name="com.thinksns.sociax.t4.android.weibo.ActivityCommentMeWeibo"
             android:theme="@style/titleTheme"
