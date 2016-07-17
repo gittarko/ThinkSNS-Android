@@ -1,0 +1,120 @@
+apply plugin: 'com.android.application'
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+
+    jcenter()
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: '*.jar')
+    //视频拍摄库
+    compile project(':lib_vediorecorder')
+    compile project(':PhotoMaster')
+    //TS聊天库
+    compile project(':TSChat')
+    compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
+    compile 'com.android.support:design:23.1.1'
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.2'
+
+    defaultConfig {
+        applicationId "com.thinksns.sociax.android"
+        minSdkVersion 10
+//        target version不要高于21,视频库在高版本系统上存在兼容问题
+        targetSdkVersion 19
+        versionName "4.2"
+        versionCode 43
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+        // your debug keystore
+        debug{
+            storeFile file("debug.keystore")
+            storePassword "123456"
+            keyAlias "thinksns"
+            keyPassword "123456"
+        }
+
+        release {
+            storeFile file("thinksns")
+            storePassword "2015t4"
+            keyAlias "t4"
+            keyPassword "2015t4"
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs']
+        }
+
+        // Move the tests to tests/java, tests/res, etc...
+        instrumentTest.setRoot('tests')
+
+        // Move the build types to build-types/<type>
+        // For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml, ...
+        // This moves them out of them default location under src/<type>/... which would
+        // conflict with src/ being used by the main source set.
+        // Adding new build types or product flavors should be accompanied
+        // by a similar customization.
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+
+    //版本API23需要添加apache
+    useLibrary 'org.apache.http.legacy'
+
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "4g"
+        preDexLibraries = false
+    }
+
+    buildTypes {
+//        release {
+//            minifyEnabled true
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard.cfg'
+//        }
+    }
+
+//    afterEvaluate {
+//        tasks.matching {
+//            it.name.startsWith('dex')
+//        }.each { dx ->
+//            if (dx.additionalParameters == null) {
+//                dx.additionalParameters = []
+//            }
+//            dx.additionalParameters += '--multi-dex'
+//            dx.additionalParameters += "--main-dex-list=$projectDir/multidex.keep".toString()
+//        }
+//
+//    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+
+    //这个是解决lint报错的代码
+    lintOptions {
+        abortOnError false
+        // 防止在发布的时候出现因MissingTranslation导致Build Failed!
+        disable 'MissingTranslation'
+    }
+}
