@@ -1,0 +1,8 @@
+include ':PhotoMaster'
+include ':android-pulltorefresh'
+include ':lib_vediorecorder'
+include ':Thinksns_v4.0'
+include ':TSChat'
+include ':multi-image-selector'
+include ':javaapk.com-datapicker_library'
+include ':ThinkSnsBase'
