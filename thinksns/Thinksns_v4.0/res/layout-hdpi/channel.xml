@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/myView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.thinksns.sociax.thinksnsbase.activity.widget.LoadingView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <com.thinksns.sociax.component.ScrollLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ScrollLayoutTest"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/white" />
+
+    <com.thinksns.sociax.component.PageControlView
+        android:id="@+id/pageControl"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center" />
+
+</RelativeLayout>

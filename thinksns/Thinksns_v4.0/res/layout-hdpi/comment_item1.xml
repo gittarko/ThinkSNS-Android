@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+ <LinearLayout 
+     xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/white"
+		android:paddingBottom="1.5dp"
+        >
+
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/reviewboxbg"
+    android:orientation="vertical"
+   android:paddingTop="6dp"
+   android:paddingBottom="6dp"
+   android:paddingLeft="6dp"
+   android:paddingRight="6dp"
+ >
+
+    <!--
+         <ImageView
+        android:id="@+id/user_comment_header"
+        android:layout_width="@dimen/header_width_hight"
+        android:layout_height="@dimen/header_width_hight"
+        android:src="@drawable/header" >
+    -->
+
+    <ImageView
+        android:id="@+id/weibo_comment_iv"
+        android:layout_width="@dimen/content_header_width_hight"
+        android:layout_height="@dimen/content_header_width_hight"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/default_user" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/weibo_comment_iv"
+        android:layout_toRightOf="@+id/weibo_comment_iv"
+        android:text="TextView"
+        android:textColor="@color/black" 
+          android:textSize="@dimen/userNameSize"/>
+
+    <TextView
+        android:id="@+id/comment_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/username"
+        android:layout_below="@+id/username"
+        android:layout_marginTop="4dp"
+        android:text="TextView"
+        android:textColor="@color/font"
+        android:textSize="@dimen/contentSize" />
+
+    <TextView
+        android:id="@+id/comment_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/username"
+        android:layout_alignParentRight="true"
+        android:text="TextView"
+        android:textColor="@color/timeColor"
+        android:textSize="@dimen/timeSize" />
+    
+</RelativeLayout>
+ </LinearLayout>

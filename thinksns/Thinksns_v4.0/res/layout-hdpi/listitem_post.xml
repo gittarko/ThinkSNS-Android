@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="10dp">
+
+    <com.thinksns.sociax.t4.android.img.RoundImageView
+            android:id="@+id/img_post_user_header"
+            android:layout_width="@dimen/img_small_ist"
+            android:layout_height="@dimen/img_small_ist"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/default_user"
+            android:scaleType="centerCrop"/>
+    <TextView
+            android:id="@+id/tv_post_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/img_post_user_header"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="姓名"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+    <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_alignLeft="@id/tv_post_user_name"
+            android:layout_below="@id/tv_post_user_name"
+            android:gravity="center_vertical"
+            android:text="时间"
+            android:textColor="@color/actionbar_txtcolor_gray"
+            android:textSize="12dp" />
+
+    <TextView
+            android:id="@+id/tv_post_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/img_post_user_header"
+            android:text="帖子标题"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    <TextView
+            android:id="@+id/tv_post_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_post_title"
+            android:text="帖子内容"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textColor="@color/bar"
+            android:textSize="14sp" />
+
+    <!--帖子图片集合-->
+    <ViewStub
+            android:id="@+id/stub_image_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout="@layout/stub_image_group"
+            android:layout_below="@id/tv_post_des"/>
+
+    <LinearLayout
+        android:id="@+id/ll_read"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tv_post_user_name"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/icon_post_read" />
+
+            <TextView
+                android:id="@+id/tv_post_read"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                    android:gravity="center_vertical"
+                    android:text="0"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp" />
+    </LinearLayout>
+    <!--评论数-->
+    <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/ll_read"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+        <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/icon_post_comment" />
+        <TextView
+                    android:id="@+id/tv_post_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_vertical"
+                    android:text="0"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp" />
+    </LinearLayout>
+</RelativeLayout>

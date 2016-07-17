@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/listitem_selector"
+    android:gravity="center_vertical"
+    android:paddingLeft="5dp"
+    android:paddingTop="10dp"
+    android:paddingRight="5dp"
+    android:paddingBottom="10dp">
+
+    <FrameLayout
+        android:id="@+id/user_head"
+        android:layout_width="@dimen/dimen_size_35"
+        android:layout_height="@dimen/dimen_size_35"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp" >
+
+        <ImageView
+            android:id="@+id/image_photo"
+            android:layout_width="@dimen/header_width_hight"
+            android:layout_height="@dimen/header_width_hight"/>
+
+        <LinearLayout
+            android:id="@+id/ll_uname_adn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/user_head"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/unnames"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Large Text"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+	
+        <TextView
+            android:id="@+id/uncontent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            android:maxWidth="200dp"
+            android:singleLine="true"
+            android:text="TextView"
+            android:textColor="@color/bar"
+            android:textSize="12sp"
+            android:visibility="visible"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/image_add"
+        android:layout_width="48dp"
+        android:layout_height="22dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:gravity="center"
+        android:text="+关注"
+        android:textSize="10sp"
+        android:background="@drawable/roundbackground_green_digg"
+        android:visibility="visible"/>
+
+</RelativeLayout>

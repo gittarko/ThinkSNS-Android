@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="20dp"
+    android:background="@drawable/round_corner_et_white"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:text="提示"
+        android:textColor="@color/black"
+        android:textSize="@dimen/smallFont" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:text="您没有权限进入TA的个人主页！"
+        android:textColor="@color/black"
+        android:textSize="@dimen/tranFont" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0.3dp"
+        android:background="@color/weibo_app_bar_text" />
+
+    <Button
+        android:id="@+id/btn_no_authority"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/ftitle_height"
+        android:background="@android:color/transparent"
+        android:text="确定"
+        android:textColor="@color/title_blue"
+        android:textSize="@dimen/smallFont" />
+
+</LinearLayout>

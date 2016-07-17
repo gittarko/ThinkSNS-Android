@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_user_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_toRightOf="@id/iv_weibo_user_head">
+
+        <TextView
+            android:id="@+id/tv_weibo_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:ellipsize="end"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            tools:text="xxx" />
+
+        <TextView
+            android:id="@+id/tv_weibo_ctime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_weibo_user_name"
+            android:textColor="@color/font"
+            android:textSize="@dimen/fromSize"
+            tools:text="" />
+
+        <TextView
+            android:id="@+id/tv_weibo_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tv_weibo_ctime"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_weibo_ctime"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="来自 --"
+            android:textColor="@color/font"
+            android:textSize="@dimen/fromSize" />
+        <!--关注-->
+        <ViewStub
+            android:id="@+id/stub_add_follow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout="@layout/stub_add_follow" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/rl_user_info"
+        android:layout_alignRight="@id/rl_user_info"
+        android:layout_below="@id/rl_user_info"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_from_weibo_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_weibo_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:lineSpacingExtra="2dp"
+                android:textIsSelectable="true"
+                android:textColor="#555"
+                android:textSize="@dimen/contentSize"
+                tools:text="Content" />
+            <!-- 自己发微博的时的图片显示界面 -->
+
+            <ViewStub
+                android:id="@+id/stub_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout="@layout/stub_image"
+                android:visibility="gone"/>
+
+            <ViewStub
+                android:id="@+id/stub_image_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout="@layout/stub_image_group"
+                android:layout_marginTop="7dp"/>
+
+            <ViewStub
+                android:id="@+id/stub_file"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout="@layout/stub_file"
+                android:layout_marginTop="7dp" />
+
+            <ViewStub
+                android:id="@+id/stub_media"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout="@layout/stub_media"
+                android:layout_marginTop="7dp"/>
+
+            <!-- 转发原微博线性布局 -->
+
+            <LinearLayout
+                android:id="@+id/ll_transport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/reviewboxbg"
+                android:orientation="vertical"
+                android:visibility="gone" />
+            <!-- 转发原微博线性布局结束 -->
+        </LinearLayout>
+
+        <!-- 转发微博界面 -->
+        <ViewStub
+            android:id="@+id/stub_weiba"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout="@layout/stub_weiba"
+            android:layout_marginTop="7dp"/>
+
+        <ViewStub
+            android:id="@+id/stub_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout="@layout/stub_address"/>
+    </LinearLayout>
+</RelativeLayout>

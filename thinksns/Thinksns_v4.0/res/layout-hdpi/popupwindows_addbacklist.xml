@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_transparent" >
+	<!--
+    <LinearLayout
+        android:id="@+id/ll_popup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/weibo_app_bar_select_color"
+        android:orientation="vertical" >
+        -->
+	<LinearLayout
+        android:id="@+id/ll_popup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_ios"
+        android:orientation="vertical" >
+        <LinearLayout
+            android:id="@+id/ll_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/item_popupwindows_camera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+            	android:padding="15dp"
+                android:gravity="center"
+                android:text="你们将自动解除关注关系，他不能再关注你或给你发评论、私信、@你"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+            
+		<View
+		    android:layout_width="match_parent"
+		    android:layout_height="0.5dp"
+		    android:background="@color/bg_listview_divider"/>
+        </LinearLayout>
+		
+        <Button
+            android:id="@+id/item_popupwindows_Photo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mtitle_height"
+            android:background="@color/white"
+            android:text="加入黑名单"
+            android:textColor="@color/red"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/item_popupwindows_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mtitle_height"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:text="取消"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingBottom="8dp"
+    android:paddingLeft="10dp"
+    android:paddingTop="8dp">
+
+    <!--<ImageView-->
+    <!--android:id="@+id/img_channel_icon"-->
+    <!--android:layout_width="@dimen/img_middle3small"-->
+    <!--android:layout_height="@dimen/img_middle3small"-->
+    <!--android:scaleType="centerCrop"-->
+    <!--android:src="@drawable/default_image_small" />-->
+    <com.thinksns.sociax.t4.android.widget.roundimageview.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/img_channel_icon"
+        android:layout_width="@dimen/img_middle3small"
+        android:layout_height="@dimen/img_middle3small"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_image_small"
+        app:riv_corner_radius="3dip" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_weight="0.77"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_channel_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            tools:text="TextView" />
+
+        <TextView
+            android:id="@+id/tv_channel_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/bar"
+            android:textSize="12sp"
+            tools:text="TextView" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="@dimen/arrow_size"
+        android:layout_height="@dimen/arrow_size"
+        android:src="@drawable/arrow" />
+
+</LinearLayout>

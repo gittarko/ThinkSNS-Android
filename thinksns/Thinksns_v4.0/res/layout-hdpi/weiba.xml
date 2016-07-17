@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.thinksns.sociax.thinksnsbase.activity.widget.LoadingView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/weiba_tool_layout" />
+
+    <com.thinksns.sociax.component.WeibaList
+        android:id="@+id/weiba_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/weiba_tool_layout"
+        android:visibility="gone" />
+
+    <com.thinksns.sociax.component.PostsList
+        android:id="@+id/post_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/weiba_tool_layout"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/mine_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/weiba_tool_layout"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <com.thinksns.sociax.component.PostsList
+            android:id="@+id/post_list_follow"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <com.thinksns.sociax.component.PostsList
+            android:id="@+id/post_list_my_post"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" />
+
+        <com.thinksns.sociax.component.PostsList
+            android:id="@+id/post_list_my_comment_post"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" />
+
+        <com.thinksns.sociax.component.PostsList
+            android:id="@+id/post_list_my_favorite_post"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/search_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/weiba_tool_layout"
+        android:background="@color/itemColor"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/searchbarColor" >
+
+            <com.thinksns.sociax.component.EditCancel
+                android:id="@+id/editCancel1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="@dimen/body_margin_left"
+                android:layout_marginRight="@dimen/body_margin_left"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/secondColor"
+            android:padding="8dp" >
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/search_weibo"
+                    style="@style/search_radiobutton_weibo"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="@string/search_weiba"
+                    android:textColor="@color/black"
+                    android:textSize="16.0sp" >
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/search_user"
+                    style="@style/search_radiobutton_user"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/search_post"
+                    android:textColor="@color/black"
+                    android:textSize="16.0sp" >
+                </RadioButton>
+            </RadioGroup>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/ImageView01"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/line" >
+        </ImageView>
+
+        <com.thinksns.sociax.thinksnsbase.activity.widget.LoadingView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/weiba_tool_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/weiba_weiba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/weibo_app_bar"
+            android:clickable="true"
+            android:drawablePadding="-3dp"
+            android:drawableTop="@drawable/weiba_weiba"
+            android:focusable="true"
+            android:gravity="bottom|center"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:text="@string/weiba"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/weiba_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/weibo_app_bar"
+            android:clickable="true"
+            android:drawablePadding="-3dp"
+            android:drawableTop="@drawable/weiba_post"
+            android:focusable="true"
+            android:gravity="bottom|center"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:text="@string/post"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/weiba_mine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/weibo_app_bar"
+            android:clickable="true"
+            android:drawablePadding="-3dp"
+            android:drawableTop="@drawable/weiba_mine"
+            android:focusable="true"
+            android:gravity="bottom|center"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:text="@string/mine"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/weiba_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/weibo_app_bar"
+            android:clickable="true"
+            android:drawablePadding="-3dp"
+            android:drawableTop="@drawable/weiba_search"
+            android:focusable="true"
+            android:gravity="bottom|center"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:text="@string/search"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</RelativeLayout>

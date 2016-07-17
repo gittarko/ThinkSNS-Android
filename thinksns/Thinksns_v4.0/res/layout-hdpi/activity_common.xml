@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 常用的公共layout，不要随便修改 -->
+
+    <com.thinksns.sociax.thinksnsbase.activity.widget.LoadingView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/searchBarContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:visibility="gone"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/input_search_query"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/roundbackground_ios"
+            android:drawableLeft="@drawable/ic_findpeople_zoom"
+            android:hint="搜索"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:paddingRight="5dip"
+            android:singleLine="true"
+            android:text=""
+            android:textColorHint="@color/gray"
+            android:textSize="15dip" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <include layout="@layout/send_comment"/>
+
+</LinearLayout>

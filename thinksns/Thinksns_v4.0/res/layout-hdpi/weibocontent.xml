@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/weibo_content_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/itemColor"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/userinfo"
+            android:layout_width="fill_parent"
+            android:layout_height="76dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/user_header"
+                android:layout_width="@dimen/follow_header_width_hight"
+                android:layout_height="@dimen/follow_header_width_hight"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/default_user" />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/user_header"
+                android:text="TextView"
+                android:textColor="@color/main_fant_color"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/line" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" >
+
+            <ScrollView
+                android:id="@+id/weibo_content_sv"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:id="@+id/weibo_data"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/weibo_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:lineSpacingExtra="2dp"
+                        android:text="..."
+                        android:textColor="@color/main_fant_color"
+                        android:textSize="@dimen/contentSize" />
+
+                    <LinearLayout
+                        android:id="@+id/image_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp" >
+
+                        <TextView
+                            android:id="@+id/weibo_from"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="TextView"
+                            android:textColor="@color/time_fant_color"
+                            android:textSize="@dimen/timeSize" />
+
+                        <TextView
+                            android:id="@+id/weibo_ctime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="8dp"
+                            android:layout_toRightOf="@+id/weibo_from"
+                            android:text="TextView"
+                            android:textColor="@color/time_fant_color"
+                            android:textSize="@dimen/timeSize" />
+
+                        <TextView
+                            android:id="@+id/text_comment_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/wb_digg"
+                            android:text="TextView"
+                            android:textColor="@color/time_fant_color"
+                            android:textSize="@dimen/countSize" />
+
+                        <TextView
+                            android:id="@+id/text_trans_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/text_comment_num"
+                            android:text="TextView"
+                            android:textColor="@color/time_fant_color"
+                            android:textSize="@dimen/countSize" />
+
+                        <ImageView
+                            android:id="@+id/wb_digg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="2dp"
+                            android:layout_toLeftOf="@+id/wb_digg_num"
+                            android:clickable="true"
+                            android:padding="2dp"
+                            android:src="@drawable/un_digg" />
+
+                        <TextView
+                            android:id="@+id/wb_digg_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="2"
+                            android:textSize="@dimen/countSize" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_comment"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <!--
+                            <com.thinksns.sociax.component.CommentList
+                            android:id="@+id/comment_list"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" 
+                            />
+                        -->
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_see_more"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/comment_see_all"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:text="@string/see_all"
+                            android:textSize="16sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--
+                     <com.thinksns.sociax.component.LoadingView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+                -->
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/info_util_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="bottom" >
+
+            <TextView
+                android:id="@+id/text_trans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/weibo_app_bar"
+                android:clickable="true"
+                android:drawablePadding="-3dp"
+                android:drawableTop="@drawable/menu_trans_img"
+                android:gravity="center_horizontal"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:text="@string/transpond"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/text_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/weibo_app_bar"
+                android:clickable="true"
+                android:drawablePadding="-3dp"
+                android:drawableTop="@drawable/weibo_app_comment"
+                android:gravity="center_horizontal"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:text="@string/comment"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/text_favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/weibo_app_bar"
+                android:clickable="true"
+                android:drawablePadding="-3dp"
+                android:drawableTop="@drawable/weibo_app_collection"
+                android:gravity="center_horizontal"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:text="@string/collection"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/text_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/weibo_app_bar"
+                android:clickable="true"
+                android:drawablePadding="-3dp"
+                android:drawableTop="@drawable/weibo_app_more"
+                android:gravity="center_horizontal"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:text="@string/more"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

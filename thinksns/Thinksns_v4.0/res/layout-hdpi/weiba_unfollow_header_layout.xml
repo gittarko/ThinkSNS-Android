@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" >
+        <ImageView
+            android:id="@+id/iv_weiba_logo2"
+            android:layout_width="@dimen/dimen_size_60"
+            android:layout_height="@dimen/dimen_size_60"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_image"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:id="@+id/tv_weiba_title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/iv_weiba_logo2"
+            android:text="微吧名称"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_size_14" />
+
+        <!--帖子信息-->
+        <TextView
+            android:id="@+id/tv_member_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_weiba_title2"
+            android:layout_alignBottom="@id/iv_weiba_logo2"
+            android:text="成员    98"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_size_12"
+            />
+        <TextView
+            android:id="@+id/tv_post_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_member_count"
+            android:layout_alignTop="@id/tv_member_count"
+            android:layout_marginLeft="20dp"
+            android:text="帖子    100"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_size_12"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#ccc"/>
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="简介"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/size_middle" />
+
+    <TextView
+        android:id="@+id/tv_weiba_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="微吧简介"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dimen_size_12"
+        android:lineSpacingExtra="2dp"/>
+
+    <!--热门贴标题-->
+    <TextView
+        android:id="@+id/tv_hot_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@color/bg_ios"
+        android:gravity="center_vertical"
+        android:text="热门帖"
+        android:textColor="@color/ge_line"
+        android:textSize="@dimen/dimen_size_12" />
+
+</LinearLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_weibo_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@drawable/listitem_selector"
+    android:orientation="vertical">
+
+    <include layout="@layout/weibo_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="52dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+        <!-- 評論贊布局更多 按钮开始 -->
+        <RelativeLayout
+            android:id="@+id/rl_manage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ViewStub
+                android:id="@+id/stub_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/ll_digg_info"
+                android:layout="@layout/stub_address"/>
+            <LinearLayout
+                android:id="@+id/ll_digg_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:layout_toLeftOf="@id/ll_comment_info"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_dig"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:src="@drawable/ic_favor_normal"
+                    android:scaleType="centerInside"/>
+
+                <TextView
+                    android:id="@+id/tv_dig_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center_vertical"
+                    android:text="0"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_comment_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/rl_more"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_comment"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:src="@drawable/weibo_comment_selector"
+                    android:scaleType="centerInside"/>
+
+                <TextView
+                    android:id="@+id/tv_comment_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="0"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/img_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_more" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!-- 評論贊布局更多 結束 -->
+        <ImageView
+            android:id="@+id/iv_weibo_comment_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="51dp"
+            android:visibility="gone"
+            android:src="@drawable/weibo_comment_bg" />
+
+        <LinearLayout
+            android:id="@+id/ll_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/commentListBg"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:visibility="gone">
+
+            <!-- 点赞人名列表 -->
+            <ViewStub
+                android:id="@+id/stub_digg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout="@layout/stub_digg_list" />
+
+            <View
+                android:id="@+id/view_weibo_divide"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:paddingTop="5dp"
+                android:layout_height="0.2dp"
+                android:background="#dfdfdd"
+                android:visibility="gone" />
+
+            <!-- 评论列表 -->
+            <ViewStub
+                android:id="@+id/stub_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout="@layout/stub_comment_list" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

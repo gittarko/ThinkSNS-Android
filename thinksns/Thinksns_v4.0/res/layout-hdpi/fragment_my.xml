@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_ios"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/titleBarBackground">
+
+        <TextView
+            android:id="@+id/tv_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我"
+            android:textColor="@color/titleBarTextColor"
+            android:textSize="@dimen/titleBarTextSize" />
+
+        <ImageView
+            android:id="@+id/iv_erweima"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/titleBarMargin"
+            android:paddingRight="@dimen/titleBarMargin"
+            android:src="@drawable/ic_my_scan"
+            android:scaleType="centerInside"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titleBarDividerLineHeight"
+            android:layout_alignParentBottom="true"
+            android:background="@color/titleBarDivideLineColor" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/sv_my"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_size_10" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:background="@color/bg_listview_divider" />
+                    <LinearLayout
+                        android:id="@+id/rl_userinfo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginTop="6dp"
+                        android:gravity="center_vertical">
+
+                        <FrameLayout
+                            android:id="@+id/fl_user_header"
+                            android:layout_width="@dimen/follow_header_width_hight"
+                            android:layout_height="@dimen/follow_header_width_hight"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp">
+
+                            <com.thinksns.sociax.t4.android.img.RoundImageView
+                                android:id="@+id/img_user_header"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:src="@drawable/default_user"/>
+
+                            <LinearLayout
+                                android:id="@+id/ll_uname_adn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|right"
+                                android:orientation="horizontal">
+
+                            </LinearLayout>
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_my_username"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="--"
+                                android:textColor="@color/main_fant_color"
+                                android:textSize="@dimen/dimen_size_16" />
+
+                            <TextView
+                                android:id="@+id/tv_my_usertag"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:textSize="@dimen/dimen_size_14"
+                                android:singleLine="true"
+                                android:text="--"
+                                android:textColor="@color/bar" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/arrow"
+                            android:layout_width="25dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/arrow" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/bg_listview_divider" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center_horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/rl_myweibo"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_count_weibo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/main_fant_color"
+                                android:textSize="@dimen/dimen_size_16"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/tv_myweibo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="分享"
+                                android:textColor="@color/title_graybg"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0.3dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginTop="6dp"
+                            android:background="@color/bg_listview_divider" />
+
+                        <LinearLayout
+                            android:id="@+id/rl_myfollow"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_count_follow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/main_fant_color"
+                                android:textSize="@dimen/dimen_size_16"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/tv_myfollow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/follow"
+                                android:textColor="@color/title_graybg"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0.3dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginTop="6dp"
+                            android:background="@color/bg_listview_divider" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_myfollowed"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1">
+
+                            <LinearLayout
+                                android:id="@+id/ll_followers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_count_followed"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="1dp"
+                                    android:paddingRight="1dp"
+                                    android:text="0"
+                                    android:textColor="@color/main_fant_color"
+                                    android:textSize="@dimen/dimen_size_16"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/tv_myfollowed"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="@string/followed"
+                                    android:textColor="@color/title_graybg"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tv_remind_follower"
+                                android:layout_width="19dp"
+                                android:layout_height="19dp"
+                                android:layout_toRightOf="@id/ll_followers"
+                                android:background="@drawable/message_remind"
+                                android:gravity="center"
+                                android:text="99"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/weibo_app_bar_text" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/weibo_app_bar_text" />
+            <!--我的收藏-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/rl_mycollection"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_size_5"
+                        android:layout_marginTop="@dimen/dimen_size_5"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_personal_collect" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/tv_mycollection"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dimen_size_14" />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/arrow" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/bg_listview_divider" />
+                    <!-- 积分 -->
+                    <LinearLayout
+                        android:id="@+id/rl_myscore"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_size_5"
+                        android:layout_marginTop="@dimen/dimen_size_5"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_personal_integral" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/tv_myrecode"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dimen_size_14" />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/arrow" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/bg_listview_divider" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/weibo_app_bar_text" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/weibo_app_bar_text" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!-- 任务中心 -->
+                    <LinearLayout
+                        android:id="@+id/rl_my_task"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_size_5"
+                        android:layout_marginTop="@dimen/dimen_size_5"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/ImageView36"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_personal_task" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="5dp"
+                            android:text="任务中心"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dimen_size_14" />
+
+                        <ImageView
+                            android:id="@+id/ImageView24"
+                            android:layout_width="25dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/arrow" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/bg_listview_divider" />
+
+                    <LinearLayout
+                        android:id="@+id/rl_my_medal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_size_5"
+                        android:layout_marginTop="@dimen/dimen_size_5"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/ImageView40"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_personal_medal" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/tv_find_medal"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dimen_size_14" />
+
+                        <ImageView
+                            android:id="@+id/ImageView29"
+                            android:layout_width="25dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/arrow" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/weibo_app_bar_text" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/weibo_app_bar_text" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!-- 草稿箱 -->
+                    <LinearLayout
+                        android:id="@+id/rl_mydraft"
+                        style="@style/customProgressBar"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_size_5"
+                        android:layout_marginTop="@dimen/dimen_size_5"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_personal_draft" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/tv_mydraft"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dimen_size_14" />
+
+                        <TextView
+                            android:id="@+id/tv_remind_draft"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/arrow" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/bg_listview_divider" />
+
+                    <LinearLayout
+                        android:id="@+id/rl_setting"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_size_5"
+                        android:layout_marginTop="@dimen/dimen_size_5"
+                        android:gravity="center_vertical">
+
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/ic_personal_set" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="设置 "
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dimen_size_14" />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/arrow" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/weibo_app_bar_text" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

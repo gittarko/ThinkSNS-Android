@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/task_bg">
+  <LinearLayout 
+       android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:orientation="vertical"
+      >
+
+      <RelativeLayout
+          android:layout_width="fill_parent"
+          android:layout_height="40dp"
+          android:background="@drawable/top_bar_bg" >
+
+         
+          <TextView
+              android:id="@+id/taks_title_name"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:layout_centerVertical="true"
+              android:text="text" 
+              android:textSize="18sp"
+              android:textColor="@color/white"/>
+
+          <ImageButton
+              android:id="@+id/task_right_img"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:layout_centerVertical="true"
+              android:layout_marginRight="8dp"
+              android:background="@drawable/menu_setting_img" />
+
+          <ImageButton
+              android:id="@+id/task_left_img"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentLeft="true"
+              android:layout_centerVertical="true"
+              android:layout_marginLeft="8dp"
+              android:background="@drawable/menu_back_img" />
+
+           <ImageButton
+               android:id="@+id/task_other_img"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerVertical="true"
+               android:layout_toLeftOf="@+id/task_left_img"
+               android:background="@drawable/menu_setting_img" 
+               android:visibility="gone"/>
+          
+      </RelativeLayout>
+      
+       <com.thinksns.sociax.thinksnsbase.activity.widget.LoadingView
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0" />
+      
+
+		<com.thinksns.sociax.component.EditCancel
+            android:id="@+id/task_search_iv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/body_margin_left"
+            android:layout_marginRight="@dimen/body_margin_left"
+            android:layout_marginTop="@dimen/body_margin_left" 
+            android:visibility="gone"/>
+
+       <EditText
+           android:id="@+id/task_cate_eidt"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="8dp"
+           android:layout_marginRight="8dp"
+           android:layout_marginTop="8dp"
+           android:background="@drawable/task_cate_bg" 
+           android:paddingLeft="8dp"
+           android:paddingRight="8dp"
+           android:hint="@string/task_add_note"
+           android:singleLine="true"
+           android:imeOptions="actionDone"
+           />
+
+      <com.thinksns.sociax.component.TaskCategoryList
+            android:id="@+id/task_cate_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" 
+            android:layout_weight="1.0"
+            android:padding="8dp"
+            android:scrollbars="none"/>
+         
+  </LinearLayout>
+    <LinearLayout
+        android:id="@+id/info_util_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" 
+        android:gravity="bottom"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/text_cate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/weibo_app_bar"
+            android:clickable="true"
+            android:drawableTop="@drawable/img_task_cate"
+            android:gravity="center_horizontal"
+            android:text="@string/category" />
+
+        <TextView
+            android:id="@+id/text_today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/weibo_app_bar"
+            android:clickable="true"
+            android:drawableTop="@drawable/img_task_today"
+            android:gravity="center_horizontal"
+            android:text="@string/today" />
+
+        <TextView
+            android:id="@+id/text_add_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/weibo_app_bar"
+            android:clickable="true"
+            android:drawableTop="@drawable/img_task_star"
+            android:gravity="center_horizontal"
+            android:text="@string/add_star" />
+
+        <TextView
+            android:id="@+id/text_overdue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/weibo_app_bar"
+            android:clickable="true"
+            android:drawableTop="@drawable/img_task_over"
+            android:gravity="center_horizontal"
+            android:text="@string/overdue" />
+
+        <TextView
+            android:id="@+id/text_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/weibo_app_bar"
+            android:clickable="true"
+            android:drawableTop="@drawable/weibo_app_more"
+            android:gravity="center_horizontal"
+            android:text="@string/more" />
+    </LinearLayout>
+        
+</LinearLayout>

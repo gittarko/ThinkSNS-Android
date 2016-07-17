@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.thinksns.sociax.thinksnsbase.activity.widget.LoadingView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.thinksns.sociax.pla.TSPhotoListView
+        xmlns:pla="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/contentColor"
+        android:scrollbars="vertical"
+        android:visibility="gone"
+        pla:plaColumnNumber="2"
+        pla:plaLandscapeColumnNumber="3" />
+
+</LinearLayout>

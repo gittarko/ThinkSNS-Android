@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9f9f9">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/titleBarBackground"
+        >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/titleBarMargin"
+            android:paddingRight="@dimen/titleBarMargin"
+            android:scaleType="centerInside"
+            android:src="@drawable/img_back" />
+
+        <ImageView
+            android:id="@+id/tv_title_center"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/iv_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="@dimen/titleBarMargin"
+            android:src="@drawable/ic_share_more"
+            android:scaleType="centerInside"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titleBarDividerLineHeight"
+            android:layout_alignParentBottom="true"
+            android:background="@color/titleBarDivideLineColor"
+            android:visibility="visible"
+            />
+
+    </RelativeLayout>
+
+    <!--微博详情主体内容-->
+    <com.handmark.pulltorefresh.library.PullToRefreshListView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_title"
+        android:layout_above="@+id/ll_comment"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:smoothScrollbar="true"
+        ptr:ptrAnimationStyle="flip" />
+
+    <LinearLayout
+        android:id="@+id/ll_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titleBarDividerLineHeight"
+            android:background="@color/titleBarDivideLineColor"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <ImageView
+                android:id="@+id/img_face"
+                android:layout_width="@dimen/img_xsmall_ist"
+                android:layout_height="@dimen/img_xsmall_ist"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/face_bar"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/et_comment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/roundbackground_white"
+                android:hint="@string/comment_hint_edit"
+                android:imeOptions="actionSend"
+                android:padding="6dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textCursorDrawable="@null"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_sociax"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_dig"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/dimen_size_5"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_share_detail_like" />
+
+                <ImageView
+                    android:id="@+id/iv_collect"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="@dimen/dimen_size_5"
+                    android:layout_marginRight="@dimen/dimen_size_5"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_share_detail_collect" />
+
+                <ImageView
+                    android:id="@+id/iv_transport"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="@dimen/dimen_size_5"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_share_detail_share" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_send_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/roundbackground_gray_chat_item"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/comment"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <com.thinksns.sociax.thinksnsbase.activity.widget.ListFaceView
+            android:id="@+id/face_view"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:tag="ture"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <com.thinksns.sociax.thinksnsbase.activity.widget.EmptyLayout
+        android:id="@+id/error_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>

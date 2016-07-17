@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/area_one" >
+
+        <!--
+             <ListPreference
+            android:defaultValue="14"
+            android:dialogTitle="@string/font_size"
+            android:entries="@array/font"
+            android:entryValues="@array/font_value"
+            android:key="font_size"
+            android:title="@string/font_size" />        -->
+
+        <Preference
+            android:key="aboutus"
+            android:persistent="false"
+            android:title="@string/about_thinksns" />
+        <Preference
+            android:key="feedback"
+            android:persistent="false"
+            android:summary="@string/feedback_intro"
+            android:title="@string/app_set_feedback" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/area_two" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pic_open"
+            android:summaryOff="@string/pic_down_off"
+            android:summaryOn="@string/pic_down_on"
+            android:title="@string/pic_open_down" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="auto_remind"
+            android:summaryOff="@string/setting_summary_off_auto_remind"
+            android:summaryOn="@string/setting_summary_on_auto_remind"
+            android:title="@string/setting_title_auto_remind" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:dependency="auto_remind"
+            android:key="vibrator"
+            android:summaryOff="@string/setting_summary_off_vibrator"
+            android:summaryOn="@string/setting_summary_on_vibrator"
+            android:title="@string/setting_vibrator" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/area_three" >
+        <Preference
+            android:key="clear_cache"
+            android:persistent="false"
+            android:summary="@string/clear_cache_info"
+            android:title="@string/clear_cache" />
+
+        <ListPreference
+            android:defaultValue="60000"
+            android:dependency="auto_remind"
+            android:dialogTitle="@string/setting_interval"
+            android:entries="@array/entries_interval"
+            android:entryValues="@array/values_interval"
+            android:key="interval"
+            android:summary="@string/setting_interval_desc"
+            android:title="@string/setting_interval" />
+
+        <Preference
+            android:key="update"
+            android:persistent="false"
+            android:summary="@string/version_info"
+            android:title="@string/app_set_update" />
+        <Preference
+            android:key="logout"
+            android:persistent="false"
+            android:title="@string/app_set_logout" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

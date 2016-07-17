@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/ll_weiba_info"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/img_weiba_icon"
+        android:layout_width="@dimen/dimen_size_35"
+        android:layout_height="@dimen/dimen_size_35"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_image_small"/>
+
+    <TextView
+        android:id="@+id/tv_weiba_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@+id/more_option"
+        android:layout_toRightOf="@id/img_weiba_icon"
+        android:ellipsize="end"
+        android:singleLine="true"
+        tools:text="--"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_middle"/>
+
+    <TextView
+        android:id="@+id/tv_weiba_des"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/img_weiba_icon"
+        android:layout_alignLeft="@id/tv_weiba_name"
+        android:layout_alignRight="@id/tv_weiba_name"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        tools:text="--"
+        android:textColor="@color/bar"
+        android:textSize="@dimen/dimen_size_13"/>
+
+    <FrameLayout
+        android:id="@+id/more_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/btn_attention"
+            android:layout_width="48dp"
+            android:layout_height="22dp"
+            android:layout_marginRight="8dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:gravity="center"
+            android:background="@drawable/roundbackground_green_digg"
+            android:text="+关注"
+            android:textSize="10sp"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+</RelativeLayout>

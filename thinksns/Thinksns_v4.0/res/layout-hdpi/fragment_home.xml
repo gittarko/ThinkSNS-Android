@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:psts="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_title"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/titleBarBackground">
+
+            <ImageView
+                android:id="@+id/iv_title_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/logo"
+                android:visibility="visible" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/homeBarDividerLineHeight"
+                android:layout_alignParentBottom="true"
+                android:background="@color/homeBarDividerLineColor" />
+
+        </RelativeLayout>
+        <!-- 导航条 -->
+        <RelativeLayout
+            android:id="@+id/ll_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/tab_background">
+
+            <View
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/homeBarDividerLineHeight"
+                android:background="@color/homeBarDividerLineColor"
+                android:layout_marginBottom="0.5dp"
+                android:layout_alignBottom="@+id/tabs"
+                android:visibility="visible"/>
+
+            <com.astuetz.PagerSlidingTabStrip
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tab_height"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:textColor="@color/tab_text_color"
+                android:textSize="@dimen/tab_text_size"
+                psts:pstsDividerColor="@android:color/transparent"
+                psts:pstsIndicatorColor="@color/tab_indicator_color"
+                psts:pstsIndicatorHeight="@dimen/tab_indicator_height"
+                psts:pstsShouldExpand="true"
+                psts:pstsTabPaddingLeftRight="12dp"
+                psts:pstsUnderlineColor="@android:color/transparent" />
+
+
+        </RelativeLayout>
+
+        <!--向上偏移0.1dp-->
+    </LinearLayout>
+</RelativeLayout>

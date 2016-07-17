@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/main_grid_item"
+    android:background="@drawable/bg_grid_item">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <TextView
+            android:id="@id/gift"
+            android:layout_width="64px"
+            android:layout_height="64px"
+            android:focusable="false" 
+            android:drawableTop="@drawable/sociax_app"
+            android:gravity="bottom|center"
+            android:text="@string/mytask"
+            android:textColor="@color/main_text"
+            android:textSize="@dimen/person_page_bar_item_textsize" />
+
+         <ImageView
+            android:id="@id/gift_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right|center"
+            android:background="@drawable/new_notify_feed"
+            android:gravity="center"
+            android:visibility="gone" /> 
+    </FrameLayout>
+
+</RelativeLayout>

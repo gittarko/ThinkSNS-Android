@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header_topic"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_edit_bg"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/img_topic"
+        android:layout_width="fill_parent"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_topic_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="话题：ts后台优化方案"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_size_16"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_topic_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="4.0版本将于3月底或4月初进入邀请测试，展示开放测试的为核心功能（含3G版本），后续会陆续更新应用功能，并将于4月底进入最新版本的4.0移动产品测试"
+            android:textColor="@color/bar"
+            android:textSize="@dimen/countSize"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titleBarDividerLineHeight"
+            android:background="@color/bg_listview_divider" />
+
+        <TextView
+            android:id="@+id/tv_topic_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="该话题共有0条相关分享"
+            android:textColor="@color/middlebar"
+            android:textSize="@dimen/countSize" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titleBarDividerLineHeight"
+            android:background="@color/bg_listview_divider" />
+
+    </LinearLayout>
+
+</LinearLayout>

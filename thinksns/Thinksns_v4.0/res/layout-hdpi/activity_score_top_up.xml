@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_ios"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/white"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/tv_title_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:drawablePadding="5dp"
+            android:text="@string/tv_gift_score_top_up"
+            android:textColor="@color/title_background"
+            android:textSize="@dimen/txt_size_title"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/tv_title_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/img_back"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/weibo_app_bar_text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="@dimen/top_up_edit_height"
+            android:layout_weight="2"
+            android:background="@drawable/rec_bg_1_white"
+            android:gravity="center"
+            android:text="充值金额"
+            android:textColor="@drawable/selector_top_up_money_txt"
+            android:textSize="@dimen/txt_size_gift_name" />
+
+        <!-- <RadioGroup
+            android:layout_width="0dp"
+            android:layout_height="@dimen/top_up_edit_height"
+            android:layout_weight="2"
+            android:weightSum="2"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/btn_top_up_101"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/top_up_edit_height"
+                android:layout_marginLeft="-1dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/selector_top_up_money_bg"
+                android:button="@null"
+                android:text="10"
+                android:textColor="@drawable/selector_top_up_money_txt"
+                android:textSize="@dimen/txt_size_gift_name" />
+
+            <RadioButton
+                android:id="@+id/btn_top_up_601"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/top_up_edit_height"
+                android:layout_marginLeft="-1dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_top_up_money_bg"
+                android:text="60"
+                  android:gravity="center"
+                android:button="@null"
+                android:textColor="@drawable/selector_top_up_money_txt"
+                android:textSize="@dimen/txt_size_gift_name" />
+        </RadioGroup> -->
+
+        <Button
+            android:id="@+id/btn_top_up_10"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/top_up_edit_height"
+            android:layout_marginLeft="-1dp"
+            android:layout_weight="1"
+            android:background="@drawable/rec_bg_1_white"
+            android:text="10"
+            android:textColor="@color/bg_gift_exchange_rule"
+            android:textSize="@dimen/txt_size_gift_name" />
+
+        <Button
+            android:id="@+id/btn_top_up_60"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/top_up_edit_height"
+            android:layout_marginLeft="-1dp"
+            android:layout_weight="1"
+            android:background="@drawable/rec_bg_1_white"
+            android:text="60"
+            android:textColor="@color/bg_gift_exchange_rule"
+            android:textSize="@dimen/txt_size_gift_name" />
+
+        <EditText
+            android:id="@+id/et_top_up_other"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/top_up_edit_height"
+            android:layout_marginLeft="-1dp"
+            android:layout_weight="2"
+            android:background="@drawable/rec_bg_1_white"
+            android:gravity="center"
+            android:hint="其他数额"
+            android:inputType="number"
+            android:textColor="@color/bg_my_score_blue"
+            android:textColorHint="@color/edit_hint"
+            android:textSize="@dimen/txt_size_gift_name" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="@dimen/padding"
+        android:paddingRight="@dimen/padding"
+        android:paddingTop="8dp"
+        android:text="提示：人民币1元=1000积分，单次最多充值100人民币"
+        android:textColor="@color/bg_gift_exchange_rule"
+        android:textSize="@dimen/size_small" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/padding"
+        android:paddingRight="@dimen/padding"
+        android:paddingTop="8dp"
+        android:text="选择充值方式"
+        android:textColor="@color/bg_gift_exchange_rule"
+        android:textSize="@dimen/txt_size_gift_name" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/weibo_app_bar_text" />
+
+    <ListView
+        android:id="@+id/lv_top_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@color/bg_listview_divider"
+        android:dividerHeight="0.3dp"
+        android:paddingLeft="@dimen/padding"
+        android:scrollbars="@null"
+        android:visibility="gone" >
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/rl_top_up_zfb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/padding" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp" >
+
+            <ImageView
+                android:layout_width="@dimen/img_small_ist"
+                android:layout_height="@dimen/img_small_ist"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_top_up_zfb" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="支付宝支付"
+                android:textColor="@color/bg_gift_exchange_rule"
+                android:textSize="@dimen/txt_size_gift_name" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/cb_top_up_zfb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:button="@drawable/selector_top_up_checkbox"
+            android:checked="true"
+            android:paddingRight="@dimen/padding" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/bg_listview_divider" />
+
+    <RelativeLayout
+        android:id="@+id/rl_top_up_ctf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:padding="@dimen/padding" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp" >
+
+            <ImageView
+                android:layout_width="@dimen/img_small_ist"
+                android:layout_height="@dimen/img_small_ist"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_top_up_cft" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="财付通支付"
+                android:textColor="@color/bg_gift_exchange_rule"
+                android:textSize="@dimen/txt_size_gift_name" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/cb_top_up_cft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:button="@drawable/selector_top_up_checkbox"
+            android:paddingRight="@dimen/padding" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/bg_listview_divider" />
+
+    <RelativeLayout
+        android:id="@+id/rl_top_up_wechat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/padding" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp" >
+
+            <ImageView
+                android:layout_width="@dimen/img_small_ist"
+                android:layout_height="@dimen/img_small_ist"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_top_up_wechat" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="微信支付"
+                android:textColor="@color/bg_gift_exchange_rule"
+                android:textSize="@dimen/txt_size_gift_name" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/cb_top_up_wechat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:button="@drawable/selector_top_up_checkbox"
+            android:paddingRight="@dimen/padding" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/bg_listview_divider" />
+
+    <RelativeLayout
+        android:id="@+id/rl_top_up_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:padding="@dimen/padding" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp" >
+
+            <ImageView
+                android:layout_width="@dimen/img_small_ist"
+                android:layout_height="@dimen/img_small_ist"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_top_up_card" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="银联支付"
+                android:textColor="@color/bg_gift_exchange_rule"
+                android:textSize="@dimen/txt_size_gift_name" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/cb_top_up_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:button="@drawable/selector_top_up_checkbox"
+            android:paddingRight="@dimen/padding" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/weibo_app_bar_text" />
+
+    <Button
+        android:id="@+id/btn_top_up_now"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding"
+        android:background="@drawable/roundbackground_blue_3_button"
+        android:text="立即充值"
+        android:textColor="@color/white" />
+
+</LinearLayout>

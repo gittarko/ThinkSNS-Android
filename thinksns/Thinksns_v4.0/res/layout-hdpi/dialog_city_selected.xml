@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundbackground_white"
+        android:orientation="vertical"
+        android:divider="@drawable/divider720"
+        android:showDividers="middle">
+        <TextView 
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="选择地区"
+            android:textSize="@dimen/dimen_size_16"
+            android:textColor="@color/blue"
+            android:gravity="center"/>
+        
+       <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+		   <!--省份-->
+            <LinearLayout 
+        		android:id="@+id/ll_province"
+        		android:layout_width="0dp"
+        		android:layout_height="match_parent"
+        		android:layout_weight="1"
+        		android:orientation="horizontal">
+            	<!--<net.simonvt.numberpicker.NumberPicker -->
+        			<!--android:id="@+id/province"  -->
+        			<!--android:layout_width="match_parent"  -->
+        			<!--android:layout_height="wrap_content"-->
+        			<!--android:calendarViewShown="false" /> -->
+        	</LinearLayout>
+		   <!-- 城市-->
+  			<LinearLayout 
+        		android:id="@+id/ll_city"
+        		android:layout_width="0dp"
+        		android:layout_height="match_parent"
+        		android:layout_weight="1"
+        		android:layout_marginLeft="15dp"
+        		android:orientation="horizontal">
+    			<!--<net.simonvt.numberpicker.NumberPicker -->
+        				<!--android:id="@+id/city"  -->
+        				<!--android:layout_width="match_parent"  -->
+        				<!--android:layout_height="wrap_content"/> -->
+        	</LinearLayout>
+		   <!--地区 -->
+        	<LinearLayout 
+        		android:id="@+id/ll_zone"
+        		android:layout_width="0dp"
+        		android:layout_height="match_parent"
+        		android:layout_weight="1"
+        		android:layout_marginLeft="15dp"
+        		android:orientation="horizontal"
+        		android:visibility="visible">
+        		<!--<net.simonvt.numberpicker.NumberPicker -->
+        			<!--android:id="@+id/zone"  -->
+        			<!--android:layout_width="match_parent"  -->
+        			<!--android:layout_height="wrap_content" />-->
+        	</LinearLayout>
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:divider="@drawable/divider_line"
+            android:showDividers="middle">
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="15dp">
+                <TextView
+                    android:id="@+id/tv_cancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="取消"
+                    android:textSize="@dimen/dimen_size_16"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="15dp">
+                <TextView
+                    android:id="@+id/tv_ok"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="确定"
+                    android:textSize="@dimen/dimen_size_16"
+                    android:textColor="@color/blue"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

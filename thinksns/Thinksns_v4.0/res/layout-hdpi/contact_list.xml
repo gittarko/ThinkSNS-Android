@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.thinksns.sociax.component.EditCancel
+        android:id="@+id/contact_edit_cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/searchbarColor"
+        android:padding="8dp"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <com.thinksns.sociax.thinksnsbase.activity.widget.LoadingView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <com.thinksns.sociax.component.ContactList
+            android:id="@+id/contact_list_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white"
+            android:cacheColorHint="@drawable/silver"
+            android:divider="@drawable/item_line"
+            android:scrollbars="none" />
+    </RelativeLayout>
+
+</LinearLayout>

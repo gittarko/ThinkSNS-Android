@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.thinksns.sociax.thinksnsbase.activity.widget.LoadingView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/searchBarContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/input_search_query"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/roundbackground_ios"
+            android:drawableLeft="@drawable/ic_findpeople_zoom"
+            android:hint="搜索"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:paddingRight="5dip"
+            android:singleLine="true"
+            android:text=""
+            android:textColorHint="@color/gray"
+            android:textSize="15dip" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_default"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchBarContainer"
+        android:gravity="center"
+        android:visibility="visible"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="310dp"
+            android:layout_height="310dp"
+            android:src="@drawable/empty_friends"
+            android:scaleType="centerInside"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="没有联系人"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/dimen_friend_default2" />
+    </LinearLayout>
+
+    <com.thinksns.sociax.t4.android.widget.ContactListViewImpl
+        android:id="@+id/lv_my_friends"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchBarContainer"
+        android:divider="@color/bg_listview_divider"
+        android:dividerHeight="0.3dp"
+        android:listSelector="@android:color/transparent"
+        android:paddingLeft="@dimen/dimen_msg_padding" />
+
+</RelativeLayout>

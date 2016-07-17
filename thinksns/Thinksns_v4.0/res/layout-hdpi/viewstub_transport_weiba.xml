@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_transport_weibo"
+    android:padding="7dp">
+
+    <TextView
+        android:id="@+id/tv_weiba_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="帖子标题"
+        android:textColor="@color/ge_line"
+        android:textSize="12sp"
+        android:singleLine="true"
+        />
+
+    <TextView
+        android:id="@+id/tv_weiba_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_weiba_title"
+        android:layout_marginTop="5dp"
+        android:textSize="12sp"
+        android:text="内容"
+        android:textColor="@color/gray"
+        android:singleLine="true"
+        />
+
+    <TextView
+        android:id="@+id/tv_post_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_weiba_content"
+        android:layout_marginTop="5dp"
+        android:textSize="12sp"
+        android:text="时间"
+        android:textColor="@color/gray"
+        android:singleLine="true" />
+
+</RelativeLayout>

@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom|center_horizontal"
+    android:background="#cfffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/btnGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/tv_create_weibo_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="68dp"
+            android:clickable="true"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/tv_new_checkin"
+            android:gravity="center_horizontal"
+            android:text="签到"
+            android:textColor="@color/blur_text_color" />
+
+        <TextView
+            android:id="@+id/tv_create_weibo_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tv_create_weibo_sign"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="73dp"
+            android:clickable="true"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/tv_new_weibo"
+            android:gravity="center_horizontal"
+            android:text="相册"
+            android:textColor="@color/blur_text_color" />
+
+        <TextView
+            android:id="@+id/tv_create_weibo_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_create_weibo_sign"
+            android:layout_alignLeft="@id/tv_create_weibo_sign"
+            android:layout_marginBottom="35dp"
+            android:clickable="true"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/tv_new_vedios"
+            android:gravity="center_horizontal"
+            android:text="视频"
+            android:textColor="@color/blur_text_color" />
+
+        <TextView
+            android:id="@+id/tv_create_weibo_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_create_weibo_pic"
+            android:layout_above="@id/tv_create_weibo_pic"
+            android:layout_alignBottom="@id/tv_create_weibo_video"
+            android:clickable="true"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/tv_new_photo"
+            android:gravity="center_horizontal"
+            android:text="拍照"
+            android:textColor="@color/blur_text_color" />
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbar_height"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/tv_home_buttom_cancel"
+            android:padding="10dp"/>
+
+    </FrameLayout>
+
+</LinearLayout>

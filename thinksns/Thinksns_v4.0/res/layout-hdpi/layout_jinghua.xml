@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:layout_width="26dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tv_post_digest"
+        android:scaleType="centerInside"/>
+
+    <TextView
+        android:id="@+id/tv_post_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:drawableRight="@drawable/arrow"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="精华帖"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dimen_size_12" />
+
+</LinearLayout>

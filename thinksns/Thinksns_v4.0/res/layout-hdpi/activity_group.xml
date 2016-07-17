@@ -1,0 +1,203 @@
+﻿<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="#FFFFFF"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/tv_title_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:drawablePadding="5dp"
+            android:text="@string/tv_group_home"
+            android:textColor="@color/title_background"
+            android:textSize="18sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_title_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_alignTop="@+id/tv_title_center"
+            android:layout_alignBottom="@+id/tv_title_center"
+            android:layout_marginLeft="@dimen/title_margin_left"
+            android:background="@drawable/img_back"
+            android:textSize="@dimen/title_leftandright_size"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_title_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/title_margin_right"
+            android:textSize="@dimen/title_leftandright_size"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/divider720" />
+
+    <RadioGroup
+        android:id="@+id/rg_weiba_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_gravity="center"
+        android:background="@color/rg_background"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/rl_tuijian"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1" >
+
+            <RadioButton
+                android:id="@+id/rb_tuijian"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:background="@drawable/rb_bg_gray_side"
+                android:button="@null"
+                android:checked="true"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="@string/tv_tuijian"
+                android:textColor="@color/title_blue" />
+
+            <TextView
+                android:id="@+id/tv_remind_tuijian"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/message_remind"
+                android:gravity="center"
+                android:minEms="5"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/divider_720_4"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_all"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1" >
+
+            <RadioButton
+                android:id="@+id/rb_all"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:background="@drawable/rb_bg_gray_middle"
+                android:button="@null"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="@string/all_task"
+                android:textColor="@color/title_graybg" />
+
+            <TextView
+                android:id="@+id/tv_remind_all"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/message_remind"
+                android:gravity="center"
+                android:minEms="5"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_guanzhu"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1" >
+
+            <RadioButton
+                android:id="@+id/rb_guanzhu"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:background="@drawable/rb_bg_gray_side"
+                android:button="@null"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="@string/tv_my_group"
+                android:textColor="@color/title_graybg" />
+
+            <TextView
+                android:id="@+id/tv_remind_关注"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/message_remind"
+                android:gravity="center"
+                android:minEms="5"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RadioGroup>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_home"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_weight="7.05"
+        android:visibility="visible" >
+    </android.support.v4.view.ViewPager>
+
+    <com.zhishisoft.v4.android.unit.AutoListView
+        android:id="@+id/lv_test"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.44"
+        android:fadingEdge="none"
+        android:visibility="gone" >
+    </com.zhishisoft.v4.android.unit.AutoListView>
+
+</LinearLayout>

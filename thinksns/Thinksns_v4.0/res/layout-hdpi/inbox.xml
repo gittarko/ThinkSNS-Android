@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/weibolist"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <com.thinksns.sociax.t4.android.image.SmartImageView
+        android:id="@+id/user_message_header"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="8dip"
+        android:src="@drawable/default_user" />
+
+    <LinearLayout
+        android:id="@+id/weibo_data"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="8dip"
+        android:layout_marginRight="8dip"
+        android:layout_marginTop="8dip"
+        android:orientation="vertical"
+        android:text="" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/message_ctime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="..."
+                android:textColor="@color/timeColor"
+                android:textSize="@dimen/smallFont"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textSize="@dimen/fontSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/message_notices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/message_remind"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="11.0sp" />
+
+            <TextView
+                android:id="@+id/message_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:singleLine="true"
+                android:text="TextView"
+                android:textColor="@color/font"
+                android:textSize="@dimen/fontSize" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

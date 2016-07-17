@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.thinksns.sociax.t4.component.SquareFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_vedio"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@null" />
+
+    <ImageView
+        android:id="@+id/img_vedio_bf"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bofang" />
+
+</com.thinksns.sociax.t4.component.SquareFrameLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+        <ImageView
+            android:id="@+id/img_weiba_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_weiba_detail_header"
+            android:layout_alignParentTop="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/iv_weiba_logo1"
+                android:layout_width="@dimen/dimen_size_60"
+                android:layout_height="@dimen/dimen_size_60"
+                android:src="@drawable/default_image_small"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/tv_weiba_title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_weiba_logo1"
+                android:layout_marginLeft="10dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="微吧帖子"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_size_18"/>
+
+            <TextView
+                android:id="@+id/tv_weiba_isfollow"
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignBottom="@id/iv_weiba_logo1"
+                android:text="已关注"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:background="@drawable/weiba_weibadetial_tv_isfollow_selector"
+                android:textColor="@color/white"
+                />
+
+            <!--帖子信息-->
+            <TextView
+                android:id="@+id/tv_member_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tv_weiba_title1"
+                android:layout_alignBottom="@id/iv_weiba_logo1"
+                android:text="成员    98"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_size_12"
+                />
+            <TextView
+                android:id="@+id/tv_post_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_member_count"
+                android:layout_alignTop="@id/tv_member_count"
+                android:layout_marginLeft="20dp"
+                android:text="帖子    100"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_size_12"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!--置顶帖-->
+    <LinearLayout
+        android:id="@+id/ll_weiba_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/divider720"
+        android:showDividers="middle"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="gone">
+    </LinearLayout>
+    <!--精华帖-->
+    <LinearLayout
+        android:id="@+id/ll_weiba_digest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tv_post_digest"
+            android:scaleType="centerInside"/>
+
+        <TextView
+            android:id="@+id/tv_diggest_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:drawableRight="@drawable/arrow"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="精华帖 ( )"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_size_14" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/sectionTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:background="@color/white"
+        android:text="A"
+        android:textColor="@color/color_msg_friends"
+        android:textSize="@dimen/dimen_msg_content"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rl_user"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_msg_padding"
+        android:layout_marginTop="@dimen/dimen_msg_padding"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingRight="@dimen/dimen_msg_padding" >
+
+        <CheckBox
+            android:id="@+id/cb_select"
+            android:layout_width="@dimen/check_user"
+            android:layout_height="@dimen/check_user"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_msg_padding"
+            android:button="@drawable/selector_select_chat_user_checkbox"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/img_chat_userheader"
+            android:layout_width="@dimen/img_small_ist"
+            android:layout_height="@dimen/img_small_ist"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@+id/cb_select"
+            android:background="@drawable/default_user" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_msg_padding"
+            android:layout_toRightOf="@+id/img_chat_userheader"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_msg_name" />
+    </RelativeLayout>
+
+</LinearLayout>

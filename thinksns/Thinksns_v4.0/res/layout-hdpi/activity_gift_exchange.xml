@@ -1,0 +1,433 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_ios"
+    android:visibility="visible" >
+
+    <LinearLayout
+        android:id="@+id/ll_exchange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl_title"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/title_height"
+            android:background="@color/white"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/tv_title_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:drawablePadding="5dp"
+                android:text="@string/tv_gift_normal_exchange"
+                android:textColor="@color/title_background"
+                android:textSize="@dimen/txt_size_title"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/tv_title_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/img_back"
+                android:padding="10dp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/weibo_app_bar_text" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:fillViewport="true"
+            android:scrollbars="@null" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/ll_exchange_normal_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white" >
+
+                        <TextView
+                            android:id="@+id/tv_receiver_nickname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:background="@null"
+                            android:hint="赠予:"
+                            android:padding="@dimen/padding"
+                            android:textColor="@color/bar"
+                            android:textColorHint="@color/edit_hint"
+                            android:textSize="@dimen/smallFont" />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/arrow" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/bg_listview_divider" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_exchange_entity_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <EditText
+                            android:id="@+id/et_true_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:hint="真实姓名"
+                            android:padding="@dimen/padding"
+                            android:textColor="@color/bar"
+                            android:textColorHint="@color/edit_hint"
+                            android:textSize="@dimen/smallFont" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/bg_listview_divider" />
+
+                        <EditText
+                            android:id="@+id/et_way_of_contact"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:hint="联系方式"
+                            android:inputType="phone"
+                            android:padding="@dimen/padding"
+                            android:textColor="@color/bar"
+                            android:textColorHint="@color/edit_hint"
+                            android:textSize="@dimen/smallFont" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/bg_listview_divider" />
+
+                        <EditText
+                            android:id="@+id/et_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:ellipsize="end"
+                            android:gravity="start"
+                            android:hint="详细地址"
+                            android:lines="3"
+                            android:maxLines="3"
+                            android:padding="@dimen/padding"
+                            android:textColor="@color/bar"
+                            android:textColorHint="@color/edit_hint"
+                            android:textSize="@dimen/smallFont" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/bg_listview_divider" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/et_receiver_wish"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:hint="写点祝福语给TA吧-50字以内"
+                        android:lines="3"
+                        android:maxLength="50"
+                        android:padding="@dimen/padding"
+                        android:textColor="@color/bar"
+                        android:textColorHint="@color/edit_hint"
+                        android:textSize="@dimen/smallFont" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/bg_listview_divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/padding" >
+
+                    <ImageView
+                        android:id="@+id/iv_exchange"
+                        android:layout_width="@dimen/img_middle3small"
+                        android:layout_height="@dimen/img_middle3small"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/default_image" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_exchange_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@color/bg_gift_name"
+                            android:textSize="@dimen/txt_size_gift_detail" />
+
+                        <TextView
+                            android:id="@+id/tv_exchange_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@color/bg_gift_name"
+                            android:textSize="@dimen/txt_size_gift_detail" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/bg_listview_divider" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_pick_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="@dimen/padding"
+                    android:paddingRight="@dimen/padding"
+                    android:paddingTop="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="数量"
+                        android:textColor="@color/bg_task_detail"
+                        android:textSize="@dimen/txt_size_gift_detail" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <Button
+                            android:id="@+id/btn_num_sub"
+                            android:layout_width="@dimen/pick_exchange_num_xwidth"
+                            android:layout_height="@dimen/pick_exchange_num_height"
+                            android:background="@drawable/rec_bg_1_white"
+                            android:clickable="false"
+                            android:gravity="center"
+                            android:text="-"
+                            android:textColor="@color/bar"
+                            android:textSize="20sp" />
+
+                        <Button
+                            android:id="@+id/btn_num"
+                            android:layout_width="@dimen/pick_exchange_num_xwidth"
+                            android:layout_height="@dimen/pick_exchange_num_height"
+                            android:layout_marginLeft="-1dp"
+                            android:layout_marginRight="-1dp"
+                            android:background="@drawable/rec_bg_1_white"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="@color/bar"
+                            android:textSize="@dimen/txt_size_gift_detail" />
+
+                        <Button
+                            android:id="@+id/btn_num_plus"
+                            android:layout_width="@dimen/pick_exchange_num_xwidth"
+                            android:layout_height="@dimen/pick_exchange_num_height"
+                            android:background="@drawable/rec_bg_1_white"
+                            android:gravity="center"
+                            android:text="+"
+                            android:textColor="@color/bar"
+                            android:textSize="@dimen/txt_size_gift_detail" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/bg_listview_divider" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_way"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="@dimen/padding"
+                    android:paddingRight="@dimen/padding"
+                    android:paddingTop="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="赠送方式"
+                        android:textColor="@color/bg_task_detail"
+                        android:textSize="@dimen/txt_size_gift_detail" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_way_of_present"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/rb_way_anonymous"
+                            android:layout_width="@dimen/pick_exchange_num_xwidth"
+                            android:layout_height="@dimen/pick_exchange_num_height"
+                            android:background="@drawable/rec_bg_1_blue"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="匿名"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/txt_size_gift_detail" />
+
+                        <RadioButton
+                            android:id="@+id/rb_way_open"
+                            android:layout_width="@dimen/pick_exchange_num_xwidth"
+                            android:layout_height="@dimen/pick_exchange_num_height"
+                            android:layout_marginLeft="-1dp"
+                            android:layout_marginRight="-1dp"
+                            android:background="@drawable/rec_bg_1_white"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="公开"
+                            android:textColor="@color/bar"
+                            android:textSize="@dimen/txt_size_gift_detail" />
+
+                        <RadioButton
+                            android:id="@+id/rb_way_private"
+                            android:layout_width="@dimen/pick_exchange_num_xwidth"
+                            android:layout_height="@dimen/pick_exchange_num_height"
+                            android:background="@drawable/rec_bg_1_white"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="私下"
+                            android:textColor="@color/bar"
+                            android:textSize="@dimen/txt_size_gift_detail" />
+                    </RadioGroup>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/bg_listview_divider" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@+id/rl_exchange"
+        android:background="@color/bg_listview_divider" />
+
+    <RelativeLayout
+        android:id="@+id/rl_exchange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:paddingBottom="8dp"
+        android:paddingLeft="@dimen/padding"
+        android:paddingRight="@dimen/padding"
+        android:paddingTop="8dp" >
+
+        <ImageView
+            android:id="@+id/iv_integral"
+            android:layout_width="14sp"
+            android:layout_height="14sp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_integral" />
+
+        <TextView
+            android:id="@+id/tv_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_integral"
+            android:text="积分："
+            android:textColor="@color/bg_gift_score_txt"
+            android:textSize="@dimen/txt_size_gift_detail" />
+		
+        <TextView
+            android:id="@+id/tv_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_txt"
+            android:text="7420"
+            android:textColor="@color/bg_gift_score"
+            android:textSize="@dimen/txt_size_gift_score" />
+
+        <TextView
+            android:id="@+id/tv_exchange_now"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/roundbackground_blue_2_button"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:paddingTop="10dp"
+            android:text="立即兑换"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_size_gift_name" />
+    </RelativeLayout>
+
+</RelativeLayout>

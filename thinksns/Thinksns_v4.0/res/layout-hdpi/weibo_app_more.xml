@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/menu_more_bg"
+    android:orientation="vertical" >
+   <!--  <TextView
+        android:id="@+id/text_my_follower"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="@string/weibo_more_my_follower"
+        android:textColor="@color/main_fant_color"
+        android:textSize="16sp" />
+    <ImageView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ge_line"
+        /> -->
+
+    <!--
+         <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="@android:drawable/divider_horizontal_bright"
+        android:textColor="@color/main_fant_color" />
+    -->
+
+<!--     <TextView
+        android:id="@+id/text_my_followed"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="@string/weibo_more_my_followed"
+        android:textColor="@color/main_fant_color"
+        android:textSize="16sp" />
+  <ImageView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ge_line"
+        /> -->
+ 
+ 
+    <TextView
+        android:id="@+id/text_my_weibo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="@string/weibo_more_my_weibo"
+        android:textColor="@color/main_fant_color"
+        android:textSize="16sp" />
+  <ImageView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ge_line"
+        />
+    <TextView
+        android:id="@+id/text_my_commend"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="@string/weibo_more_my_commend"
+        android:textColor="@color/main_fant_color"
+        android:textSize="16sp" />
+
+</LinearLayout>

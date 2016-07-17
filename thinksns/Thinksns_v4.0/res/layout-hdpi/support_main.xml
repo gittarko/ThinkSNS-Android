@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/top_bar_bg" >
+
+            <TextView
+                android:id="@+id/hot_ques_title_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="text"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/hot_ques_right_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:textColor="@color/white" />
+
+            <ImageButton
+                android:id="@+id/hot_ques_left_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/menu_back_img" />
+
+            <ImageButton
+                android:id="@+id/hot_ques_other_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/task_left_img"
+                android:background="@drawable/menu_setting_img"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <com.thinksns.sociax.thinksnsbase.activity.widget.LoadingView
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0" />
+
+        <com.thinksns.sociax.component.EditCancel
+            android:id="@+id/ques_search_iv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/body_margin_left"
+            android:background="@color/searchbarColor"/>
+
+        <com.thinksns.sociax.component.QuestionList
+            android:id="@+id/hot_question_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="8dp"
+            android:layout_weight="1.0"
+            android:scrollbars="none" />
+    </LinearLayout>
+
+</LinearLayout>

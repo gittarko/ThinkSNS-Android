@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/padding"
+    android:paddingTop="@dimen/padding" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp" >
+
+        <ImageView
+            android:id="@+id/iv_way_of_top_up"
+            android:layout_width="@dimen/img_small_ist"
+            android:layout_height="@dimen/img_small_ist"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/tv_way_of_top_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="支付宝支付"
+            android:textColor="@color/bg_gift_exchange_rule"
+            android:textSize="@dimen/txt_size_gift_name" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/cb_top_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:button="@drawable/selector_select_chat_user_checkbox"
+        android:paddingRight="@dimen/padding" />
+
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/post_create_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_ios"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <com.thinksns.sociax.thinksnsbase.activity.widget.LoadingView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" />
+
+    <EditText
+        android:id="@+id/et_post_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundbackground_white"
+        android:hint="@string/posts_title_hint"
+        android:padding="6dp"
+        android:textSize="16sp"
+        android:textColorHint="#44202020"
+        android:textCursorDrawable="@color/title_blue" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/et_post_content"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/roundbackground_white"
+        android:gravity="top"
+        android:hint="@string/posts_content_hint"
+        android:inputType="textMultiLine"
+        android:padding="6dp"
+        android:textSize="16sp"
+        android:textColorHint="#44202020"
+        android:textCursorDrawable="@color/title_blue" />
+
+</LinearLayout>

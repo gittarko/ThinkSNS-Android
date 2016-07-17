@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_weiba_tit_follow"
+        style="@style/title_button_n"
+        android:layout_width="wrap_content"
+        android:text="@string/weiba_tit_follow" />
+    
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/nav_line"
+        />
+
+    <TextView
+        android:id="@+id/tv_weiba_tit_post"
+        style="@style/title_button_n"
+        android:layout_width="wrap_content"
+        android:text="@string/weiba_tit_post" />
+    
+     <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/nav_line"
+        />
+
+    <TextView
+        android:id="@+id/tv_weiba_tit_comment"
+        style="@style/title_button_n"
+        android:layout_width="wrap_content"
+        android:text="@string/weiba_tit_comment" />
+    
+     <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/nav_line"
+        />
+
+    <TextView
+        android:id="@+id/tv_weiba_tit_fiv"
+        style="@style/title_button_p"
+        android:layout_width="wrap_content"
+        android:text="@string/weiba_tit_fiv" 
+        />
+
+</LinearLayout>

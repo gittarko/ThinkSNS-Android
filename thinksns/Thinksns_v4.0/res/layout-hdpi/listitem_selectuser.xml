@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_select_chat_user"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/image_photo"
+        android:layout_width="@dimen/header_width_hight"
+        android:layout_height="@dimen/header_width_hight"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/cb_select"
+        android:src="@drawable/default_user" />
+
+    <TextView
+        android:id="@+id/uncontent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/image_photo"
+        android:layout_marginLeft="24dp"
+        android:layout_toRightOf="@+id/image_photo"
+        android:ellipsize="end"
+        android:maxWidth="200dp"
+        android:singleLine="true"
+        android:text="TextView"
+        android:textColor="#787878"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/unnames"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/uncontent"
+        android:layout_alignTop="@+id/image_photo"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/image_photo"
+        android:text="Large Text"
+        android:textColor="@color/black"
+        android:textSize="13sp" />
+
+    <CheckBox
+        android:id="@+id/cb_select"
+        android:layout_width="@dimen/check_user"
+        android:layout_height="@dimen/check_user"
+        android:layout_above="@+id/uncontent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:button="@drawable/selector_select_chat_user_checkbox" 
+        android:layout_marginLeft="10dp" />
+
+</RelativeLayout>

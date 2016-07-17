@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+
+    <FrameLayout
+        android:layout_width="@dimen/header_width_hight"
+        android:layout_height="@dimen/header_width_hight" >
+
+        <ImageView
+            android:id="@+id/iv_weibo_user_head"
+            android:layout_width="@dimen/header_width_hight"
+            android:layout_height="@dimen/header_width_hight"
+            android:src="@drawable/default_user" />
+
+        <LinearLayout
+            android:id="@+id/ll_uname_adn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_user_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_weibo_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:text="name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/userNameSize" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/body_margin_top"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_weibo_ctime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ctime"
+                        android:textColor="@color/font"
+                        android:textSize="@dimen/fromSize" />
+
+                    <TextView
+                        android:id="@+id/tv_weibo_from"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="from"
+                        android:textColor="@color/font"
+                        android:textSize="@dimen/fromSize" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rl_content_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:orientation="vertical"
+            android:paddingTop="8dp" >
+
+            <LinearLayout
+                android:id="@+id/ll_textcontent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_weibo_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/contentSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_media"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/body_margin_top"
+                android:layerType="none"
+                android:orientation="vertical"
+                android:visibility="gone" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_image"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/rl_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="42dp"
+                android:layout_marginTop="8dp"
+                android:background="@null"
+                android:visibility="gone" >
+
+                <com.thinksns.sociax.t4.component.GridViewNoScroll
+                    android:id="@+id/gv_weibo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="4dp"
+                    android:numColumns="3"
+                    android:verticalSpacing="4dp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_weibo_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/body_margin_top"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_image" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_manage"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/body_margin_left"
+            android:layout_marginRight="@dimen/body_margin_right"
+            android:layout_marginTop="10dp" >
+
+            <LinearLayout
+                android:id="@+id/ll_digg_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/ll_comment_info"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="3dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="3dp" >
+
+                <ImageView
+                    android:id="@+id/iv_dig"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/ic_favor_normal" />
+
+                <TextView
+                    android:id="@+id/tv_dig_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/dig"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_comment_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/img_more"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="3dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="3dp" >
+
+                <ImageView
+                    android:id="@+id/iv_comment"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/weibo_comment_selector" />
+
+                <TextView
+                    android:id="@+id/tv_comment_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="1dp"
+                    android:text="10"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_more"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp"
+                android:src="@drawable/weibo_more_selector" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_comment"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/body_margin_right"
+            android:layout_marginTop="@dimen/body_margin_top"
+            android:background="@color/commentListBg"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:id="@+id/ll_comment_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_comment_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="查看全部评论"
+                android:textColor="@color/font"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_add_comment"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@color/white"
+                android:padding="5dp"
+                android:text="@string/comment_hint"
+                android:textColor="@color/bar"
+                android:textColorHint="@color/edit_hint"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

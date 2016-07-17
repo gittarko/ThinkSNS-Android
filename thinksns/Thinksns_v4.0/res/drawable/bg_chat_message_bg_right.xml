@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/bg_chat_message_bg_right_t" android:state_checked="true"></item>
+    <item android:drawable="@drawable/bg_chat_message_bg_right_f" android:state_checked="false"></item>
+
+</selector>

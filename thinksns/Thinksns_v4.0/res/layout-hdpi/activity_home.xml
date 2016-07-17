@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/bg_ios"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="#ccc"/>
+            <RadioGroup
+                android:id="@+id/rg_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dp"
+                android:background="@color/white"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+            <FrameLayout
+                android:id="@+id/fl_bottom_home"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal">
+
+                    <RadioButton
+                        android:id="@+id/tv_bottom_home"
+                        style="@style/main_tab_bottom2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/tab_selector_home"
+                        android:checked="true"
+                        android:clickable="false"/>
+                    <TextView
+                        android:id="@+id/txt_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_bottom_home"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="2dp"
+                        android:text="主页"
+                        android:textColor="@color/actionbar_txtcolor_blue"
+                        android:textSize="10sp"/>
+                </RelativeLayout>
+
+            </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_bottom_find"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/tv_bottom_find"
+                    style="@style/main_tab_bottom2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/tab_selector_find"
+                    android:checked="false"
+                    android:clickable="false"/>
+
+                <com.thinksns.sociax.thinksnsbase.activity.widget.BadgeView
+                    android:id="@+id/badgeWeiba"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_bottom_find"/>
+                <TextView
+                    android:id="@+id/txt_find"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_bottom_find"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="2dp"
+                    android:text="发现"
+                    android:textColor="@color/actionbar_txtcolor_gray"
+                    android:textSize="10sp"/>
+            </RelativeLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_bottom_new"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="2dp"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/tv_bottom_new"
+                    style="@style/main_tab_bottom2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/tv_new_on"
+                    android:checked="false"/>
+                <TextView
+                    android:id="@+id/txt_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="2dp"
+                    android:text="0"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_bottom_message"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:id="@+id/ll_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/tv_bottom_message"
+                    style="@style/main_tab_bottom2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/tab_selector_message"
+                    android:checked="false"
+                    android:clickable="false"/>
+                <com.thinksns.sociax.thinksnsbase.activity.widget.BadgeView
+                    android:id="@+id/badgeMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_bottom_message"/>
+                <TextView
+                    android:id="@+id/txt_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_bottom_message"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="2dp"
+                    android:text="消息"
+                    android:textColor="@color/actionbar_txtcolor_gray"
+                    android:textSize="10sp"/>
+            </RelativeLayout>
+
+        </FrameLayout>
+
+            <FrameLayout
+            android:id="@+id/fl_bottom_my"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+                <RelativeLayout
+                android:id="@+id/ll_my"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:orientation="vertical">
+
+                    <RadioButton
+                    android:id="@+id/tv_bottom_my"
+                    style="@style/main_tab_bottom2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/tab_selector_my"
+                    android:checked="false"
+                    android:clickable="false"/>
+                    <com.thinksns.sociax.thinksnsbase.activity.widget.BadgeView
+                    android:id="@+id/badgeMy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_bottom_my"/>
+
+                    <TextView
+                    android:id="@+id/txt_my"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/tv_bottom_my"
+                    android:layout_marginTop="2dp"
+                    android:text="我的"
+                    android:textColor="@color/actionbar_txtcolor_gray"
+                    android:textSize="10sp"/>
+                    </RelativeLayout>
+
+                </FrameLayout>
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--评论框-->
+    <include
+            layout="@layout/send_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"/>
+
+</FrameLayout>

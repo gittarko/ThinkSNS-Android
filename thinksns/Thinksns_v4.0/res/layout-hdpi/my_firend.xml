@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.thinksns.sociax.thinksnsbase.activity.widget.LoadingView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/weibo_tool_layout" />
+
+    <com.thinksns.sociax.component.FollowList
+        android:id="@+id/follower_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/weibo_tool_layout" />
+
+    <com.thinksns.sociax.component.FollowList
+        android:id="@+id/following_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/weibo_tool_layout"
+        android:visibility="gone" />
+
+    <com.thinksns.sociax.component.FollowList
+        android:id="@+id/follow_each_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/weibo_tool_layout"
+        android:visibility="gone" />
+    
+    <LinearLayout
+        android:id="@+id/weibo_tool_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/firend_following"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/weibo_app_bar"
+            android:clickable="true"
+            android:drawablePadding="-5dp"
+            android:drawableTop="@drawable/weibo_app_following"
+            android:focusable="true"
+            android:gravity="bottom|center"
+            android:text="@string/follow" />
+        
+        <TextView
+            android:id="@+id/firend_follower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/weibo_app_bar"
+            android:clickable="true"
+            android:drawablePadding="-5dp"
+            android:drawableTop="@drawable/weibo_app_follower"
+            android:focusable="true"
+            android:gravity="bottom|center"
+            android:text="@string/followed" />
+
+        <TextView
+            android:id="@+id/firend_follow_each"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/weibo_app_bar"
+            android:clickable="true"
+            android:drawablePadding="-5dp"
+            android:drawableTop="@drawable/weibo_app_follow_each"
+            android:focusable="true"
+            android:gravity="bottom|center"
+            android:text="@string/follow_each" />
+    </LinearLayout>
+
+</RelativeLayout>

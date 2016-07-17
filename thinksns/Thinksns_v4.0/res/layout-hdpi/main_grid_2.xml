@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/style_default_bg_color"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/top_bar_bg" >
+
+            <TextView
+                android:id="@+id/grid_title_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="text" />
+
+            <ImageButton
+                android:id="@+id/grid_right_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/menu_setting_img" />
+
+        </RelativeLayout>
+
+        <GridView
+            android:id="@+id/gridview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="20dip"
+            android:gravity="center_horizontal"
+            android:scrollbars="none"
+            
+            android:numColumns="3"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:verticalSpacing="20dp"
+            android:layout_marginBottom="50dp"
+            >
+        </GridView>
+    </LinearLayout>
+
+    <SlidingDrawer
+        android:id="@+id/main_sliding"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:content="@+id/content"
+        android:handle="@id/system_notice_layout"
+        android:orientation="vertical" 
+        android:addStatesFromChildren="true" 
+       >
+
+        <LinearLayout
+            android:id="@id/system_notice_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip"
+            android:layout_marginTop="0.0dip"
+            android:background="@drawable/grid_bar_img"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center" >
+
+            <LinearLayout
+                android:id="@+id/notice_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@id/notice_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:duplicateParentState="true"
+                    android:src="@drawable/menu_message_img" />
+
+                <TextView
+                    android:id="@id/system_notice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.0"
+                    android:duplicateParentState="true"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/notice_center"
+                    android:textColor="@color/white"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@id/notice_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|right|center"
+                    android:background="@drawable/message_remind"
+                    android:layout_marginTop="3dip"
+                    android:layout_marginLeft="1dip"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="11.0sp" 
+                    android:visibility="invisible"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white"
+            android:orientation="vertical" 
+            android:clickable="true"
+            >
+			
+           <com.thinksns.sociax.component.MessageRemindList
+                android:id="@id/mess_remind_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" /> 
+            
+        </LinearLayout>
+    </SlidingDrawer>
+
+</FrameLayout>

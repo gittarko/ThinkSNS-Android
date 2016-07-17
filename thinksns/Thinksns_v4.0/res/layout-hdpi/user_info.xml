@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/weibo_content_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.thinksns.sociax.thinksnsbase.activity.widget.LoadingView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:orientation="vertical" >
+
+        <com.thinksns.sociax.component.UserWeiboList
+            android:id="@+id/user_weibo_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" >
+
+        <LinearLayout
+            android:id="@+id/info_util_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="bottom"
+            >
+
+            <TextView
+                android:id="@+id/at_he"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/weibo_app_bar"
+                android:clickable="true"
+                android:drawableTop="@drawable/weibo_app_atme"
+                android:gravity="center_horizontal"
+                android:text="@string/athe" />
+
+            <TextView
+                android:id="@+id/send_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/weibo_app_bar"
+                android:clickable="true"
+                android:drawableTop="@drawable/menu_message_img"
+                android:gravity="center_horizontal"
+                android:text="@string/send_chat" />
+
+            <TextView
+                android:id="@+id/add_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/weibo_app_bar"
+                android:clickable="true"
+                android:drawableTop="@drawable/menu_add_contact_img"
+                android:gravity="center_horizontal"
+                android:text="@string/collection"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/black_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/weibo_app_bar"
+                android:clickable="true"
+                android:drawableTop="@drawable/menu_black_img"
+                android:gravity="center_horizontal"
+                android:text="@string/blacklist"
+                android:visibility="gone" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

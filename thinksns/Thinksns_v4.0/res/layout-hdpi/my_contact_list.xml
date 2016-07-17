@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+     <com.thinksns.sociax.component.EditCancel
+        android:id="@+id/contact_edit_cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/searchbarColor" 
+        android:padding="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:cacheColorHint="@drawable/silver"
+            android:scrollbars="none" 
+            android:divider="@drawable/item_line"/>
+
+        <com.thinksns.sociax.component.LetterListBar
+            android:id="@+id/my_letter_list_view"
+            android:layout_width="25dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

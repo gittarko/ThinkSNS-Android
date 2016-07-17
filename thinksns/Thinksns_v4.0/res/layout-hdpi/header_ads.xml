@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+        <com.thinksns.sociax.t4.android.img.HackyViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.thinksns.sociax.t4.android.img.HackyViewPager>
+
+        <!--广告小圆点-->
+        <LinearLayout
+            android:id="@+id/ll_find_ads_dot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:orientation="horizontal" />
+
+        <!--网络错误提示-->
+        <com.thinksns.sociax.thinksnsbase.activity.widget.EmptyLayout
+            android:id="@+id/empty_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+        </com.thinksns.sociax.thinksnsbase.activity.widget.EmptyLayout>
+</RelativeLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="@dimen/dimen_size_10">
+
+    <FrameLayout
+        android:id="@+id/fl_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="top">
+        <com.thinksns.sociax.t4.android.widget.roundimageview.RoundedImageView
+            android:id="@+id/iv_weibo_user_head"
+            android:layout_width="@dimen/header_width_hight"
+            android:layout_height="@dimen/header_width_hight"
+            android:src="@drawable/default_user"
+            app:riv_corner_radius="30dip"
+            app:riv_oval="true"/>
+
+        <LinearLayout
+            android:id="@+id/ll_uname_adn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/fl_head"
+        android:layout_toLeftOf="@+id/fl_source_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_weibo_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:text="xxxx"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_size_12" />
+
+        <TextView
+            android:id="@+id/tv_weibo_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:text="content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_size_13"
+            android:visibility="visible"/>
+        <!--赞图标-->
+        <ImageView
+            android:id="@+id/iv_dig_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_favor_press"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_source_content"
+        android:layout_width="@dimen/img_middle"
+        android:layout_height="@dimen/img_middle"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:id="@+id/img_weibobg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_image_small" />
+
+        <TextView
+            android:id="@+id/tv_weibocontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@color/bg_ios"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:padding="3dp"
+            android:text=""
+            android:textColor="@color/bar"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/iv_comment_play"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/bofang"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</RelativeLayout>

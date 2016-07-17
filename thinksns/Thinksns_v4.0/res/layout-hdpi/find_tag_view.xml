@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingBottom="12dp"
+    android:paddingTop="2dp" >
+
+    <TextView
+        android:id="@+id/tag_one"
+        style="@style/tag_style"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+        android:id="@+id/tag_two"
+        style="@style/tag_style"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+        android:id="@+id/tag_three"
+        style="@style/tag_style"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+        android:id="@+id/tag_four"
+        style="@style/tag_style" />
+
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="8dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="8dp" >
+
+    <com.thinksns.sociax.t4.android.widget.roundimageview.RoundedImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/img_channel_icon"
+        android:layout_width="@dimen/dimen_size_40"
+        android:layout_height="@dimen/dimen_size_40"
+        android:layout_alignParentLeft="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_image_small"
+        app:riv_corner_radius="3dip" />
+
+    <!--关注按钮-->
+    <TextView
+        android:id="@+id/channel_follow"
+        android:layout_width="48dp"
+        android:layout_height="22dp"
+        android:background="@drawable/roundbackground_fav_true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:paddingBottom="3dp"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:paddingTop="3dp"
+        android:text="关注"
+        android:textSize="10sp"
+        android:textColor="@color/white"
+        android:visibility="visible" />
+    <TextView
+        android:id="@+id/tv_channel_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/img_channel_icon"
+        android:layout_toLeftOf="@id/channel_follow"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_channel_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_channel_name"
+        android:layout_toLeftOf="@id/channel_follow"
+        android:layout_below="@id/tv_channel_name"
+        android:layout_alignBottom="@id/img_channel_icon"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/channel_content_count"
+        android:textColor="@color/bar"
+        android:textSize="12sp" />
+
+
+</RelativeLayout>

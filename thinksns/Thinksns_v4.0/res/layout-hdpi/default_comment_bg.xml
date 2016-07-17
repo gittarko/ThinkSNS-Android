@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/default_bg"
+    android:id="@+id/default_comment_bg"
+    android:visibility="gone"
+    android:orientation="horizontal"
+    android:layout_height="match_parent">
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="6">
+
+        <ImageView
+            android:id="@+id/iv_default_bg"
+            android:layout_width="320dp"
+            android:layout_height="320dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/bg_default_message"
+            android:scaleType="centerInside"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"
+            android:layout_below="@id/iv_default_bg"
+            android:layout_marginTop="-10dp"
+            android:gravity="center"
+            android:text="你还没有收到任何消息，快去和大家互动吧"
+            android:textSize="@dimen/dimen_size_14"
+            android:textColor="@color/gray"/>
+    </RelativeLayout>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+</LinearLayout>

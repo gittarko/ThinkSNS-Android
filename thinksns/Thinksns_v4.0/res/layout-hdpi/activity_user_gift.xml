@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_ios" >
+
+    <RelativeLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <com.thinksns.sociax.thinksnsbase.activity.widget.LoadingView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible" />
+
+            <com.thinksns.sociax.t4.component.ListUserInfo
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="366dp"
+                android:layout_weight="1.82"
+                android:background="@color/white"
+                android:divider="@null"
+                android:listSelector="@android:color/transparent"
+                android:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

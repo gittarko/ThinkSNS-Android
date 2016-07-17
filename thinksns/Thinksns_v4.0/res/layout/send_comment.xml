@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_send_comment"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/ll_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_ios"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/img_face"
+                android:layout_width="@dimen/img_xsmall_ist"
+                android:layout_height="@dimen/img_xsmall_ist"
+                android:src="@drawable/face_bar"/>
+
+            <EditText
+                android:id="@+id/et_comment"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/roundbackground_white"
+                android:ems="10"
+                android:hint="@string/comment_hint_edit"
+                android:imeOptions="actionSend"
+                android:padding="5dp"
+                android:textColor="@color/ge_line"
+                android:textSize="14sp">
+            </EditText>
+
+            <Button
+                android:id="@+id/btn_send_comment"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:background="@drawable/roundbackground_blue_chat_item"
+                android:gravity="center"
+                android:text="@string/comment"
+                android:textColor="@color/white"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <com.thinksns.sociax.thinksnsbase.activity.widget.ListFaceView
+            android:id="@+id/face_view"
+            android:layout_below="@id/ll_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:tag="ture"
+            android:visibility="gone"/>
+</RelativeLayout>

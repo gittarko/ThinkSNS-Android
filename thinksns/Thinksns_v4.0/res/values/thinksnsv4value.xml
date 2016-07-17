@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--app所有页面顶部导航栏高度-->
+    <dimen name="title_height">49dp</dimen>
+    <!--导航栏背景色-->
+    <color name="titleBarBackground">@color/white</color>
+    <!--导航栏中间字体大小-->
+    <dimen name="titleBarTextSize">18sp</dimen>
+    <!--导航栏中间字体颜色-->
+    <color name="titleBarTextColor">@color/black</color>
+    <!--导航栏左/右图标距离屏幕左/右间距-->
+    <dimen name="titleBarMargin">15dp</dimen>
+    <!--如果导航栏左边是文字，对应的文字颜色-->
+    <color name="titleBarLeftTextColor">@color/blue</color>
+    <!--如果导航栏右边是文字，对应的文字颜色-->
+    <color name="titleBarRightTextColor">@color/blue</color>
+    <dimen name="titleBarDividerLineHeight">0.3dp</dimen>
+    <color name="titleBarDivideLineColor">@color/bg_listview_divider</color>
+    <!--选项卡一栏背景色-->
+    <color name="tab_background">@color/white</color>
+    <!--选项卡一栏高度-->
+    <dimen name="tab_height">40dp</dimen>
+    <!--选项卡文字颜色-->
+    <color name="tab_text_color">@color/black</color>
+    <!--选项卡文字颜色-->
+    <dimen name="tab_text_size">14sp</dimen>
+    <!--选项卡选中颜色-->
+    <color name="tab_selected_text_color">@color/blue</color>
+    <!--选项卡游标颜色-->
+    <color name="tab_indicator_color">@color/blue</color>
+    <!--选项卡游标高度-->
+    <dimen name="tab_indicator_height">@dimen/indicatorHeight</dimen>
+    <!--公共按钮高度-->
+    <dimen name="button_height">40dp</dimen>
+    <!--公共按钮背景颜色-->
+    <color name="button_background">@color/title_blue</color>
+    <!--按钮圆角大小-->
+    <dimen name="button_radius">4dp</dimen>
+    <!--按钮文字颜色-->
+    <color name="button_text_color">@color/white</color>
+    <!--页面背景色-->
+    <color name="page_background_color">@color/white</color>
+    <!--首页样式设置-->
+    <!--顶部页卡的游标高度-->
+    <dimen name="indicatorHeight">2dp</dimen>
+    <!--首页顶部分割线高度-->
+    <dimen name="homeBarDividerLineHeight">0.7dp</dimen>
+    <!--首页顶部分割线颜色-->
+    <color name="homeBarDividerLineColor">@color/bg_listview_divider</color>
+
+    <!--转发微博中的缩略图大小-->
+    <dimen name="transport_image_size">50dp</dimen>
+    <!--转发微博中的缩略图上下左右间距-->
+    <dimen name="transport_image_margin">7dp</dimen>
+    <!-- 字体大小 -->
+    <dimen name="title_leftandright_size">16sp</dimen>
+    <dimen name="title_center_size">20sp</dimen>
+    <dimen name="size_big">18sp</dimen>
+    <dimen name="size_middle">14sp</dimen>
+    <dimen name="size_middle2small">12sp</dimen>
+    <dimen name="size_middle3small">11sp</dimen>
+    <dimen name="size_small">12sp</dimen>
+    <dimen name="txt_size_title">18sp</dimen>
+
+    <!--频道模块样式设置-->
+
+    <!-- 任务中心字体 -->
+    <dimen name="txt_size_task_name">15sp</dimen>
+    <dimen name="txt_size_task_complete_state">12sp</dimen>
+    <dimen name="txt_size_task_detail">13sp</dimen>
+
+    <!-- 礼物中心字体 -->
+    <dimen name="txt_size_gift_name">15sp</dimen>
+    <dimen name="txt_size_gift_score">18sp</dimen>
+    <dimen name="txt_size_gift_detail">13sp</dimen>
+    <dimen name="txt_size_gift_activity_my_score">50sp</dimen>
+    <dimen name="txt_size_gift_activity_my_detail">14sp</dimen>
+    <dimen name="txt_size_gift_activity_my_exchange">17sp</dimen>
+    <dimen name="txt_size_gift_activity_my_score_list_score">35sp</dimen>
+    <dimen name="padding">12dp</dimen>
+    <dimen name="top_up_edit_height">45dp</dimen>
+    <dimen name="pick_exchange_num_height">35dp</dimen>
+    <dimen name="pick_exchange_num_xwidth">50dp</dimen>
+
+    <!-- 图片大小 -->
+
+    <dimen name="img_big_ist">100dp</dimen>
+    <dimen name="img_big">80dp</dimen>
+    <dimen name="img_les_big">70dp</dimen>
+    <dimen name="img_middle">60dp</dimen>
+    <dimen name="img_middle2small">50dp</dimen>
+    <dimen name="img_middle3small">45dp</dimen>
+    <dimen name="img_small">40dp</dimen>
+    <dimen name="img_small_ist">35dp</dimen>
+    <dimen name="img_ssmall_ist">30dp</dimen>
+    <dimen name="img_xsmall_ist">25dp</dimen>
+    <dimen name="img_xxsmall_ist">20dp</dimen>
+    <dimen name="trans_icon">150dp</dimen>
+    <!-- 间距 -->
+    <dimen name="title_margin_left">3dp</dimen>
+    <dimen name="title_margin_right">15dp</dimen>
+    <dimen name="ltitle_height">50dp</dimen>
+    <dimen name="xltitle_height">60dp</dimen>
+    <dimen name="xxltitle_height">45dp</dimen>
+    <dimen name="mtitle_height">40dp</dimen>
+    <dimen name="ftitle_height">35dp</dimen>
+    <dimen name="home_left_right_btn">23dp</dimen>
+    <dimen name="btn_height">30dp</dimen>
+    <dimen name="large_btn_height">40dp</dimen>
+    <dimen name="my_padding">8dp</dimen>
+    <dimen name="my_paddingTop">6dp</dimen>
+    <dimen name="my_paddingButtom">6dp</dimen>
+    <dimen name="my_paddingLeft">13dp</dimen>
+    <dimen name="standard_padding">8dip</dimen>
+    <dimen name="half_padding">4dip</dimen>
+    <dimen name="check_user">25dp</dimen>
+
+    <!-- 首页底部导航高度 -->
+    <dimen name="actionbar_height">45dp</dimen>
+
+    <!-- 消息页面周围间距 -->
+    <dimen name="dimen_msg_padding">10dp</dimen>
+    <!-- 消息页面Name字号 -->
+    <dimen name="dimen_msg_name">16sp</dimen>
+    <!-- 消息页面Title字号 -->
+    <dimen name="dimen_msg_title">15sp</dimen>
+    <!-- 消息页面Content字号 -->
+    <dimen name="dimen_msg_content">13sp</dimen>
+    <!-- 消息页面Time字号 -->
+    <dimen name="dimen_msg_time">12.5sp</dimen>
+    <!-- 消息页面红点大小 -->
+    <dimen name="dimen_msg_unread">17.5sp</dimen>
+    <!-- 消息页面红点大小 -->
+    <dimen name="dimen_msg_unread_txt">9sp</dimen>
+    <!-- 消息页面搜索好友背景 -->
+    <color name="color_msg_friends">#cac9cf</color>
+    <!-- 消息页面搜索好友高度 -->
+    <dimen name="dimen_msg_search_height">40dp</dimen>
+    <!-- 发现页面边距 -->
+    <dimen name="dimen_find_padding">10dp</dimen>
+    <!-- 好友页缺省文字颜色 -->
+    <!-- 好友页缺省文字大小 -->
+    <color name="color_friend_default">#8f9fa5</color>
+    <dimen name="dimen_friend_default1">22.5sp</dimen>
+    <dimen name="dimen_friend_default2">14sp</dimen>
+
+    <!-- 用户组图标 -->
+    <dimen name="weiba_detail_usergroup">6dp</dimen>
+    <dimen name="other_usergroup">5dp</dimen>
+    <dimen name="comment_usergroup">3dp</dimen>
+    <!-- 颜色 -->
+
+    <color name="guide_bg">#343840</color>
+    <color name="title_blue">#0096E5</color>
+    <color name="title_graybg">#848484</color>
+    <color name="title_black">#bb000000</color>
+    <color name="rg_background">#EAEAEA</color>
+    <color name="bg_popupwindow">#F9FAF9</color>
+    <color name="bg_popupwindow_cancel">#C9CAC9</color>
+    <color name="bg_chat_color">#F5F5F5</color>
+    <color name="bg_ios">#F3F3F3</color>
+    <color name="gary_bg_ios">#FFEEEEEF</color>
+    <color name="bg_weiba_follow">#252525</color>
+    <color name="chat_edit_bg">#f9f9f9</color>
+    <!-- 签到分割线颜色 -->
+    <color name="checkin_line">#dbcb9d</color>
+
+    <!-- 底部导航字体颜色 -->
+    <color name="actionbar_txtcolor_gray">#aaaaaa</color>
+    <color name="actionbar_txtcolor_blue">#0096e6</color>
+
+    <!-- 任务中心颜色 -->
+    <color name="bg_task_name">#4b5768</color>
+    <color name="bg_task_complete_state_blue_txt">#149ee7</color>
+    <color name="bg_task_complete_state_gray_txt">#b5b7b8</color>
+    <color name="bg_task_complete_state_progress">#fbbc6a</color>
+    <color name="bg_task_detail">#909399</color>
+    <color name="bg_task_not_complete">#afb1b2</color>
+
+    <!-- 礼物中心颜色 -->
+    <color name="bg_gift_name">#4a5668</color>
+    <color name="bg_gift_score">#f55145</color>
+    <color name="bg_gift_score_txt">#585858</color>
+    <color name="bg_gift_surplus">#828994</color>
+    <color name="bg_gift_exchange_rule">#606060</color>
+    <color name="bg_my_score_blue">#169fe8</color>
+    <color name="bg_transfer">#ffc37d</color>
+    <color name="bg_my_score_view">#1a74a3</color>
+    <color name="bg_my_score_deep_blue">#148fd0</color>
+    <color name="bg_my_score_source_score">#169fe8</color>
+
+    <!--网页进度条-->
+    <color name="bg_pb_under">#ffffff</color>
+    <color name="bg_pb_cover">#169fe8</color>
+    <color name="tabIndicatorColor">#169fe8</color>
+    <color name="tabtextcolor">#667086</color>
+
+    <!-- 字符串 -->
+    <string name="upload_false">上传失败</string>
+    <string name="download_false">下载失败</string>
+    <string name="upload_true">上传成功</string>
+    <string name="reg_checkvarify_success">验证成功</string>
+    <string name="reg_sendvarify_success">验证码已发送</string>
+    <string name="reg_re_phone_unvaild">非法的手机号</string>
+    <string name="pull_to_refresh">下拉刷新</string>
+    <string name="load_full">已加载全部</string>
+    <string name="no_data">暂无数据</string>
+    <string name="lastUpdateTime">最后刷新</string>
+    <string name="release_to_refresh">松开刷新</string>
+    <string name="tv_buttom_home">首页</string>
+    <string name="tv_buttom_find">发现</string>
+    <string name="tv_group_home">群组</string>
+    <string name="tv_buttom_message">消息</string>
+    <string name="tv_top_newest">最新</string>
+    <string name="tv_top_firends">好友</string>
+    <string name="tv_top_channel">频道</string>
+    <string name="tv_buttom_my">我</string>
+    <string name="tv_find_activity">活动</string>
+    <string name="tv_find_vote">投票</string>
+    <string name="tv_find_scan">扫一扫</string>
+    <string name="tv_find_gift">积分商城</string>
+    <string name="tv_find_medal">勋章馆</string>
+    <string name="tv_find_find">找人</string>
+    <string name="tv_find_top">风云榜</string>
+    <string name="tv_find_near">附近的人</string>
+    <string name="tv_find_group">群组</string>
+    <string name="tv_my_group">我的群组</string>
+    <string name="tv_mycollection">我的收藏</string>
+    <string name="tv_myshare">我的分享</string>
+    <string name="tv_myrecode">我的积分</string>
+    <string name="tv_myvedios">我的视频</string>
+    <string name="tv_mydraft">草稿箱</string>
+    <string name="tv_myfriends">我的好友</string>
+    <string name="tv_mytask">任务中心</string>
+    <string name="tv_digg">赞</string>
+    <string name="tv_at_me">提到我的</string>
+    <string name="tv_guanzhu">关注</string>
+    <string name="tv_gift_all">全部礼物</string>
+    <string name="tv_gift_my">收到的礼物</string>
+    <string name="tv_gift_shop">积分商城</string>
+    <string name="tv_gift_normal_exchange">兑换礼物</string>
+    <string name="tv_transfer_score">积分转账</string>
+    <string name="tv_gift_score_rule">积分规则</string>
+    <string name="tv_gift_score_detail">积分明细</string>
+    <string name="tv_information">资讯</string>
+    <string name="tv_gift_score_top_up">积分充值</string>
+    <string name="tv_gift_detail">礼物详情</string>
+    <string name="tv_gift_recevier">接收人</string>
+    <string name="tv_tuijian">推荐</string>
+    <string name="tv_manage_count">帐号管理</string>
+    <string name="tv_privacy_setting">隐私设置</string>
+    <string name="tv_black_count">黑名单</string>
+    <string name="tv_receive_new">接收新消息提醒</string>
+    <string name="tv_wifi_auto">WiFi网络下自动播放</string>
+    <string name="tv_clear_cache">清理缓存</string>
+    <string name="tv_clear_message">删除所有聊天记录</string>
+    <string name="tv_weiba">微吧</string>
+    <string name="hot">热门</string>
+    <string name="tv_myweiba">我的微吧</string>
+    <string name="tv_recharge">充值</string>
+    <string name="tv_count_mobile">手机号</string>
+    <string name="tv_count_sina">新浪微博</string>
+    <string name="tv_count_qq">QQ帐号</string>
+    <string name="tv_count_weichat">微信帐号</string>
+    <string name="tv_count_change">修改密码</string>
+    <string name="tv_privacy_sixin">私信设置</string>
+    <string name="tv_privacy_admit_all_sixin">允许所有人给我发私信</string>
+    <string name="tv_privacy_admit_follow_sixin">我关注的人才能给我发私信</string>
+    <string name="tv_privacy_comment">评论设置</string>
+    <string name="tv_privacy_admit_all_comment">允许所有人评论</string>
+    <string name="tv_privacy_admit_all_follow">我关注的人才能评论</string>
+    <string name="tv_privacy_space">空间设置</string>
+    <string name="tv_privacy_admit_space_all">允许所有人查看我的空间</string>
+    <string name="tv_privacy_admit_space_follow">我关注的人才能查看我的空间</string>
+    <string name="tv_find_nearby">附近</string>
+    <string name="tv_find_area">地区</string>
+    <string name="tv_find_tag">标签</string>
+    <string name="tv_find_aouth">认证</string>
+    <string name="tv_selete_firend">选择好友</string>
+    <string name="tv_selete_send">赠送</string>
+    <string name="tv_user_info_home">主页</string>
+    <string name="tv_user_info_album">相册</string>
+    <string name="tv_user_info_intro">简介</string>
+    <string name="tv_user_info_from">来自</string>
+    <string name="tv_user_info_weiwang">威望</string>
+    <string name="tv_user_info_xp">经验</string>
+    <string name="tv_user_info_meili">魅力</string>
+    <string name="tv_weibo_detail">分享详情</string>
+    <string name="tv_weibo_collect">收藏</string>
+    <string name="tv_weibo_digg">赞</string>
+    <string name="tv_weibo_all_comment">评论  %s</string>
+
+    <!-- id -->
+    <!-- drawables -->
+    <!-- styles -->
+    <style name="main_tab_bottom2">
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <!-- others -->
+    <style name="Animations" />
+
+    <!-- PopDownMenu -->
+    <style name="Animations.PopDownMenu" />
+
+    <style name="Animations.PopDownMenu.Center">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_top</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_bottom</item>
+    </style>
+
+    <style name="Animations.PopDownMenu.Left">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_topleft_to_bottomright</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_bottomright_to_topleft</item>
+    </style>
+
+    <style name="Animations.PopDownMenu.Right">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_topright_to_bottomleft</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_bottomleft_to_topright</item>
+    </style>
+
+    <style name="Animations.PopDownMenu.Reflect">
+        <item name="@android:windowEnterAnimation">@anim/pump_top</item>
+        <item name="@android:windowExitAnimation">@anim/disappear</item>
+    </style>
+
+    <!-- PopUpMenu -->
+    <style name="Animations.PopUpMenu" />
+
+    <style name="Animations.PopUpMenu.Center">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_bottom</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_top</item>
+    </style>
+
+    <style name="Animations.PopUpMenu.Left">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_bottomleft_to_topright</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_topright_to_bottomleft</item>
+    </style>
+
+    <style name="Animations.PopUpMenu.Right">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_bottomright_to_topleft</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_topleft_to_bottomright</item>
+    </style>
+
+    <style name="Animations.PopUpMenu.Reflect">
+        <item name="@android:windowEnterAnimation">@anim/pump_bottom</item>
+        <item name="@android:windowExitAnimation">@anim/disappear</item>
+    </style>
+
+    <style name="tablayoutIcon" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">15sp</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:width">5sp</item>
+    </style>
+
+    <dimen name="dimen_size_5">5dp</dimen>
+    <dimen name="dimen_size_6">10dp</dimen>
+    <dimen name="dimen_size_8">10dp</dimen>
+    <dimen name="dimen_size_10">10dp</dimen>
+    <dimen name="dimen_size_11">11dp</dimen>
+    <dimen name="dimen_size_12">12dp</dimen>
+    <dimen name="dimen_size_13">13dp</dimen>
+    <dimen name="dimen_size_14">14dp</dimen>
+    <dimen name="dimen_size_15">15dp</dimen>
+    <dimen name="dimen_size_16">16dp</dimen>
+    <dimen name="dimen_size_17">17dp</dimen>
+    <dimen name="dimen_size_18">18dp</dimen>
+    <dimen name="dimen_size_20">20dp</dimen>
+    <dimen name="dimen_size_22">22dp</dimen>
+    <dimen name="dimen_size_24">24dp</dimen>
+    <dimen name="dimen_size_50">50dp</dimen>
+
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <LinearLayout
+        android:id="@+id/ll_empty_follow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingBottom="40dp"
+        android:paddingTop="40dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开启你的微吧之路"
+            android:textColor="@color/gray"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/btn_add_weiba"
+            android:layout_width="260dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/roundbackground_blue_2_button"
+            android:text="全部微吧"
+            android:textColor="@android:color/white"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</LinearLayout>

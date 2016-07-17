@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/weibo_content_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.thinksns.sociax.t4.component.ScrollViewSociax
+        android:id="@+id/svSociax"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/ll_user_info_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_home8"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp" >
+
+                        <RelativeLayout
+                            android:layout_width="176dp"
+                            android:layout_height="match_parent" >
+
+                            <ImageView
+                                android:id="@+id/img_back"
+                                android:layout_width="@dimen/home_left_right_btn"
+                                android:layout_height="@dimen/home_left_right_btn"
+                                android:src="@drawable/tv_user_info_back" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" >
+
+                            <ImageView
+                                android:id="@+id/imageView2"
+                                android:layout_width="@dimen/home_left_right_btn"
+                                android:layout_height="@dimen/home_left_right_btn"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/tv_user_info_more" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp" >
+
+                        <LinearLayout
+                            android:id="@+id/iv_header"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center" >
+
+                            <ImageView
+                                android:id="@+id/iv_user_header"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/default_user" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_header"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/tv_user_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="name"
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+
+                            <ImageView
+                                android:id="@+id/im_sex"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/tv_user_info_man" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_follow_and_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal" >
+
+                        <ImageView
+                            android:id="@+id/button_follow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/tv_user_info_followded"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:visibility="visible" />
+
+                        <ImageView
+                            android:id="@+id/send_chat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/tv_user_info_message"
+                            android:text="@string/delfollow"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_change_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"
+                        android:visibility="gone" >
+
+                        <ImageView
+                            android:id="@+id/img_change_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/img_change_info"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_fragment_control"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <RadioGroup
+                        android:id="@+id/rg_userinfo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/ftitle_height"
+                        android:background="@color/rg_background"
+                        android:orientation="horizontal"
+                        android:visibility="visible" >
+
+                        <RelativeLayout
+                            android:id="@+id/rl_home"
+                            android:layout_width="match_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1" >
+
+                            <RadioButton
+                                android:id="@+id/rb_home"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                android:background="@drawable/rb_bg_gray_side"
+                                android:button="@null"
+                                android:checked="true"
+                                android:clickable="false"
+                                android:gravity="center"
+                                android:text="@string/tv_user_info_home"
+                                android:textColor="@color/title_blue" />
+
+                            <TextView
+                                android:id="@+id/tv_remind_home"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentTop="true"
+                                android:background="@drawable/message_remind"
+                                android:gravity="center"
+                                android:minEms="5"
+                                android:paddingLeft="1dp"
+                                android:paddingRight="1dp"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:visibility="gone" />
+
+                            <View
+                                android:id="@+id/ImageView01"
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="#cccccc"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_weibo"
+                            android:layout_width="match_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1" >
+
+                            <RadioButton
+                                android:id="@+id/rb_weibo"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                android:background="@drawable/rb_bg_gray_middle"
+                                android:button="@null"
+                                android:clickable="false"
+                                android:gravity="center"
+                                android:text="@string/weibo"
+                                android:textColor="@color/title_graybg" />
+
+                            <TextView
+                                android:id="@+id/tv_remind_weibo"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/message_remind"
+                                android:gravity="center"
+                                android:minEms="5"
+                                android:paddingLeft="1dp"
+                                android:paddingRight="1dp"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_album"
+                            android:layout_width="match_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1" >
+
+                            <RadioButton
+                                android:id="@+id/rb_album"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                android:background="@drawable/rb_bg_single_left_selector"
+                                android:button="@null"
+                                android:clickable="false"
+                                android:gravity="center"
+                                android:text="@string/tv_user_info_album"
+                                android:textColor="@color/title_graybg" />
+
+                            <TextView
+                                android:id="@+id/tv_remind_album"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/message_remind"
+                                android:gravity="center"
+                                android:minEms="5"
+                                android:paddingLeft="1dp"
+                                android:paddingRight="1dp"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_gift"
+                            android:layout_width="match_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1" >
+
+                            <RadioButton
+                                android:id="@+id/rb_gift"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                android:background="@drawable/rb_bg_gray_side"
+                                android:button="@null"
+                                android:clickable="false"
+                                android:gravity="center"
+                                android:text="@string/tv_find_gift"
+                                android:textColor="@color/title_graybg" />
+
+                            <TextView
+                                android:id="@+id/tv_remind_gift"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentTop="true"
+                                android:background="@drawable/message_remind"
+                                android:gravity="center"
+                                android:minEms="5"
+                                android:paddingLeft="1dp"
+                                android:paddingRight="1dp"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+                    </RadioGroup>
+                </LinearLayout>
+
+                <com.thinksns.sociax.t4.component.ViewPagerUnits
+                    android:id="@+id/vp_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.thinksns.sociax.t4.component.ScrollViewSociax>
+
+    <com.thinksns.sociax.thinksnsbase.activity.widget.LoadingView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</LinearLayout>

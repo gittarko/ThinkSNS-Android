@@ -1,0 +1,134 @@
+﻿<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/titleBarBackground">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/titleBarMargin"
+            android:paddingRight="@dimen/titleBarMargin"
+            android:src="@drawable/img_back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="微吧"
+            android:textSize="@dimen/titleBarTextSize"
+            android:textColor="@color/titleBarTextColor"
+            android:layout_centerInParent="true"
+            />
+
+        <ImageView
+            android:id="@+id/iv_weiba_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="@dimen/titleBarMargin"
+            android:paddingRight="@dimen/titleBarMargin"
+            android:src="@drawable/ic_weiba_search"/>
+            <ImageView
+                android:id="@+id/iv_weiba_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/iv_weiba_search"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10dp"
+                android:src="@drawable/ic_weiba_tip"/>
+
+            <TextView
+                android:id="@+id/bg_remind"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_toRightOf="@id/iv_weiba_msg"
+                android:layout_marginLeft="-5dp"
+                android:layout_alignTop="@id/iv_weiba_msg"
+                android:background="@drawable/message_count"
+                android:visibility="gone"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titleBarDividerLineHeight"
+            android:background="@color/titleBarDivideLineColor"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/tab_background">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="@color/titleBarDivideLineColor"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="1dp"/>
+
+        <RadioGroup
+            android:id="@+id/rg_weiba_title"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/rl_tuijian"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rb_tuijian"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/bottom_border_blue"
+                android:button="@null"
+                android:text="我加入的"
+                android:textColor="@color/title_blue"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rl_all"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rb_all"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:background="@null"
+                android:button="@null"
+                android:text="热帖推荐"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:checked="false"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp" />
+        </LinearLayout>
+    </RadioGroup>
+    </RelativeLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.thinksns.sociax.t4.component.SquareLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/iv_pic"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    </com.thinksns.sociax.t4.component.SquareLinearLayout>

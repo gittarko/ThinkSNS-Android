@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    android:id="@+id/tv_part_name"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="30dp"
+    android:background="@color/bg_ios"
+    android:gravity="center_vertical"
+    android:paddingBottom="3dp"
+    android:paddingLeft="10dp"
+    android:paddingTop="3dp"
+    android:singleLine="true"
+    android:text="推荐的"
+    android:textColor="@color/bar"/>

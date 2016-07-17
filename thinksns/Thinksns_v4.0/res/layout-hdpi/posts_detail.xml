@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+     android:background="@color/white">
+    
+     <com.thinksns.sociax.thinksnsbase.activity.widget.LoadingView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        />
+
+    <com.thinksns.sociax.component.CommentPostList
+        android:id="@+id/com_post_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:layout_above="@+id/weiba_post_util"
+        android:background="@color/white"
+       />
+    
+    <LinearLayout
+        android:id="@+id/weiba_post_util"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/weibo_app_bar_n"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true" >
+
+        <ImageView
+            android:id="@+id/im_fav_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/no_favorite" />
+
+        <EditText
+            android:id="@+id/et_comment_context"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="8dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/chat_edit_bg"
+            android:textSize="12sp"
+            android:maxLines="2"/>
+
+        <Button
+            android:id="@+id/btn_send_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/btn_height"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:clickable="true"
+            android:background="@drawable/menu_send_img" 
+            android:text="@string/comment"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            />
+
+    </LinearLayout>
+</RelativeLayout>

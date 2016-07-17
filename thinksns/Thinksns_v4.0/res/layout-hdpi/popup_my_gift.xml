@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#70000000">
+
+    <RadioGroup
+        android:id="@+id/ll_popup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="10dp">
+
+        <RadioButton
+            android:id="@+id/tv_send_gift"
+            style="@android:style/Theme.Holo.Dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@drawable/gift_btn_bg"
+            android:checked="true"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="收到的礼物"
+            android:textColor="@drawable/gift_btn_text_color" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="@color/bg_ios" />
+
+        <RadioButton
+            android:id="@+id/tv_received_gift"
+            style="@android:style/Theme.Holo.Dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@drawable/gift_btn_bg"
+            android:paddingBottom="10dp"
+            android:paddingLeft="25dp"
+            android:paddingTop="10dp"
+            android:text=" 送出的礼物"
+            android:textColor="@drawable/gift_btn_text_color" />
+
+    </RadioGroup>
+
+</RelativeLayout>

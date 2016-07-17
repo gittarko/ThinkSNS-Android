@@ -1,0 +1,116 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="#f5f5f5"
+        android:padding="5dp"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/et_search"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/et_search"
+            android:background="@null"
+            android:text="取消"
+            android:textColor="@color/title_blue"
+            android:textSize="16sp" />
+
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/btn_cancel"
+            android:background="@drawable/roundbackground_white"
+            android:drawableLeft="@drawable/weiba_ic_search"
+            android:drawablePadding="5dp"
+            android:hint="搜索"
+            android:imeOptions="actionSearch"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#ccc" />
+
+    <RadioGroup
+        android:id="@+id/rg_weiba_title"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/rl_search_weiba"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rb_search_weiba"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/bottom_border_blue"
+                android:button="@null"
+                android:text="找微吧"
+                android:textColor="@color/title_blue"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rl_search_tz"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rb_search_tz"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp"
+                android:background="@null"
+                android:button="@null"
+                android:text="搜帖子"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#ddd" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_ios"
+        android:visibility="visible" />
+</LinearLayout>

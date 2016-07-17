@@ -1,0 +1,167 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="#FFFFFF"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/tv_title_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:drawablePadding="5dp"
+            android:text="@string/tv_gift_shop"
+            android:textColor="@color/title_background"
+            android:textSize="18sp"
+            android:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/tv_title_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="#00000000"
+            android:src="@drawable/img_back"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/tv_title_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="我的礼物"
+             android:textColor="@color/title_blue"
+            android:layout_marginRight="@dimen/title_margin_right"
+            android:textSize="@dimen/title_leftandright_size"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/divider720" />
+
+    <RadioGroup
+        android:id="@+id/rg_weiba_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/ftitle_height"
+        android:layout_gravity="center"
+        android:background="@color/rg_background"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/rl_all"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1" >
+
+            <RadioButton
+                android:id="@+id/rb_all"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:button="@null"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="@string/tv_gift_all"
+                android:textColor="@color/title_blue" />
+
+            <TextView
+                android:id="@+id/tv_remind_all"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/message_remind"
+                android:gravity="center"
+                android:minEms="5"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/view_gift_title_all"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/title_blue"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#cccccc" />
+
+        <RelativeLayout
+            android:id="@+id/rl_my_gift"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1" >
+
+            <RadioButton
+                android:id="@+id/rb_my_gift"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:button="@null"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="@string/tv_gift_my"
+                android:textColor="@color/title_graybg" />
+
+            <View
+                android:id="@+id/view_gift_title_mygift"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/title_blue"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_remind_my_gift"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/message_remind"
+                android:gravity="center"
+                android:minEms="5"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RadioGroup>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_home"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_weight="7.05"
+        android:visibility="visible" >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

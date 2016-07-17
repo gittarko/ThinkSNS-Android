@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="group_item_height">40.0dp</dimen>
+    <dimen name="logo">30sp</dimen>
+    <dimen name="title">14sp</dimen>
+    <dimen name="userNameSize">15sp</dimen>
+    <!-- <dimen name="contentSize">13sp</dimen> -->
+    <dimen name="contentSize">14sp</dimen>
+    <dimen name="timeSize">9sp</dimen>
+    <dimen name="fromSize">9sp</dimen>
+    <dimen name="digNumSize">16sp</dimen>
+    <dimen name="commentNumSize">16sp</dimen>
+    <dimen name="commentSize">12sp</dimen>
+    <!-- 转发和评论数大小 -->
+    <dimen name="countSize">12sp</dimen>
+    <dimen name="fontSize">16sp</dimen>
+    <dimen name="smallFont">15sp</dimen>
+    <dimen name="tranFont">11sp</dimen>
+    <dimen name="messageTitle">10px</dimen>
+    <dimen name="useinfo_name">18sp</dimen>
+	
+    <!-- add by -->
+    <dimen name="person_page_bar_item_textsize">16sp</dimen>
+    <dimen name="face_item_view_height">5dp</dimen>
+    <dimen name="face_view_height">220.0dp</dimen>
+
+</resources>

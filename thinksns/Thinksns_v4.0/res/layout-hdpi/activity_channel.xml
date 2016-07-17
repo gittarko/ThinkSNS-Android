@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:psts="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <!-- 导航条 -->
+    <RelativeLayout
+        android:id="@+id/ll_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/homeBarDividerLineHeight"
+            android:background="@color/homeBarDividerLineColor"
+            android:layout_alignBottom="@+id/tabs"
+            android:layout_marginBottom="0.5dp"/>
+
+        <com.astuetz.PagerSlidingTabStrip
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            psts:pstsShouldExpand="false"
+            psts:pstsIndicatorColor="@color/title_blue"
+            psts:pstsDividerColor="@android:color/transparent"
+            psts:pstsUnderlineColor="@android:color/transparent"
+            psts:pstsIndicatorHeight="@dimen/indicatorHeight"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            />
+    </RelativeLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_home"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_weight="7.05"
+        android:visibility="visible">
+
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

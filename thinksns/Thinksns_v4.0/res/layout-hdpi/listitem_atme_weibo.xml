@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+
+    <FrameLayout
+        android:layout_width="@dimen/header_width_hight"
+        android:layout_height="@dimen/header_width_hight" >
+
+        <ImageView
+            android:id="@+id/iv_weibo_user_head"
+            android:layout_width="@dimen/header_width_hight"
+            android:layout_height="@dimen/header_width_hight"
+            android:src="@drawable/default_user" />
+
+        <LinearLayout
+            android:id="@+id/ll_uname_adn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:background="@color/white"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_user_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_weibo_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:text="name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/userNameSize" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_weibo_ctime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ctime"
+                        android:textColor="@color/font"
+                        android:textSize="@dimen/fromSize" />
+
+                    <TextView
+                        android:id="@+id/tv_weibo_from"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="from"
+                        android:textColor="@color/font"
+                        android:textSize="@dimen/timeSize" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_weibo_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/contentSize" />
+
+        <LinearLayout
+            android:id="@+id/ll_weibo_center_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@+id/rl_image"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/body_margin_top"
+                android:background="#E1E1E1"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/iv_weibo_image"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_image" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_image"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/body_margin_top"
+                android:orientation="vertical"
+                android:visibility="gone" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_media"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/body_margin_top"
+                android:background="@color/red"
+                android:layerType="none"
+                android:orientation="vertical"
+                android:visibility="gone" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_transport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/body_margin_left"
+                android:layout_marginRight="@dimen/body_margin_right"
+                android:layout_marginTop="@dimen/body_margin_top"
+                android:background="@drawable/reviewboxbg"
+                android:orientation="vertical"
+                android:visibility="gone" >
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rl_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/img_weibobg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_image_small"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:background="@color/comment_weibo"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="5dp" >
+
+                <!-- 这里又以前 padding5 变成10 -->
+
+                <TextView
+                    android:id="@+id/tv_weibocontent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="15dp"
+                    android:text="TextView"
+                    android:textColor="@color/bar"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_manage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/body_margin_right"
+            android:gravity="center_vertical" >
+
+            <LinearLayout
+                android:id="@+id/ll_digg_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/ll_comment_info"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="3dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="3dp" >
+
+                <ImageView
+                    android:id="@+id/iv_dig"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/ic_favor_normal" />
+
+                <TextView
+                    android:id="@+id/tv_dig_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/dig"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_comment_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/img_more"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="3dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="3dp" >
+
+                <ImageView
+                    android:id="@+id/iv_comment"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/weibo_comment_selector" />
+
+                <TextView
+                    android:id="@+id/tv_comment_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="1dp"
+                    android:text="0"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_more"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="3dp"
+                android:gravity="center_vertical"
+                android:src="@drawable/weibo_more_selector" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

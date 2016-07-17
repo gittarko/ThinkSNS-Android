@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_ios"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/white"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_title_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:drawablePadding="5dp"
+            android:text="@string/tv_myrecode"
+            android:textColor="@color/title_background"
+            android:textSize="@dimen/txt_size_title"
+            android:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/tv_title_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/img_back" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/weibo_app_bar_text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_my_score_blue"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_score_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="10dp"
+            android:text="积分规则"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_size_gift_activity_my_detail" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp">
+
+            <TextView
+                android:id="@+id/tv_my_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_gift_activity_my_score" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_my_score"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/tv_my_score"
+                android:text="积分"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_gift_activity_my_detail" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="25dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="积分可以兑换礼物，赶紧积攒吧~"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_gift_activity_my_detail" />
+
+            <Button
+                android:id="@+id/btn_exchange_now"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/round_corner_et_transpant_white"
+                android:text="去兑换"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_gift_activity_my_detail" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_my_score_deep_blue"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_top_up"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="@dimen/img_small_ist"
+                    android:layout_height="@dimen/img_small_ist"
+                    android:src="@drawable/ic_my_score_exchange" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="充值"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_size_gift_activity_my_exchange" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/bg_my_score_view" />
+
+            <LinearLayout
+                android:id="@+id/ll_transfer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="@dimen/img_small_ist"
+                    android:layout_height="@dimen/img_small_ist"
+                    android:src="@drawable/ic_my_score_transfer" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="转账"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_size_gift_activity_my_exchange" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/bg_listview_divider" />
+
+    <RelativeLayout
+        android:id="@+id/rl_score_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="积分明细"
+            android:textColor="@color/bg_gift_exchange_rule"
+            android:textSize="@dimen/txt_size_gift_name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="更多"
+            android:textColor="@color/bg_task_detail"
+            android:textSize="@dimen/txt_size_gift_name" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/bg_listview_divider" />
+
+    <com.thinksns.sociax.t4.component.ListScore
+        android:id="@+id/lv_my_score_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/bg_listview_divider"
+        android:dividerHeight="0.5dp"
+        android:scrollbars="@null" />
+
+</LinearLayout>

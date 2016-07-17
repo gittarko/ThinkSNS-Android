@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp">
+
+    <com.thinksns.sociax.t4.android.widget.roundimageview.RoundedImageView
+        android:id="@+id/iv_weibo_user_head"
+        android:layout_width="@dimen/header_width_hight"
+        android:layout_height="@dimen/header_width_hight"
+        android:layout_marginRight="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_user"
+        android:visibility="visible"
+        app:riv_corner_radius="30dip"
+        app:riv_oval="true" />
+
+    <ViewStub
+        android:id="@+id/stub_uname_adn"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_alignBottom="@id/iv_weibo_user_head"
+        android:layout_alignRight="@id/iv_weibo_user_head"
+        android:layout_gravity="bottom|right"
+        android:layout="@layout/stub_user_group" />
+
+    <RelativeLayout
+        android:id="@+id/rl_user_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv_weibo_user_head">
+        <TextView
+            android:id="@+id/tv_weibo_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            tools:text="xxx"
+            android:textColor="#333333"
+            android:textSize="@dimen/dimen_size_14" />
+
+        <TextView
+            android:id="@+id/tv_weibo_ctime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_weibo_user_name"
+            android:layout_below="@id/tv_weibo_user_name"
+            android:layout_marginTop="2dp"
+            tools:text="今天 18:56"
+            android:textColor="@color/font"
+            android:textSize="@dimen/fromSize" />
+
+        <TextView
+            android:id="@+id/tv_weibo_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tv_weibo_ctime"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_weibo_ctime"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="来自 --"
+            android:textColor="@color/font"
+            android:textSize="@dimen/fromSize" />
+        <!--关注-->
+        <ViewStub
+            android:id="@+id/stub_add_follow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout="@layout/stub_add_follow" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/rl_user_info"
+        android:layout_below="@id/rl_user_info"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_from_weibo_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <!--微博内容-->
+            <TextView
+                android:id="@+id/tv_weibo_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textColor="@color/black"
+                android:lineSpacingExtra="2dp"
+                android:textSize="@dimen/contentSize"
+                tools:text="Content" />
+            <!-- 自己发微博的时的图片显示界面 -->
+            <ViewStub
+                android:id="@+id/stub_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout="@layout/stub_image"/>
+
+            <ViewStub
+                android:id="@+id/stub_image_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout="@layout/stub_image_group" />
+
+            <ViewStub
+                android:id="@+id/stub_file"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout="@layout/stub_file" />
+            <!--视频-->
+            <ViewStub
+                android:id="@+id/stub_media"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout="@layout/stub_media" />
+            <!-- 转发原微博线性布局 -->
+            <ViewStub
+                android:id="@+id/stub_transport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout="@layout/viewstub_transport_weibo"/>
+            <!-- 转发原微博线性布局结束 -->
+            <!--&lt;!&ndash;转发微吧的微博-->
+            <ViewStub
+                android:id="@+id/stub_weiba_transport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout="@layout/viewstub_transport_weiba"/>
+        </LinearLayout>
+
+        <!-- 转发微吧界面 -->
+        <ViewStub
+            android:id="@+id/stub_weiba"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout="@layout/stub_weiba"/>
+    </LinearLayout>
+</RelativeLayout>

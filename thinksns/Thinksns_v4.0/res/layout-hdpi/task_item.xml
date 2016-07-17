@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/task_item_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/task_item_bg" >
+
+    <TextView
+        android:id="@+id/img_task_has_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/has_desc"
+        android:gravity="center"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/img_task_is_do"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="2dp"
+        android:src="@drawable/un_do_task_n" />
+
+    <ImageView
+        android:id="@+id/img_task_is_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/img_task_is_do"
+        android:src="@drawable/un_star" 
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"/>
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/img_task_is_star"
+        android:orientation="vertical">
+         <TextView
+        android:id="@+id/task_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/img_task_is_star"
+        android:text="text"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+         <TextView
+        android:id="@+id/task_time_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/img_task_is_star"
+        android:text="text"
+        android:textColor="@color/red"
+        android:textSize="16sp"
+        android:visibility="gone" />
+        
+    </LinearLayout>
+
+   
+
+</RelativeLayout>

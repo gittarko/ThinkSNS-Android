@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/task_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/top_bar_bg" >
+
+            <TextView
+                android:id="@+id/taks_title_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="text"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:id="@+id/task_right_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/menu_setting_img" />
+
+            <ImageButton
+                android:id="@+id/task_left_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/menu_back_img" />
+
+            <ImageButton
+                android:id="@+id/task_other_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/task_left_img"
+                android:background="@drawable/menu_setting_img"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/main_list_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <com.thinksns.sociax.thinksnsbase.activity.widget.LoadingView
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.0" />
+
+            <EditText
+                android:id="@+id/task_cate_eidt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/task_cate_bg"
+                android:hint="@string/task_cate_add_note"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:singleLine="true"
+                android:visibility="gone" 
+                android:imeOptions="actionDone"/>
+
+            <com.thinksns.sociax.component.TaskCategoryList
+                android:id="@+id/task_cate_list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:padding="8dp"
+                android:scrollbars="none" />
+        </LinearLayout>
+
+        <ScrollView
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             android:background="@color/white"
+            >
+			<LinearLayout
+                android:id="@+id/main_more_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" 
+                >
+
+                <TextView
+                    android:id="@+id/all_task_txt"
+                    style="@style/task_more"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/task_cate_bg"
+                    android:drawableLeft="@drawable/all_task_left"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/arrow"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dp"
+                    android:text="@string/all_task" 
+                    android:visibility="gone"/>
+
+                <TextView
+                     android:id="@+id/over_task_txt"
+                    style="@style/task_more"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/task_cate_bg"
+                    android:drawableLeft="@drawable/over_task_left"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/arrow"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dp"
+                    android:text="@string/over_task" />
+
+                <TextView
+                     android:id="@+id/tom_task_txt"
+                    style="@style/task_more"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/task_cate_bg"
+                    android:drawableLeft="@drawable/tom_task_left"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/arrow"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dp"
+                    android:text="@string/tom_task" />
+
+                <TextView
+                     android:id="@+id/today_a_task_txt"
+                    style="@style/task_more"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/task_cate_bg"
+                    android:drawableLeft="@drawable/today_a_left"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/arrow"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dp"
+                    android:text="@string/today_a_task" />
+
+                <TextView
+                     android:id="@+id/noday_task_txt"
+                    style="@style/task_more"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/task_cate_bg"
+                    android:drawableLeft="@drawable/noday_task_left"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/arrow"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dp"
+                    android:text="@string/no_day_task" />
+
+                <TextView
+                     android:id="@+id/all_w_task_txt"
+                    style="@style/task_more"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/task_cate_bg"
+                    android:drawableLeft="@drawable/all_task_w_left"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/arrow"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dp"
+                    />
+              <!--   android:text="@string/all_w_task"  -->
+
+                <TextView
+                     android:id="@+id/to_task_txt"
+                    style="@style/task_more"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/task_cate_bg"
+                    android:drawableLeft="@drawable/to_task_left"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/arrow"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dp"
+                    android:text="@string/to_task" />
+
+                <TextView
+                     android:id="@+id/from_task_txt"
+                    style="@style/task_more"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/task_cate_bg"
+                    android:drawableLeft="@drawable/form_task_left"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/arrow"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dp"
+                    android:text="@string/from_task" />
+                
+                <TextView
+                    android:id="@+id/search_task_txt"
+                    style="@style/task_more"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/task_cate_bg"
+                    android:drawableLeft="@drawable/search_task_left"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/arrow"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dp"
+                    android:text="@string/search_task" />
+           
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/info_util_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="bottom" >
+
+        <TextView
+            android:id="@+id/text_cate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/weibo_app_bar"
+            android:clickable="true"
+            android:drawableTop="@drawable/img_task_cate"
+            android:gravity="center_horizontal"
+            android:text="@string/category" />
+
+        <TextView
+            android:id="@+id/text_today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/weibo_app_bar"
+            android:clickable="true"
+            android:drawableTop="@drawable/img_task_today"
+            android:gravity="center_horizontal"
+            android:text="@string/today" />
+
+        <TextView
+            android:id="@+id/text_add_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/weibo_app_bar"
+            android:clickable="true"
+            android:drawableTop="@drawable/img_task_star"
+            android:gravity="center_horizontal"
+            android:text="@string/add_star" />
+
+        <TextView
+            android:id="@+id/text_overdue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/weibo_app_bar"
+            android:clickable="true"
+            android:drawableTop="@drawable/img_task_over"
+            android:gravity="center_horizontal"
+            android:text="@string/overdue" />
+
+        <TextView
+            android:id="@+id/text_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/weibo_app_bar"
+            android:clickable="true"
+            android:drawableTop="@drawable/weibo_app_more"
+            android:gravity="center_horizontal"
+            android:text="@string/more" />
+    </LinearLayout>
+
+</LinearLayout>

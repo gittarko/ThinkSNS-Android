@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="getverifycode_name">获取验证码</string>
+    <string name="weibosdk_demo_share_text_title">分享文字</string>
+    <string name="weibosdk_demo_share_image_title">分享图片</string>
+    <string name="weibosdk_demo_share_webpage_title">分享网页</string>
+    <string name="weibosdk_demo_share_music_title">分享音乐</string>
+    <string name="weibosdk_demo_share_video_title">分享视频</string>
+    <string name="weibosdk_demo_share_voice_title">分享声音</string>
+
+    <!-- 分享所用的测试数据 -->
+    <string name="weibosdk_demo_share_webpage_desc">网页描述：XXX</string>
+    <string name="weibosdk_demo_share_music_desc">音乐描述：XXX</string>
+    <string name="weibosdk_demo_share_video_desc">视频描述：XXX</string>
+    <string name="weibosdk_demo_share_voice_desc">声音描述：XXX</string>
+    <string name="weibosdk_demo_app_url">https://github.com/mobileresearch/weibo_android_sdk/blob/master/WeiboSDKDemo.apk</string>
+    <string name="weibosdk_demo_test_webpage_url">http://news.sina.com.cn/c/2013-10-22/021928494669.shtml</string>
+    <string name="weibosdk_demo_test_music_url">http://music.sina.com.cn/yueku/i/2850305.html</string>
+    <string name="weibosdk_demo_test_video_url">http://video.sina.com.cn/p/sports/cba/v/2013-10-22/144463050817.html</string>
+    <!-- NOTE: Voice 的 URL 与 Music 一样 -->
+    <string name="weibosdk_demo_test_voice_url">http://music.sina.com.cn/yueku/i/2850305.html</string>
+
+    <!-- 第三方分享拼接3G版微博地址 -->
+    <string name="w3g_address_of_shareSDK_weibo">/ts4/index.php?app=w3g&amp;mod=Index&amp;act=detail&amp;weibo_id=</string>
+    <!-- 第三方分享拼接3G版帖子地址 -->
+    <string name="w3g_address_of_shareSDK_post">/ts4/index.php?app=w3g&amp;mod=Index&amp;act=detail&amp;post_id=</string>
+
+    <!--分享二维码拼接地址-->
+    <string name="w3g_address_of_share_erweima">/ts4/index.php?app=w3g&amp;mod=Index&amp;act=weibo&amp;uid=</string>
+
+    <string name="dig">%s</string>
+    <string name="comment_hint">我也说一句...</string>
+    <string name="comment_hint_edit">请输入评论...</string>
+    <string name="comment">评论</string>
+    <string name="transpond">转发</string>
+    <string name="collection">收藏</string>
+    <string name="delete">删除</string>
+    <string name="denounce">举报</string>
+    <string name="done">完成</string>
+    <string name="weibo_share">微博分享</string>
+    <string name="pengyouquan_share">朋友圈分享</string>
+    <string name="weixin_share">微信分享</string>
+    <string name="qq_share">QQ</string>
+    <!--  -->
+    <string name="new_user_link">注册新帐号</string>
+    <string name="refreshing">更新中...</string>
+    <string name="please_down">下拉可以刷新</string>
+    <string name="please_up">松开可以刷新</string>
+    <string name="last_refresh">最后更新于</string>
+    <string name="weibo_content">微博正文</string>
+    <string name="send_not_content">说点什么吧...</string>
+    <string name="comment_checkbox">同时发一条新的分享</string>
+    <string name="transpond_checkbox">同时评论该作者</string>
+    <string name="publish">发布</string>
+    <string name="please_wait">请稍候...</string>
+    <string name="loading_more">加载中...</string>
+    <string name="comment_list">评论列表</string>
+    <string name="follow">关注</string>
+    <string name="follow_each">互相关注</string>
+    <string name="addfollow">加关注</string>
+    <string name="delfollow">取消关注</string>
+    <string name="followed">粉丝</string>
+    <string name="weibo">分享</string>
+    <string name="share">分享</string>
+    <string name="atme">\@我</string>
+    <string name="athe">TA</string>
+    <string name="send_chat">聊天</string>
+    <string name="blacklist">加入黑名单</string>
+    <string name="unlockblack">解除黑名单</string>
+    <string name="add_contact">添加到通讯录</string>
+    <string name="recent">联系人</string>
+    <string name="chat_title">对话</string>
+    <string name="edit">上传头像</string>
+    <string name="edit_info">编辑个人资料</string>
+    <string name="contact_title">通讯录</string>
+    <string name="add_local_contact">添加至联系人</string>
+    <string name="app_sets">应用管理</string>
+    <string name="app_install">应用已安装</string>
+    <string name="app_unstall">应用已卸载</string>
+    <string name="unstall_error">卸载失败</string>
+    <string name="install_error">安装失败</string>
+    <string name="word_limit">输入的字数超过限制</string>
+    <string name="add_contact_list">收藏联系人</string>
+    <string name="del_contact_list"> 取消收藏 </string>
+    <string name="my_contact_list">我的联系人</string>
+    <string name="info">资料</string>
+    <string name="deinfo">的主页</string>
+    <string name="reply">回复</string>
+    <string name="message_detail">短消息详情</string>
+    <string name="home">首页</string>
+    <string name="news">信息</string>
+    <string name="search">搜索</string>
+    <string name="more">更多</string>
+    <string name="sendMessage">发送</string>
+    <string name="imageshow">图片浏览</string>
+    <string name="imagesave">保存</string>
+    <string name="refresh">刷新</string>
+    <string name="re_load">加载中，请勿重复点击</string>
+    <string name="private_letter">聊天</string>
+    <string name="logine">登录</string>
+    <string name="register">注册</string>
+    <string name="my_sina_weibo">新浪</string>
+    <string name="site_change">切换站点</string>
+    <string name="refresh_success">刷新成功</string>
+    <string name="refresh_error">暂无更多信息</string>
+    <string name="search_weibo">搜分享</string>
+    <string name="search_user">搜用户</string>
+    <string name="search_key">搜索</string>
+    <string name="password">密码</string>
+    <string name="email">邮箱</string>
+    <string name="account">帐户</string>
+    <string name="send_email">邮件</string>
+    <string name="call">电话</string>
+    <string name="demo_name">张三</string>
+    <string name="no_remind">没有新的提醒</string>
+    <string name="category">分类</string>
+    <string name="today">今天</string>
+    <string name="add_star">加星标</string>
+    <string name="overdue">逾期</string>
+    <string name="tast_cate_name">任务分类列表</string>
+    <string name="input_text_topic">\#请插入话题#</string>
+    <string name="input_text_suggest">\#Android建议反馈#</string>
+    <string name="input_text_at">\@请输入昵称</string>
+    <string name="posts_creat">发布帖子</string>
+    <string name="posts_title_hint">标题 （必填）</string>
+    <string name="posts_content_hint">请输入内容（必填）</string>
+    <string name="search_weiba">搜微吧</string>
+    <string name="search_post">搜帖子</string>
+    <string name="weiba_tit_follow">我关注的</string>
+    <string name="weiba_tit_post">我发表的</string>
+    <string name="weiba_tit_comment">我评论的</string>
+    <string name="weiba_tit_fiv">我收藏的</string>
+    <string name="weiba_posts_detail">帖子详情</string>
+    <string name="weiba_com_sf">沙发</string>
+    <string name="weiba_com_bd">板凳</string>
+    <string name="weiba_com_floor">楼</string>
+    <string name="weiba_post_fav">收藏成功</string>
+    <string name="weiba_post_unfav">取消收藏</string>
+    <string name="weiba_com_post">回复帖子</string>
+    <string name="weiba_replay_com">回复评论</string>
+    <string name="weiba_post_press"> 您需要关注此微吧才能发帖，确认关注吗？</string>
+    <string name="weiba_action_fail"> 操作失败，请重试 </string>
+    <string name="net_fail">网络未连接，请检查网络设置</string>
+    <string name="font_size">字体大小</string>
+    <string name="clear_cache">清除缓存</string>
+    <string name="clear_cache_info">包括用户信息、微博信息和图片</string>
+    <string name="clear_cache_alert">确定清除缓存吗？</string>
+    <string name="clear_cache_alert_title">提示</string>
+    <string name="pic_open_down">2G/3G网络下载图片</string>
+    <string name="pic_down_off">关闭图片下载，分享列表无图模式</string>
+    <string name="pic_down_on">开启图片下载</string>
+    <string name="pic_down_info">当前不再WIFI网络下，是否关闭图片下载，节省流量？</string>
+    <string name="pic_down_close_info">您现2G/3G网络下，已关闭图片下载，时候显示图片</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="photo">照片</string>
+    <string name="photo_2">墙</string>
+    <string name="grid_title">Sociax</string>
+    <string name="friendnews">微博</string>
+    <string name="mysmail">短邮</string>
+    <string name="contact">公司通讯录</string>
+    <string name="myinfo">我的主页</string>
+    <string name="user_info_tit">个人主页</string>
+    <string name="user_info_xx">详细</string>
+    <string name="user_info_zl">资料</string>
+    <string name="appcenter">应用管理</string>
+    <string name="myDigg">博客</string>
+    <string name="myfile">文档</string>
+    <string name="mytask">任务</string>
+    <string name="chat">聊天</string>
+    <string name="find_firend">找人</string>
+    <string name="myfirend">我的好友</string>
+    <string name="my_following">我的关注</string>
+    <string name="my_follower">我的粉丝</string>
+    <string name="channel">频道</string>
+    <string name="information">资讯</string>
+    <string name="topic">话题</string>
+    <string name="weiba">微吧</string>
+    <string name="notice_center">消息通知</string>
+    <string name="chang_site">选择站点</string>
+    <string name="about">关于我们</string>
+    <string name="app_set_settings">系统设置</string>
+    <string name="app_set_modify">资料修改</string>
+    <string name="app_set_feedback">意见反馈</string>
+    <string name="app_set_update">软件更新</string>
+    <string name="app_set_logout">注销登录</string>
+    <string name="setting_title_generic_else">其他</string>
+    <string name="feedback_intro">欢迎提出宝贵意见</string>
+    <string name="upload_head">上传头像</string>
+    <string name="see_more">展开更多</string>
+    <string name="see_less">收起</string>
+    <string name="input_key">请输入关键字</string>
+    <string name="sys_notify">系统通知</string>
+    <string name="all_action">我的关注</string>
+    <string name="setting">设置</string>
+    <string name="cancel">取消</string>
+    <string name="itemmenu_delete_mDigg">删除分享</string>
+    <string name="weibo_more_my_followed">我的粉丝</string>
+    <string name="weibo_more_my_follower">我的关注</string>
+    <string name="weibo_more_my_weibo">我发布的</string>
+    <string name="weibo_more_my_commend">我评论的</string>
+    <string name="see_all">查看更多</string>
+    <string name="sex">性别：</string>
+    <string name="male">男</string>
+    <string name="female">女</string>
+    <string name="task_meun_tilte">列表选项</string>
+    <string name="task_tilte">任务选项</string>
+    <string name="task_cate_meun_share">分享</string>
+    <string name="task_cate_meun_edit">编辑</string>
+    <string name="task_cate_meun_del">删除</string>
+    <string name="task_cate_add_note">添加一个分类列表</string>
+    <string name="task_add_note">添加一个任务</string>
+    <string name="task_add_email">添加电子邮件</string>
+    <string name="task_add_email_contact">从联系人中选择</string>
+    <string name="task_cate_edit">编辑分类列表名称</string>
+    <string name="task_desc_edit">编辑任务描述</string>
+    <string name="list_share_hint">编辑分类列表名称</string>
+    <string name="task_edit">编辑任务</string>
+    <string name="task_del">删除任务</string>
+    <string name="task_name">任务名称</string>
+    <string name="task_detail">任务详情</string>
+    <string name="task_contact">我的联系人</string>
+    <string name="task_contact_add">添加</string>
+    <string name="task_has_c_mail">选择联系人</string>
+    <string name="task_has_s_mail">已分享联系人</string>
+    <string name="task_to_mail">指派参与人</string>
+    <string name="task_s_del">完全取消共享列表</string>
+    <string name="task_pleas_add_c">请添加联系人</string>
+    <string name="task_d_text">详细内容</string>
+    <string name="task_d_deanlin">截至时间</string>
+    <string name="task_d_join">参与人</string>
+    <string name="task_d_cate">所属分类</string>
+    <string name="task_d_text_n">无备注</string>
+    <string name="task_d_deanlin_n">无时间</string>
+    <string name="task_d_join_n">无参与人</string>
+    <string name="ok">确定</string>
+    <string name="all_task">全部</string>
+    <string name="over_task">已完成</string>
+    <string name="tom_task">明日</string>
+    <string name="today_a_task">日后</string>
+    <string name="no_day_task">无日期</string>
+    <string name="all_w_task">全部待办</string>
+    <string name="to_task">我指派的</string>
+    <string name="from_task">指派给我的</string>
+    <string name="search_task">搜索任务</string>
+    <string name="post">帖子</string>
+    <string name="mine">我的</string>
+    <string name="post_list">帖子列表</string>
+    <string name="chat_new">发私信</string>
+    <string name="topic_title">推荐话题</string>
+    <string name="link_text">查看更多 &#160; </string>
+    <string name="weibo_del_msg">内容已被删除</string>
+
+    <!-- alert message -->
+    <string name="search_alert">请输入内容</string>
+    <string name="email_alert">请输正确的emial地址</string>
+    <string name="post_t_alert">请输入标题</string>
+    <string name="post_c_alert">请输入内容</string>
+    <string name="comment_c_alert">我也说一句...</string>
+    <string name="comment_c_success">评论成功</string>
+    <string name="comment_c_fail">评论失败</string>
+    <string name="weiba_follow_fail">关注失败</string>
+
+    <!-- support text -->
+    <string name="hot_supp_tit">热门问题</string>
+    <string name="hot_supp_cate">分类</string>
+    <string name="supp_comm_lb">我来评论</string>
+    <string name="supp_ques_detail">问题详情</string>
+    <string name="setting_title_remark">显示备注信息</string>
+    <string name="setting_summary_remark">显示对关注用户设置的备注信息</string>
+    <string name="setting_title_auto_remind">自动提醒</string>
+    <string name="setting_summary_off_auto_remind">关闭自动提醒</string>
+    <string name="setting_summary_on_auto_remind">启用自动提醒</string>
+    <string name="setting_title_auto_remind_setting">自动提醒设置</string>
+    <string name="setting_summary_off_vibrator">关闭震动提醒</string>
+    <string name="setting_summary_on_vibrator">启用震动提醒</string>
+    <string name="setting_summary_off_audio">关闭铃声提醒</string>
+    <string name="setting_summary_on_audio">启用铃声提醒</string>
+    <string name="setting_title_audio">铃声提醒</string>
+    <string name="setting_title_generic_setting">通用设置</string>
+    <string name="setting_bind_uc">绑定UC浏览器</string>
+    <string name="setting_bind_uc_desc">默认使用UC浏览器打开链接</string>
+    <string name="pref_setting_notify">提醒设置</string>
+    <string name="pref_setting_notify_summary">可定制项包括:微博、私信、@我、评论</string>
+    <string name="pref_setting_weibo">微博提醒</string>
+    <string name="pref_setting_at">\@我提醒</string>
+    <string name="pref_setting_comment">评论提醒</string>
+    <string name="pref_setting_message">私信提醒</string>
+    <string name="pref_setting_fans">新粉丝提醒</string>
+    <string name="setting_autocheck">自动检测</string>
+    <string name="setting_autocheck_desc">自动检测新微博、评论和私信</string>
+    <string name="setting_vibrator">震动提醒</string>
+    <string name="setting_vibrator_desc">检测到新消息时，震动提醒</string>
+    <string name="setting_interval">检测间隔</string>
+    <string name="setting_interval_desc">自动检测消息的间隔时间，间隔长省流量</string>
+    <string name="setting_autoload_more">自动加载“更多”</string>
+    <string name="setting_autoload_more_desc">到达列表底部时自动加载“更多”微博</string>
+    <string name="no_new_version">没有新版本</string>
+    <string name="area_two">开关设置</string>
+    <string name="area_three">系统设置</string>
+    <string name="xp_apps_title">应用推荐</string>
+    <string name="find_near">附近的人</string>
+    <string name="find_tag">按标签</string>
+    <string name="find_area">按地区</string>
+    <string name="find_approve">认证用户</string>
+    <string name="find_official">官方推荐</string>
+    <string name="find_status">身份</string>
+    <string name="find_pro">职业</string>
+    <string name="find_interest">兴趣</string>
+    <string name="find_search">筛选</string>
+    <string name="find_search1">找人筛选</string>
+    <string name="find_tag_title">标签筛选</string>
+    <string name="find_result">找人</string>
+    <string name="find_result_near">附近</string>
+    <string name="find_result_tag">标签</string>
+    <string name="find_result_renzhen">认证</string>
+    <string name="find_result_area">地区</string>
+    <string name="find_result_pcontacts">通讯录联系人</string>
+    <string name="reg_name_hint">2-10个汉字中英文、数字、下划线</string>
+    <string name="reg_email_hint">输入正确邮箱</string>
+    <string name="reg_pass_hint">6-15个字母、数字、符号、区分大小写</string>
+    <string name="reg_re_pass_hint">输入确认密码</string>
+    <string name="reg_re_email_alert">请输入邮箱</string>
+    <string name="reg_re_email_check_alert">请输入正确的邮箱格式</string>
+    <string name="reg_re_pass_alert">请输入密码</string>
+    <string name="reg_re_pass_lenght_alert">密码长度至少6位</string>
+    <string name="reg_re_name_alert">请输入昵称</string>
+    <string name="reg_success">注册成功</string>
+    <string name="re_p_success">密码重置成功</string>
+    <string name="reg_fail">注册失败</string>
+    <string name="reg_email_error">邮箱已注册</string>
+    <string name="reg_name_error">昵称已注册或格式不对</string>
+    <string name="reg_third_title">第三方帐号登录</string>
+    <string name="wc_itme_img_error">获取图片出错</string>
+
+    <!-- 通讯录 -->
+    <string name="find_invite">我发现了一个有意思的社区，快来加入吧</string>
+
+    <!-- group -->
+    <string name="group">班级</string>
+    <string name="group_new">动态</string>
+    <string name="group_at_me">\@我</string>
+    <string name="group_com">评论</string>
+    <string name="group_member">成员</string>
+
+    <!-- checkin -->
+    <string name="checkin">签到</string>
+    <string name="check_success">签到成功</string>
+    <string name="check_fail">签到失败</string>
+    <string name="reg_name">&#160; 昵称  &#160;</string>
+    <string name="reg_email">&#160; 邮箱   &#160;</string>
+    <string name="reg_pass">&#160; 密码  &#160;</string>
+    <string name="reg_re_pass">确认密码</string>
+
+    <string-array name="phone">
+        <item>发送短信</item>
+        <item>拨打电话</item>
+    </string-array>
+    <string-array name="camera">
+        <item>立即拍照</item>
+        <item>本地照片</item>
+    </string-array>
+    <string-array name="commentopts">
+        <item>查看原分享</item>
+        <item>查看该用户信息</item>
+        <item>回复该评论</item>
+    </string-array>
+    <string-array name="inboxopts">
+        <item>回复该消息</item>
+        <item>查看该用户信息</item>
+        <item>查看整个对话</item>
+    </string-array>
+    <string-array name="del_topts">
+        <item>查看该用户信息</item>
+        <item>回复该评论</item>
+    </string-array>
+    <string-array name="del_commentopts">
+        <item>查看该用户信息</item>
+        <item>回复该评论</item>
+        <item>删除该评论</item>
+    </string-array>
+    <string-array name="values_interval">
+        <item>30000</item>
+        <item>60000</item>
+        <item>300000</item>
+    </string-array>
+
+    <array name="entries_interval">
+        <item>@string/entries_interval_1</item>
+        <item>@string/entries_interval_3</item>
+        <item>@string/entries_interval_4</item>
+    </array>
+
+    <string name="entries_interval_1">0.5分钟</string>
+    <string name="entries_interval_3">1分钟</string>
+    <string name="entries_interval_4">5分钟</string>
+
+    <array name="category_reming_arrsy">
+        <item>@string/pref_setting_weibo</item>
+        <item>@string/pref_setting_at</item>
+        <item>@string/pref_setting_comment</item>
+        <item>@string/pref_setting_message</item>
+        <item>@string/pref_setting_fans</item>
+    </array>
+
+    <string-array name="font">
+        <item>小</item>
+        <item>中等</item>
+        <item>大</item>
+        <item>较大</item>
+        <item>很大</item>
+    </string-array>
+    <string-array name="font_value">
+        <item>12</item>
+        <item>14</item>
+        <item>18</item>
+        <item>22</item>
+        <item>26</item>
+    </string-array>
+
+    <!-- mupdf vaule -->
+
+    <string name="no_media_warning">Storage Media not present</string>
+    <string name="no_media_hint">Sharing the storage media with a PC can make it inaccessible</string>
+    <string name="open_failed">Unable to open document</string>
+    <!-- <string name="cancel">Cancel</string> -->
+    <string name="search_backwards">Search backwards</string>
+    <string name="search_forwards">Search forwards</string>
+    <string name="search_document">Search document</string>
+    <string name="picker_title">MuPDF</string>
+    <string name="outline_title">Table of Contents</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="text_not_found">Text not found</string>
+    <string name="searching_">Searching...</string>
+    <string name="link_control">Link highlighting and enabling</string>
+    <string name="about_us_info">\t\t\ ThinkSNS，是智士软件开源的开源微博、社交网络平台。采用PHP+MySQL技术平台，微博+应用的产品模式，通过应用、插件、风格包等丰富的机制来扩展功能，同时支持多种常见浏览器和移动客户端。拥有iphone、android客户端以及适合手机浏览的wap版界面，是建立社交网站、微博平台、移动互联网创业的首选二次开发平台。</string>
+    <string name="about_contact">联系我们：TEL:010 - 82431402</string>
+    <string name="title_activity_er_wei_ma">ScanActivity</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_tab">TabActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_my_friend">MyFriend</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="app_picker_name">Applications</string>
+    <string name="bookmark_picker_name">Bookmarks</string>
+    <string name="button_add_calendar">Add to calendar</string>
+    <string name="button_add_contact">Add contact</string>
+    <string name="button_back">Back</string>
+    <string name="button_book_search">Book Search</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_custom_product_search">Custom search</string>
+    <string name="button_dial">Dial number</string>
+    <string name="button_done">Done</string>
+    <string name="button_email">Send email</string>
+    <string name="button_get_directions">Get directions</string>
+    <string name="button_google_shopper">Shopper</string>
+    <string name="button_mms">Send MMS</string>
+    <string name="button_ok">OK</string>
+    <string name="button_open_browser">Open browser</string>
+    <string name="button_product_search">Product Search</string>
+    <string name="button_search_book_contents">Search contents</string>
+    <string name="button_share_app">Application</string>
+    <string name="button_share_bookmark">Bookmark</string>
+    <string name="button_share_by_email">Share via email</string>
+    <string name="button_share_by_sms">Share via SMS</string>
+    <string name="button_share_clipboard">Clipboard</string>
+    <string name="button_share_contact">Contact</string>
+    <string name="button_show_map">Show map</string>
+    <string name="button_sms">Send SMS</string>
+    <string name="button_web_search">Web search</string>
+    <string name="button_wifi">Connect to Network</string>
+    <string name="contents_contact">Contact info</string>
+    <string name="contents_email">Email address</string>
+    <string name="contents_location">Geographic coordinates</string>
+    <string name="contents_phone">Phone number</string>
+    <string name="contents_sms">SMS address</string>
+    <string name="contents_text">Plain text</string>
+    <string name="history_clear_text">Clear history</string>
+    <string name="history_clear_one_history_text">Clear</string>
+    <string name="history_email_title">Barcode Scanner history</string>
+    <string name="history_empty">Empty</string>
+    <string name="history_empty_detail">No barcode scans have been recorded</string>
+    <string name="history_send">Send history</string>
+    <string name="history_title">History</string>
+    <string name="menu_encode_mecard">Use MECARD</string>
+    <string name="menu_encode_vcard">Use vCard</string>
+    <string name="menu_help">Help</string>
+    <string name="menu_history">History</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_share">Share</string>
+    <string name="msg_bulk_mode_scanned">Bulk mode: barcode scanned and saved</string>
+    <string name="msg_camera_framework_bug">Sorry, the Android camera encountered a problem. You may need to restart the device.</string>
+    <string name="msg_default_format">Format</string>
+    <string name="msg_default_meta">Metadata</string>
+    <string name="msg_default_mms_subject">Hi</string>
+    <string name="msg_default_status">Place a barcode inside the viewfinder rectangle to scan it.</string>
+    <string name="msg_default_time">Time</string>
+    <string name="msg_default_type">Type</string>
+    <string name="msg_encode_contents_failed">Could not encode a barcode from the data provided.</string>
+    <string name="msg_google_books">Google Books</string>
+    <string name="msg_google_product">Google Product Search</string>
+    <string name="msg_google_shopper_missing">Google Shopper is not installed</string>
+    <string name="msg_install_google_shopper">Google Shopper combines barcode scanning with online and local prices, reviews and more without opening the browser. Would you like to try it?</string>
+    <string name="msg_intent_failed">Sorry, the requested application could not be launched. The barcode contents may be invalid.</string>
+    <string name="msg_redirect">Redirect</string>
+    <string name="msg_sbc_book_not_searchable">Sorry, this book is not searchable.</string>
+    <string name="msg_sbc_failed">Sorry, the search encountered a problem.</string>
+    <string name="msg_sbc_no_page_returned">No page returned</string>
+    <string name="msg_sbc_page">Page</string>
+    <string name="msg_sbc_results">Results</string>
+    <string name="msg_sbc_searching_book">Searching book\u2026</string>
+    <string name="msg_sbc_snippet_unavailable">Snippet not available</string>
+    <string name="msg_sbc_unknown_page">Unknown page</string>
+    <string name="msg_share_explanation">You can share data by displaying a barcode on your screen and scanning it with another phone.</string>
+    <string name="msg_share_subject_line">Here are the contents of a barcode I scanned</string>
+    <string name="msg_share_text">Or type some text and press Enter</string>
+    <string name="msg_sure">Are you sure?</string>
+    <string name="msg_unmount_usb">Sorry, the SD card is not accessible.</string>
+    <string name="preferences_actions_title">When a barcode is found\u2026</string>
+    <string name="preferences_auto_focus_title">Use auto focus</string>
+    <string name="preferences_bulk_mode_summary">Scan and save many barcodes continuously</string>
+    <string name="preferences_bulk_mode_title">Bulk scan mode</string>
+    <string name="preferences_copy_to_clipboard_title">Copy to clipboard</string>
+    <string name="preferences_custom_product_search_summary" formatted="false">Substitutions: %s = contents, %f = format, %t = type</string>
+    <string name="preferences_custom_product_search_title">Custom search URL</string>
+    <string name="preferences_decode_1D_title">1D barcodes</string>
+    <string name="preferences_decode_Data_Matrix_title">Data Matrix</string>
+    <string name="preferences_decode_QR_title">QR Codes</string>
+    <string name="preferences_device_bug_workarounds_title">Device Bug Workarounds</string>
+    <string name="preferences_disable_continuous_focus_summary">Use only standard focus mode</string>
+    <string name="preferences_disable_continuous_focus_title">No continuous focus</string>
+    <string name="preferences_disable_exposure_title">No exposure</string>
+    <string name="preferences_front_light_summary">Improves scanning in low light on some phones, but may cause glare. Does not work on all phones.</string>
+    <string name="preferences_front_light_title">Use front light</string>
+    <string name="preferences_front_light_auto">Automatic</string>
+    <string name="preferences_front_light_off">Off</string>
+    <string name="preferences_front_light_on">On</string>
+    <string name="preferences_general_title">General settings</string>
+    <string name="preferences_invert_scan_title">Invert scan</string>
+    <string name="preferences_invert_scan_summary">Scan for white barcodes on black background. Not available on some devices.</string>
+    <string name="preferences_name">Settings</string>
+    <string name="preferences_play_beep_title">Beep</string>
+    <string name="preferences_remember_duplicates_summary">Store multiple scans of the same barcode in History</string>
+    <string name="preferences_remember_duplicates_title">Remember duplicates</string>
+    <string name="preferences_result_title">Result settings</string>
+    <string name="preferences_scanning_title">When scanning for barcodes, decode\u2026</string>
+    <string name="preferences_search_country">Search country</string>
+    <string name="preferences_try_bsplus">Try Barcode Scanner+</string>
+    <string name="preferences_try_bsplus_summary">Enhanced with new features and interface</string>
+    <string name="preferences_supplemental_summary">Try to retrieve more information about the barcode contents</string>
+    <string name="preferences_supplemental_title">Retrieve more info</string>
+    <string name="preferences_vibrate_title">Vibrate</string>
+    <string name="result_address_book">Found contact info</string>
+    <string name="result_calendar">Found calendar event</string>
+    <string name="result_email_address">Found email address</string>
+    <string name="result_geo">Found geographic coordinates</string>
+    <string name="result_isbn">Found book</string>
+    <string name="result_product">Found product</string>
+    <string name="result_sms">Found SMS address</string>
+    <string name="result_tel">Found phone number</string>
+    <string name="result_text">Found plain text</string>
+    <string name="result_uri">Found URL</string>
+    <string name="result_wifi">Found WLAN Configuration</string>
+    <string name="sbc_name">Google Book Search</string>
+    <string name="wifi_changing_network">Requesting connection to network\u2026</string>
+    <string name="wifi_ssid_label">Network Name</string>
+    <string name="wifi_type_label">Type</string>
+    <string name="title_activity_action_filter">ActionFilter</string>
+    <string name="title_activity_filter_type">FilterType</string>
+    <string name="title_activity_topic_manager">TopicManager</string>
+    <string name="title_activity_add_interest_user">AddInterestUser</string>
+    <string name="title_activity_near_center">NearCenter</string>
+    <string name="title_activity_interest_area">InterestArea</string>
+    <string name="title_activity_add_center">AddCenter</string>
+    <string name="scan_text">将二维码放入框内, 即可自动扫描</string>
+    <string name="title_activity_square_weibo">SquareWeiboActivity</string>
+    <string name="title_activity_weibo_create">WeiboCreateActivity</string>
+    <string name="title_activity_weibo_login">LoginActivity</string>
+    <string name="hint">提示</string>
+    <string name="dialog_yes">是</string>
+    <string name="dialog_no">否</string>
+    <string name="action_back">返回</string>
+    <string name="action_cancel">取消</string>
+    <string name="action_ok">确定</string>
+    <string name="imageview_content_description"></string>
+    <string name="record_camera_author">智士 出品</string>
+    <string name="record_camera_title">拍摄</string>
+    <string name="record_camera_back">返回</string>
+    <string name="record_camera_next">下一步</string>
+    <string name="record_camera_back_delete">回删</string>
+    <string name="record_camera_delay">延迟</string>
+    <string name="record_camera_filter">滤镜</string>
+    <string name="record_camera_init_faild">初始化视频存储路径失败</string>
+    <string name="record_camera_progress_message">正在转码…</string>
+    <string name="record_camera_check_available_faild">手机满了！至少需要200M存储空间才能继续拍摄！</string>
+    <string name="record_camera_open_audio_faild">无法打开录音设备！</string>
+    <string name="record_camera_save_faild">视频信息保存失败！</string>
+    <string name="record_camera_exit_dialog_message">是否放弃这段视频？</string>
+    <string name="record_camera_import">导入</string>
+    <string name="record_camera_import_image">照片</string>
+    <string name="record_camera_import_image_choose">从本地照片选择</string>
+    <string name="record_camera_import_image_faild">导入照片失败</string>
+    <string name="record_camera_import_video">视频</string>
+    <string name="record_camera_import_video_title">截\t取</string>
+    <string name="record_camera_import_video_choose">从本地视频选择</string>
+    <string name="record_camera_import_video_faild">导入视频失败</string>
+    <string name="record_camera_tools_focus">焦点</string>
+    <string name="record_camera_tools_led">闪光</string>
+    <string name="record_camera_ghost">幽灵</string>
+    <string name="record_camera_preview_title">编辑</string>
+    <string name="record_camera_preview_pre">拍摄</string>
+    <string name="record_camera_preview_next">下一步</string>
+    <string name="record_camera_cancel_dialog_yes">确定</string>
+    <string name="record_camera_cancel_dialog_no">取消</string>
+    <string name="record_video_transcoding_faild">视频转码失败</string>
+    <string name="record_video_transcoding_success">视频保存在:%s</string>
+    <string name="record_read_object_faild">拍摄信息读取失败！请检查SD卡，稍后重试！</string>
+    <string name="record_preview_theme">主题</string>
+    <string name="record_preview_title">预览</string>
+    <string name="record_preview_theme_original">原始</string>
+    <string name="record_preview_theme_load_faild">主题加载失败</string>
+    <string name="record_preview_encoding">请稍后…</string>
+    <string name="record_preview_encoding_format">请稍后\t%d%%</string>
+    <string name="record_preview_music_nothing">无</string>
+    <string name="record_preview_tab_theme">主题</string>
+    <string name="record_preview_tab_filter">滤镜</string>
+    <string name="record_preview_building">视频生成中…</string>
+    <string name="text_ack_msg">已读</string>
+    <string name="back">返回</string>
+    <string name="save">保存</string>
+    <string name="button_pushtotalk">按住说话</string>
+    <string name="button_send">发送</string>
+    <string name="attach_smile">表情</string>
+    <string name="attach_picture">相册</string>
+    <string name="attach_take_pic">拍照</string>
+    <string name="attach_location">位置</string>
+    <string name="attach_file">名片</string>
+    <string name="user_card">名片</string>
+    <string name="move_up_to_cancel">手指上滑，取消发送</string>
+    <string name="release_to_cancel">松开手指，取消发送</string>
+    <string name="send_fail">发送消息失败,</string>
+    <string name="delete_message">删除消息</string>
+    <string name="copy_message">复制消息</string>
+    <string name="delete_voice">删除语音</string>
+    <string name="delete_video">删除视频</string>
+    <string name="resend">重发</string>
+    <string name="confirm_resend">确认重发该信息？</string>
+    <string name="connect_failuer_toast">连接不到服务器，请稍后重试</string>
+    <string name="network_unavailable">网络连接不可用，请检查网络</string>
+    <string name="copy">复制</string>
+    <string name="forward">转发</string>
+    <string name="button_logout">退出登录</string>
+    <string name="prompt">提示</string>
+    <string name="clear_records">清空记录</string>
+    <string name="clear_all_records">是否清空所有聊天记录？</string>
+    <string name="location_recv">[%1$s的位置]</string>
+    <string name="location_message">位置信息</string>
+    <string name="recording_video">录制视频</string>
+    <string name="location_prefix">[我的位置]</string>
+    <string name="voice">[语音]</string>
+    <string name="picture">[图片]</string>
+    <string name="video">[视频]</string>
+    <string name="file">[文件]</string>
+    <string name="button_save">保存</string>
+    <string name="button_search">查找</string>
+    <string name="button_add">添加</string>
+    <string name="search_header">S</string>
+    <string name="network_isnot_available">网络不可用</string>
+    <string name="recoding_fail">录音失败，请重试！</string>
+    <string name="select_contacts">选择联系人</string>
+    <string name="confirm_forward_to">确定转发到：%1$s ?</string>
+    <string name="logout">退出登录</string>
+    <string name="logout_hint">退出后不会删除任何历史数据，下次登录依然可以使用本账号</string>
+    <string name="exit_group_hint">退出后，将不再接收此群聊信息</string>
+    <string name="dissolution_group_hint">退出后，此群将被解散</string>
+    <string name="exit_group">退出</string>
+    <string name="connect_conflict">同一帐号已在其他设备登录</string>
+    <string name="title_activity_picture">Picture</string>
+    <string name="title_activity_chat_picture">ChatPicture</string>
+    <string name="title_activity_t4_nearby_person">T4NearbyPerson</string>
+    <string name="title_activity_t4_find_person_details">T4FindPersonDetails</string>
+    <string name="title_activity_t4_find_person_message">T4FindPersonMessage</string>
+    <string name="title_activity_bind__user__register">Bind_User_RegisterActivity</string>
+    <string name="title_activity_wxentry">WXEntryActivity</string>
+
+    <string name="tip_double_click_exit">再按一次退出</string>
+    <string name="btn_gift_donation">转赠</string>
+    <string name="txt_from_anonymous">来自: 匿名</string>
+    <string name="show_current_location">显示当前位置</string>
+    <string name="i_am_here">我在这里</string>
+    <string name="current_location">当前所在位置</string>
+    <string name="fav_add_follow">+关注</string>
+    <string name="fav_followed">已关注</string>
+
+    <!--空置页面文字提示-->
+    <!--分享相关、频道、微吧、帖子、草稿、照片、视频、话题-->
+    <string name="empty_content">没有任何内容</string>
+    <string name="empty_user_comment">还没有人评论</string>
+    <string name="empty_user_digg">还没有人点赞</string>
+    <string name="empty_search_result">暂无用户</string>
+    <string name="empty_friends">还没有联系人</string>
+    <string name="empty_gifts">还没有相关礼物</string>
+    <string name="empty_collection">还没收藏相关内容</string>
+    <string name="empty_user_following">还没有人关注你</string>
+    <string name="empty_user_followed">还没关注任何人</string>
+    <string name="empty_blacklist">还没有人被拉入黑名单</string>
+    <string name="empty_user">暂无用户</string>
+    <string name="empty_medal">暂无勋章</string>
+    <string name="empty_post">没有任何帖子</string>
+    <string name="empty_more_data">没有更多内容了</string>
+    <string name="empty_user_intro">这家伙很懒，什么也没留下</string>
+    <!--频道模块文字设置-->
+    <!--频道分享数-->
+    <string name="channel_content_count">已有%s条分享</string>
+    <!--举报内容说明-->
+    <string name="denounce_tips">不良信息是指含有色情、暴力、广告或其他骚扰你正常工作生活的内容，您是否举报?</string>
+</resources>

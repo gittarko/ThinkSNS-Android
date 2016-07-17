@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/task_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/top_bar_bg" >
+
+            <TextView
+                android:id="@+id/taks_title_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="text"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/task_right_img"
+                android:layout_width="@dimen/home_left_right_btn"
+                android:layout_height="@dimen/home_left_right_btn"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/menu_setting_img" />
+
+            <ImageButton
+                android:id="@+id/task_left_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/taks_title_name"
+                android:layout_alignParentLeft="true"
+                android:layout_alignTop="@+id/taks_title_name"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/menu_back_img" />
+
+            <ImageButton
+                android:id="@+id/task_other_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/task_left_img"
+                android:background="@drawable/menu_setting_img"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <com.thinksns.sociax.component.EditCancel
+            android:id="@+id/contact_edit_cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/searchbarColor"
+            android:padding="8dp"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/list_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:cacheColorHint="@drawable/silver"
+                android:divider="@drawable/item_line"
+                android:scrollbars="none" />
+
+            <com.thinksns.sociax.component.LetterListBar
+                android:id="@+id/my_letter_list_view"
+                android:layout_width="25dip"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

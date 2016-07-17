@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 隐私设置页面 checkbox 样式 -->
+    <item android:state_checked="true" android:drawable="@drawable/ic_setting_checkbox_selected"></item>
+  <item android:state_checked="false" android:drawable="@drawable/ic_setting_checkbox_normal"></item>
+  <item android:drawable="@drawable/ic_setting_checkbox_normal"></item><!-- The default one -->
+
+</selector>

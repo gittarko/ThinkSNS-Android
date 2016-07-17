@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.thinksns.sociax.thinksnsbase.activity.widget.LoadingView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/searchBarContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dimen_msg_search_height"
+        android:background="@color/color_msg_friends" >
+
+        <EditText
+            android:id="@+id/input_search_query"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="6dip"
+            android:background="@drawable/round_corner_et_white"
+            android:hint="搜索"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:paddingLeft="8dip"
+            android:paddingRight="25dip"
+            android:singleLine="true"
+            android:text=""
+            android:textColorHint="@color/edit_hint"
+            android:textSize="15dip" />
+    </RelativeLayout>
+
+    <com.thinksns.sociax.t4.android.widget.ContactListViewImpl
+        android:id="@+id/lv_chat_user"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:divider="@color/bg_listview_divider"
+        android:dividerHeight="0.3dp"
+        android:listSelector="@android:color/transparent"
+        android:paddingLeft="@dimen/dimen_msg_padding" />
+
+</LinearLayout>

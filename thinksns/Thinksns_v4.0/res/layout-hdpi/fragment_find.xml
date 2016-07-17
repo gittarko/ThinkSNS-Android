@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/titleBarBackground">
+
+        <TextView
+            android:id="@+id/tv_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="发现"
+            android:textColor="@color/titleBarTextColor"
+            android:textSize="@dimen/titleBarTextSize"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titleBarDividerLineHeight"
+            android:layout_alignParentBottom="true"
+            android:background="@color/titleBarDivideLineColor"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/sv_find"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_ios"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_ios"
+            android:orientation="vertical"
+            android:showDividers="middle">
+            <!--<LinearLayout-->
+            <!--android:id="@+id/ll_ads"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical" >-->
+            <!--</LinearLayout>-->
+            <com.thinksns.sociax.t4.android.function.FunctionAdvertise
+                android:id="@+id/fc_ads"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </com.thinksns.sociax.t4.android.function.FunctionAdvertise>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/bg_listview_divider"/>
+
+            <LinearLayout
+                android:id="@+id/rl_weiba"
+                style="@style/find_category_style">
+
+                <ImageView
+                    android:id="@+id/ImageView17"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_find_weiba"/>
+
+                <TextView
+                    android:id="@+id/TextView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/weiba"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+                <!--新消息-->
+                <com.thinksns.sociax.thinksnsbase.activity.widget.BadgeView
+                    android:id="@+id/badgeWeiba"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="开启你的微吧之路"
+                    android:textColor="@color/frag_find_details_text"
+                    android:textSize="12sp"/>
+
+                <ImageView
+                    android:id="@+id/ImageView20"
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/arrow"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/bg_listview_divider"/>
+
+            <!--话题-->
+            <LinearLayout
+                android:id="@+id/rl_topic"
+                style="@style/find_category_style"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ImageView30"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_find_topic"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/topic"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="快快参与讨论吧"
+                    android:textColor="@color/frag_find_details_text"
+                    android:textSize="12sp"/>
+
+                <ImageView
+                    android:id="@+id/ImageView34"
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/arrow"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/bg_listview_divider"/>
+
+            <LinearLayout
+                android:id="@+id/rl_channel"
+                style="@style/find_category_style">
+
+                <ImageView
+                    android:id="@+id/ImageView19"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_find_channel"/>
+
+
+                <TextView
+                    android:id="@+id/TextView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/channel"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/TextView18"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="发现你所感兴趣的"
+                    android:textColor="@color/frag_find_details_text"
+                    android:textSize="12sp"/>
+
+                <ImageView
+                    android:id="@+id/ImageView18"
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/arrow"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/bg_listview_divider"/>
+
+            <LinearLayout
+                android:id="@+id/rl_info"
+                style="@style/find_category_style">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_information"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/information"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="随时随地掌握最新资讯"
+                    android:textColor="@color/frag_find_details_text"
+                    android:textSize="12sp"/>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/arrow"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/bg_listview_divider"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/bg_listview_divider"/>
+
+            <LinearLayout
+                android:id="@+id/rl_find"
+                style="@style/find_category_style">
+
+                <ImageView
+                    android:id="@+id/ImageView26"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_find_find"/>
+
+                <TextView
+                    android:id="@+id/TextView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/tv_find_find"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/TextView14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="认识更多有趣的人"
+                    android:textColor="@color/frag_find_details_text"
+                    android:textSize="12sp"/>
+
+                <ImageView
+                    android:id="@+id/ImageView25"
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/arrow"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/bg_listview_divider"/>
+
+            <!--风云榜-->
+            <LinearLayout
+                android:id="@+id/rl_top"
+                style="@style/find_category_style">
+
+                <ImageView
+                    android:id="@+id/ImageView50"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_find_top"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/tv_find_top"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="有数据有真相"
+                    android:textColor="@color/frag_find_details_text"
+                    android:textSize="12sp"/>
+
+                <ImageView
+                    android:id="@+id/ImageView51"
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/arrow"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/bg_listview_divider"/>
+            <!-- 附近的人 -->
+            <LinearLayout
+                android:id="@+id/rl_near"
+                style="@style/find_category_style">
+
+                <ImageView
+                    android:id="@+id/ImageView53"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_find_near"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/tv_find_near"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="发现你身边的用户"
+                    android:textColor="@color/frag_find_details_text"
+                    android:textSize="12sp"/>
+
+                <ImageView
+                    android:id="@+id/ImageView52"
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/arrow"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/bg_listview_divider"/>
+
+            <View
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/bg_listview_divider"/>
+
+            <LinearLayout
+                android:id="@+id/rl_gift"
+                style="@style/find_category_style">
+
+                <ImageView
+                    android:id="@+id/ImageView28"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_find_gift"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/tv_find_gift"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="去给好友兑换礼物吧"
+                    android:textColor="@color/frag_find_details_text"
+                    android:textSize="12sp"/>
+
+                <ImageView
+                    android:id="@+id/ImageView27"
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/arrow"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/bg_listview_divider"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

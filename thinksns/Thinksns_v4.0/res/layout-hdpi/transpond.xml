@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/itemColor"
+    android:orientation="vertical"
+    android:weightSum="1" >
+
+    <com.thinksns.sociax.thinksnsbase.activity.widget.LoadingView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" />
+
+    <EditText
+        android:id="@+id/send_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/itemColor"
+        android:gravity="top"
+        android:hint="@string/send_not_content"
+        android:inputType="textMultiLine"
+        android:textColor="@color/font"
+        android:textSize="@dimen/fontSize" 
+        android:padding="8dp">
+
+        <requestFocus >
+        </requestFocus>
+    </EditText>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+		android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/weibo_app_bar_n" >
+
+        <TextView
+            android:id="@+id/overWordCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:text="TextView"
+            android:textAppearance="?android:attr/textAppearanceLarge" >
+        </TextView>
+
+        <CheckBox
+            android:id="@+id/isComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="8dp"
+            android:text="CheckBox" >
+        </CheckBox>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/weibolist"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/user_header"
+        android:layout_width="@dimen/header_width_hight"
+        android:layout_height="@dimen/header_width_hight"
+        android:layout_marginLeft="@dimen/body_margin_left"
+        android:layout_marginTop="@dimen/body_margin_top"
+        android:src="@drawable/default_user" >
+    </ImageView>
+
+    <LinearLayout
+        android:id="@+id/weibo_data"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/body_margin_top"
+        android:layout_marginLeft="@dimen/body_margin_left"
+        android:layout_marginRight="@dimen/body_margin_right"
+        android:layout_marginTop="@dimen/body_margin_top"
+        android:layout_toRightOf="@+id/user_header"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/body_margin_top" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="@dimen/body_margin_left"
+            android:layout_marginTop="-4.0dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textSize="@dimen/userNameSize"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/wb_post_v"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@+id/user_name"
+                android:src="@drawable/v" />
+
+            <ImageView
+                android:id="@+id/wb_post_c_v"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@+id/wb_post_v"
+                android:src="@drawable/c_v" />
+
+            <TextView
+                android:id="@+id/weibo_ctime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="TextView"
+                android:textColor="@color/timeColor"
+                android:textSize="@dimen/timeSize" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/weibo_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="-5dp"
+            android:layout_weight="1.0"
+            android:text="TextView"
+            android:textColor="@color/font"
+            android:textSize="@dimen/contentSize" />
+
+        <LinearLayout
+            android:id="@+id/image_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/app_center_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tran_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/reviewboxbg"
+            android:orientation="vertical"
+            android:padding="8dp" >
+
+            <TableLayout
+                android:id="@+id/image_table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </TableLayout>
+
+            <!--
+                 <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/app_center_normal" />
+            -->
+        </LinearLayout>
+
+        <!--
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/image_layout"
+            android:orientation="vertical"
+            >
+			<TextView />
+            
+        </LinearLayout>
+        -->
+
+        <TextView
+            android:id="@+id/tv_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/link_bg"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/link_text"
+            android:textColor="@color/white" />
+
+        <RelativeLayout
+            android:id="@+id/weibo_count_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="-3dp"
+            android:layout_marginTop="2dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/weibo_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="TextView"
+                android:textColor="@color/time_fant_color"
+                android:textSize="@dimen/countSize" />
+
+            <TextView
+                android:id="@+id/transpond_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/comment_count"
+                android:text="TextView"
+                android:textSize="@dimen/countSize" />
+
+            <TextView
+                android:id="@+id/comment_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/wb_digg"
+                android:text="TextView"
+                android:textSize="@dimen/countSize" />
+
+            <ImageView
+                android:padding="2dp"
+                android:id="@+id/wb_digg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="2dp"
+                android:layout_toLeftOf="@+id/wb_digg_num"
+                android:src="@drawable/un_digg"
+                android:clickable="true"/>
+
+            <TextView
+                android:id="@+id/wb_digg_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="2"
+                android:textSize="@dimen/countSize" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

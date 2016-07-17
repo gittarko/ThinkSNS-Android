@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="friend_news" type="id">false</item>
+    <item name="header_edit" type="id">false</item>
+    <item name="header" type="id">false</item>
+    <item name="main_title" type="id">false</item>
+    <item name="grid_header_set" type="id">false</item>
+    <item name="headIcon" type="id">false</item>
+    <item name="my_feed" type="id">false</item>
+    <item name="my_feed_count" type="id">false</item>
+    <item name="my_info" type="id">false</item>
+    <item name="gift" type="id">false</item>
+    <item name="my_get_gift" type="id">false</item>
+    <item name="my_send_gift" type="id">false</item>
+    <item name="my_credit_detail" type="id">false</item>
+    <item name="my_score_rule" type="id">false</item>
+    <item name="gift_new" type="id">false</item>
+    <item name="searchuser" type="id">false</item>
+    <item name="searchuser_new" type="id">false</item>
+    <item name="near_persons" type="id">false</item>
+    <item name="im_chat" type="id">false</item>
+    <item name="unread_cnt" type="id">false</item>
+    <item name="app_center" type="id">false</item>
+    <item name="system_notice_layout" type="id">false</item>
+    <item name="notice_icon" type="id">false</item>
+    <item name="system_notice" type="id">false</item>
+    <item name="notice_count" type="id">false</item>
+    <item name="my_friend" type="id">false</item>
+    
+    
+    <item name="mess_remind_list" type="id">false</item>
+    <item name="app_set_settings" type="id">false</item>
+    <item name="app_set_modify" type="id">false</item>
+    <item name="app_set_feedback" type="id">false</item>
+    <item name="app_set_update" type="id">false</item>
+    <item name="app_set_logout" type="id">false</item>
+    <item name="sites_for_list" type="id">false</item>
+    
+    <item name="decode" type="id"/>
+    <item name="decode_failed" type="id"/>
+    <item name="quit" type="id"/>
+    <item name="decode_succeeded" type="id"/>
+    <item name="encode_failed" type="id"/>
+    <item name="encode_succeeded" type="id"/>
+    <item name="launch_product_query" type="id"/>
+    <item name="restart_preview" type="id"/>
+    <item name="return_scan_result" type="id"/>
+    <item name="search_book_contents_failed" type="id"/>
+    <item name="search_book_contents_succeeded" type="id"/>
+    <item name="auto_focus" type="id"/>
+    
+    
+    <item name="tag_weibo" type="id"/>
+    <item name="tag_viewholder" type="id"/>
+    <item name="tag_channel" type="id"/>
+    <item name="tag_chat" type="id"/>
+    <item name="tag_chat_message" type="id"/>
+    <item name="tag_position" type="id"/>
+    <item name="tag_follow" type="id"/>
+    <item name="tag_search_user" type="id"/>
+    <item name="tag_user" type="id"/>
+    <item name="tag_gift" type="id"/>
+    <item name="tag_type" type="id"/>
+    <item name="tag_task" type="id"/>
+    <item name="tag_medal" type="id"/>
+    <item name="tag_topic" type="id"/>
+    <item name="tag_weiba" type="id"/>
+    <item name="tag_post" type="id"/>
+    <item name="tag_object" type="id"/>
+    <item name="tag_uid" type="id"/>
+    
+</resources>

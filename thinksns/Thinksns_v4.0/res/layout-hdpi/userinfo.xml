@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/itemColor" >
+
+    <com.thinksns.sociax.thinksnsbase.activity.widget.LoadingView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/user_info_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/itemColor"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:id="@+id/util_scroll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="50dp" >
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="clip_vertical"
+                    android:layout_marginBottom="8dp" >
+
+                    <ImageView
+                        android:id="@+id/userInfo_header"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/default_user" />
+
+                    <TextView
+                        android:id="@+id/user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_toLeftOf="@+id/button_follow"
+                        android:layout_toRightOf="@+id/userInfo_header"
+                        android:singleLine="true"
+                        android:text="...."
+                        android:textColor="@color/main_fant_color"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/button_follow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/button_is_follow"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:text="@string/delfollow"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/button_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/button_follow"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:text="@string/edit"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/button_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/has_in_black_img"
+                        android:text="@string/unlockblack"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/body_margin_left"
+                    android:layout_marginRight="@dimen/body_margin_right"
+                    android:paddingBottom="16dp" >
+
+                    <com.thinksns.sociax.component.NumberButton
+                        android:id="@+id/followers"
+                        android:layout_width="@dimen/small_button_layout"
+                        android:layout_height="@dimen/small_button_layout"
+                        android:layout_marginTop="@dimen/body_margin_left"
+                        android:layout_weight="1"
+                        android:background="@drawable/blockbg_img" />
+
+                    <com.thinksns.sociax.component.NumberButton
+                        android:id="@+id/followeds"
+                        android:layout_width="@dimen/small_button_layout"
+                        android:layout_height="@dimen/small_button_layout"
+                        android:layout_marginLeft="@dimen/info_button_margin"
+                        android:layout_marginRight="@dimen/info_button_margin"
+                        android:layout_marginTop="@dimen/body_margin_left"
+                        android:layout_weight="1"
+                        android:background="@drawable/blockbg_img" />
+
+                    <com.thinksns.sociax.component.NumberButton
+                        android:id="@+id/weibos"
+                        android:layout_width="@dimen/small_button_layout"
+                        android:layout_height="@dimen/small_button_layout"
+                        android:layout_marginTop="@dimen/body_margin_left"
+                        android:layout_weight="1"
+                        android:background="@drawable/blockbg_img" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/text_gen"
+                        style="@style/user_info_text"
+                        android:clickable="true"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/text_info_department"
+                        style="@style/user_info_text"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/text_info_phone"
+                        style="@style/user_info_text"
+                        android:clickable="true"
+                        android:text=""
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/text_info_tel"
+                        style="@style/user_info_text"
+                        android:clickable="true"
+                        android:text=""
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/user_info_email"
+                        style="@style/user_info_text"
+                        android:text=""
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/text_info_tag"
+                        style="@style/user_info_text"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/text_intro"
+                        style="@style/user_info_text"
+                        android:clickable="true"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_expand"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/expand_handler"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/img_user_info_handler"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/handel_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:text="@string/see_more"
+                        android:textSize="@dimen/dimen_size_14" />
+
+                    <ImageView
+                        android:id="@+id/img_is_expand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:focusable="false"
+                        android:src="@drawable/un_expand" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/info_util_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/at_he"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/weibo_app_bar"
+            android:clickable="true"
+            android:drawableTop="@drawable/weibo_app_atme"
+            android:gravity="center_horizontal"
+            android:text="@string/athe" />
+
+        <TextView
+            android:id="@+id/send_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/weibo_app_bar"
+            android:clickable="true"
+            android:drawableTop="@drawable/menu_message_img"
+            android:gravity="center_horizontal"
+            android:text="@string/send_chat" />
+
+        <TextView
+            android:id="@+id/add_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/weibo_app_bar"
+            android:clickable="true"
+            android:drawableTop="@drawable/menu_add_contact_img"
+            android:gravity="center_horizontal"
+            android:text="@string/collection"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/black_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/weibo_app_bar"
+            android:clickable="true"
+            android:drawableTop="@drawable/menu_black_img"
+            android:gravity="center_horizontal"
+            android:text="@string/blacklist"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</FrameLayout>

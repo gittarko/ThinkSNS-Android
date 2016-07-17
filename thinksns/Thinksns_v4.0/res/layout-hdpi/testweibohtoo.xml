@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   
+ 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom" >
+
+        
+        <HorizontalScrollView
+            android:id="@+id/weibo_tool_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:orientation="horizontal"
+                >
+
+                 <TextView
+                    android:id="@+id/weibo_app_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/weibo_app_bar"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/weibo_app_new"
+                    android:focusable="true"
+                    android:gravity="bottom|center"
+                    android:text="@string/weibo" />
+
+                <!--  <TextView
+                    android:id="@+id/weibo_app_atme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/weibo_app_bar"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/weibo_app_atme"
+                    android:focusable="true"
+                    android:gravity="bottom|center" 
+                    android:text="@string/atme" /> -->
+
+                <TextView
+                    android:id="@+id/weibo_app_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/weibo_app_bar"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/weibo_app_comment"
+                    android:focusable="true"
+                    android:gravity="bottom|center"
+                    android:text="@string/comment" />
+
+                <TextView
+                    android:id="@+id/weibo_app_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/weibo_app_bar"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/weibo_app_search"
+                    android:focusable="true"
+                    android:gravity="bottom|center"
+                    android:text="@string/search" />
+
+                <TextView
+                    android:id="@+id/weibo_app_collection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/weibo_app_bar"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/weibo_app_collection"
+                    android:focusable="true"
+                    android:gravity="bottom|center"
+                    android:text="@string/collection" />
+
+                <TextView
+                    android:id="@+id/weibo_app_follower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/weibo_app_bar"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/weibo_app_follower"
+                    android:focusable="true"
+                    android:gravity="bottom|center"
+                    android:text="@string/followed" />
+
+                <TextView
+                    android:id="@+id/weibo_app_following"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/weibo_app_bar"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/weibo_app_following"
+                    android:focusable="true"
+                    android:gravity="bottom|center"
+                    android:text="@string/follow" />
+
+                <TextView
+                    android:id="@+id/weibo_app_my"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/weibo_app_bar"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/weibo_app_my"
+                    android:focusable="true"
+                    android:gravity="bottom|center"
+                    android:text="@string/weibo_more_my_weibo" />
+
+                <TextView
+                    android:id="@+id/weibo_app_send_com"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/weibo_app_bar"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/weibo_app_my_com"
+                    android:focusable="true"
+                    android:gravity="bottom|center"
+                    android:text="@string/weibo_more_my_commend" />
+
+                <!--
+                     <com.thinksns.sociax.component.MyTextView
+                    android:id="@+id/weibo_app_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/weibo_app_bar"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/weibo_app_more"
+                    android:focusable="true"
+                    android:gravity="bottom|center"
+                    android:text="@string/more" />
+                -->
+
+
+                
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="left"
+            android:src="@drawable/weibo_tool_left"
+            android:visibility="gone" />
+        
+        
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right"
+            android:src="@drawable/weibo_tool_right" />
+    </FrameLayout>

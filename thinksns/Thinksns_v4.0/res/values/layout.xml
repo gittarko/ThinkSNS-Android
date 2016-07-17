@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="title_margin">10dp</dimen>
+    <dimen name="title_left_margin">8dp</dimen>
+    <dimen name="body_margin_right">8dp</dimen>
+    <dimen name="body_margin_left">8dp</dimen>
+    <dimen name="body_margin_top">8dp</dimen>
+    <dimen name="body_margin_buttonm">10dp</dimen>
+    <dimen name="body_margin">10dp</dimen>
+    <dimen name="header_width_hight">32dp</dimen>
+    <dimen name="room_header">40dp</dimen>
+    <dimen name="userhome_header_width_hight">75dp</dimen>
+    <dimen name="chat_text_margin">65dp</dimen>
+    <dimen name="sheader_width_hight">30dp</dimen>
+     <dimen name="user_button">37dp</dimen>
+    <dimen name="xsheader_width_hight">20dp</dimen>
+    <dimen name="large_header_width_hight">80dp</dimen>
+    <dimen name="middle_header_width_hight">50dp</dimen>
+    <dimen name="scan_head_height">50dp</dimen>
+    <dimen name="content_header_width_hight">60dp</dimen>
+    <dimen name="follow_header_width_hight">50dp</dimen>
+    <dimen name="weibo_content_button">115dp</dimen>
+    <dimen name="small_button_layout">50dp</dimen>
+    <dimen name="append_margin_top">10dp</dimen>
+    <dimen name="weibo_buttonm">20dp</dimen>
+    <dimen name="tab_button">62dp</dimen>
+    <dimen name="body_margin_left_new">20dp</dimen>
+    <dimen name="info_button_margin">6dp</dimen>
+    <dimen name="info_button_size">16sp</dimen>
+    <dimen name="bottom_tab_font_size">9.0dip</dimen>
+    <dimen name="bottom_tab_padding_up">2.0dip</dimen>
+    <dimen name="bottom_tab_padding_drawable">2.0dip</dimen>
+    <dimen name="switch_logo_bottom_padding">30.0sp</dimen>
+    <dimen name="height_user_home_bg">240dp</dimen>
+
+    <!--  -->
+    <dimen name="shi_liu">16.0sp</dimen>
+    <dimen name="shi_si">14.0sp</dimen>
+    <dimen name="shi_er">12.0sp</dimen>
+    <dimen name="shi_ba">18.0sp</dimen>
+    <dimen name="er_shi">20.0sp</dimen>
+
+</resources>

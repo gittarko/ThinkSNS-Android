@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_ios"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@id/app_set_settings"
+        style="@style/setting_item"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/roundbackground_white"
+        android:padding="10dp"
+        android:text="@string/app_set_settings"
+        android:textColor="@color/bar"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@id/app_set_modify"
+        style="@style/setting_item"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/roundbackground_white"
+        android:padding="10dp"
+        android:text="@string/app_set_modify"
+        android:textColor="@color/bar"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@id/app_set_feedback"
+        style="@style/setting_item"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/roundbackground_white"
+        android:padding="10dp"
+        android:text="@string/app_set_feedback"
+        android:textColor="@color/bar"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@id/app_set_update"
+        style="@style/setting_item"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/roundbackground_white"
+        android:padding="10dp"
+        android:text="@string/app_set_update"
+        android:textColor="@color/bar"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@id/app_set_logout"
+        style="@style/setting_item"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/roundbackground_white"
+        android:padding="10dp"
+        android:text="@string/app_set_logout"
+        android:textColor="@color/bar"
+        android:textSize="16sp" />
+
+</LinearLayout>

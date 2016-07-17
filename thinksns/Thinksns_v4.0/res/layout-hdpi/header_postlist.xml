@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_head_info" >
+    <!--关注微吧时的视图-->
+    <ViewStub
+        android:id="@+id/follow_stub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/weiba_follow_header_layout"
+        android:inflatedId="@+id/weiba_follow_view">
+    </ViewStub>
+
+    <!--未关注微吧时视图信息-->
+    <ViewStub
+        android:id="@+id/unfollow_stub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/weiba_unfollow_header_layout"
+        android:inflatedId="@+id/weiba_unfollow_view"/>
+
+</RelativeLayout>

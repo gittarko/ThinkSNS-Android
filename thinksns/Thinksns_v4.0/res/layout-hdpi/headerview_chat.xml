@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_comment_me"
+        style="@style/customProgressBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dimen_msg_padding"
+        android:paddingRight="@dimen/dimen_msg_padding"
+        android:layout_marginBottom="@dimen/dimen_msg_padding"
+        android:layout_marginTop="@dimen/dimen_msg_padding"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/ImageView01"
+            android:layout_width="@dimen/room_header"
+            android:layout_height="@dimen/room_header"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_msg_comment" />
+
+        <TextView
+            android:id="@+id/TextView05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_msg_padding"
+            android:layout_toRightOf="@+id/ImageView01"
+            android:text="@string/comment"
+            android:textColor="@color/bar"
+            android:textSize="@dimen/dimen_msg_name" />
+
+        <ImageView
+            android:id="@+id/ImageView06"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:id="@+id/tv_remind_comment"
+            android:layout_width="@dimen/dimen_msg_unread"
+            android:layout_height="@dimen/dimen_msg_unread"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/ImageView06"
+            android:background="@drawable/message_count"
+            android:gravity="center"
+            android:text="99+"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_msg_unread_txt"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/bg_listview_divider" />
+
+    <RelativeLayout
+        android:id="@+id/rl_digg"
+        style="@style/customProgressBar"
+        android:paddingLeft="@dimen/dimen_msg_padding"
+        android:paddingRight="@dimen/dimen_msg_padding"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_msg_padding"
+        android:layout_marginTop="@dimen/dimen_msg_padding" >
+
+        <ImageView
+            android:id="@+id/ImageView11"
+            android:layout_width="@dimen/room_header"
+            android:layout_height="@dimen/room_header"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:src="@drawable/ic_msg_favor" />
+
+        <TextView
+            android:id="@+id/TextView06"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_msg_padding"
+            android:layout_toRightOf="@+id/ImageView11"
+            android:text="@string/tv_digg"
+            android:textColor="@color/bar"
+            android:textSize="@dimen/dimen_msg_name" />
+
+        <ImageView
+            android:id="@+id/ImageView12"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:id="@+id/tv_remind_digg"
+            android:layout_width="@dimen/dimen_msg_unread"
+            android:layout_height="@dimen/dimen_msg_unread"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/ImageView12"
+            android:background="@drawable/message_count"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_msg_unread_txt"
+            android:visibility="gone" />
+    </RelativeLayout>
+    
+     <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/bg_listview_divider" />
+    <!--@我-->
+    <RelativeLayout
+        android:id="@+id/rl_at_me"
+        style="@style/customProgressBar"
+        android:paddingLeft="@dimen/dimen_msg_padding"
+        android:paddingRight="@dimen/dimen_msg_padding"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_msg_padding"
+        android:layout_marginTop="@dimen/dimen_msg_padding" >
+
+        <com.thinksns.sociax.t4.android.img.RoundImageView
+            android:id="@+id/ImageView13"
+            android:layout_width="@dimen/room_header"
+            android:layout_height="@dimen/room_header"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:src="@drawable/ic_msg_at" />
+
+        <TextView
+            android:id="@+id/TextView07"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_msg_padding"
+            android:layout_toRightOf="@+id/ImageView13"
+            android:text="@string/tv_at_me"
+            android:textColor="@color/bar"
+            android:textSize="@dimen/dimen_msg_name" />
+
+        <ImageView
+            android:id="@+id/ImageView14"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:id="@+id/tv_remind_at"
+            android:layout_width="@dimen/dimen_msg_unread"
+            android:layout_height="@dimen/dimen_msg_unread"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/ImageView14"
+            android:background="@drawable/message_count"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_msg_unread_txt"
+            android:visibility="gone" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/bg_listview_divider" />
+</LinearLayout>

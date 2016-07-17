@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    android:background="@color/white" >
+
+    <com.thinksns.sociax.t4.android.image.RoundImageView
+        android:id="@+id/image_photo_pcontact"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/channel" />
+
+    <TextView
+        android:id="@+id/uncontent_pcontacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/image_photo_pcontact"
+        android:layout_marginLeft="24dp"
+        android:layout_toRightOf="@+id/image_photo_pcontact"
+        android:text="TextView"
+        android:textColor="#787878" />
+
+    <TextView
+        android:id="@+id/unnames_phcontacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/uncontent_pcontacts"
+        android:layout_alignTop="@+id/image_photo_pcontact"
+        android:text="Large Text"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/image_add_phcontacts"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/uncontent_pcontacts"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="43dp"
+        android:background="@drawable/findperson_jiaguanzhu2x" />
+
+    <Button
+        android:id="@+id/button_invite_phcontacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/uncontent_pcontacts"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="21dp"
+        android:text="邀请" />
+
+</RelativeLayout>

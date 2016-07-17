@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@color/style_default_bg_color"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/style_default_bg_color"
+                android:orientation="vertical" 
+                >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" 
+                    android:layout_marginTop="10dip">
+					<!-- first line begin -->
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18.0dip"
+                        android:layout_marginRight="18.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@id/friend_news"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:clickable="true"
+                            android:drawableTop="@drawable/img_weibo_news"
+                            android:focusable="true"
+                            android:gravity="bottom|center"
+                            android:text="@string/friendnews"
+                            android:textColor="@color/main_text"
+                            android:textSize="@dimen/person_page_bar_item_textsize" />
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true" >
+
+                            <ImageView
+                                android:id="@id/my_feed_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top|right|center"
+                                android:background="@drawable/new_notify_feed"
+                                android:gravity="center"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@id/my_feed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:drawableTop="@drawable/img_my_contact"
+                                android:focusable="true"
+                                android:gravity="bottom|center"
+                                android:text="@string/contact"
+                                android:textColor="@color/main_text"
+                                android:textSize="@dimen/person_page_bar_item_textsize" />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@id/my_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:clickable="true"
+                            android:drawableTop="@drawable/img_my_info"
+                            android:focusable="true"
+                            android:gravity="bottom|center"
+                            android:text="@string/myinfo"
+                            android:textColor="@color/main_text"
+                            android:textSize="@dimen/person_page_bar_item_textsize" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18.0dip"
+                        android:layout_marginRight="18.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@id/my_friend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:clickable="true"
+                            android:drawableTop="@drawable/img_my_short_email"
+                            android:focusable="true"
+                            android:gravity="bottom|center"
+                            android:text="@string/mysmail"
+                            android:textColor="@color/main_text"
+                            android:textSize="@dimen/person_page_bar_item_textsize" />
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true" >
+
+                            <TextView
+                                android:id="@id/gift"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_centerVertical="true"
+                                android:clickable="true"
+                                android:drawableTop="@drawable/img_my_task"
+                                android:focusable="true"
+                                android:gravity="bottom|center"
+                                android:text="@string/mytask"
+                                android:textColor="@color/main_text"
+                                android:textSize="@dimen/person_page_bar_item_textsize" />
+
+                            <ImageView
+                                android:id="@id/gift_new"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top|right|center"
+                                android:background="@drawable/new_notify_feed"
+                                android:gravity="center" 
+                                android:visibility="gone"/>
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true" >
+
+                            <TextView
+                                android:id="@id/searchuser"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:clickable="true"
+                                android:drawableTop="@drawable/img_my_file"
+                                android:focusable="true"
+                                android:gravity="bottom|center"
+                                android:text="@string/myfile"
+                                android:textColor="@color/main_text"
+                                android:textSize="@dimen/person_page_bar_item_textsize" />
+
+                            <ImageView
+                                android:id="@id/searchuser_new"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top|right|center"
+                                android:background="@drawable/new_notify_feed"
+                                android:gravity="center"
+                                android:visibility="gone" />
+                        </FrameLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18.0dip"
+                        android:layout_marginRight="18.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@id/near_persons"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:clickable="true"
+                            android:drawableTop="@drawable/img_my_chat"
+                            android:focusable="true"
+                            android:gravity="bottom|center"
+                            android:text="@string/chat"
+                            android:textColor="@color/main_text"
+                            android:textSize="@dimen/person_page_bar_item_textsize" />
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true" >
+
+                            <TextView
+                                android:id="@id/im_chat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:clickable="true"
+                                android:drawableTop="@drawable/img_my_blog"
+                                android:focusable="true"
+                                android:gravity="bottom|center"
+                                android:text="@string/myDigg"
+                                android:textColor="@color/main_text"
+                                android:textSize="@dimen/person_page_bar_item_textsize" />
+
+                            <TextView
+                                android:id="@id/unread_cnt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top|right|center"
+                                android:background="@drawable/new_notify_bg"
+                                android:gravity="center"
+                                android:paddingBottom="1.0dip"
+                                android:text="N"
+                                android:textColor="@color/white"
+                                android:textSize="11.0sp"
+                                android:visibility="gone" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@id/app_center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:clickable="true"
+                            android:drawableTop="@drawable/img_app_center"
+                            android:focusable="true"
+                            android:gravity="bottom|center"
+                            android:text="@string/appcenter"
+                            android:textColor="@color/main_text"
+                            android:textSize="@dimen/person_page_bar_item_textsize" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <SlidingDrawer
+        android:id="@+id/main_sliding"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:content="@+id/content"
+        android:handle="@id/system_notice_layout"
+        android:orientation="vertical" 
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@id/system_notice_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip"
+            android:layout_marginTop="0.0dip"
+            android:background="@drawable/dynamic_tabbar_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center" >
+
+            <LinearLayout
+                android:id="@+id/notice_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="40.0dip"
+                android:duplicateParentState="true"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@id/notice_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:duplicateParentState="true"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/tab_system_notice" />
+
+                <TextView
+                    android:id="@id/system_notice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.0"
+                    android:duplicateParentState="true"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/notice_center"
+                    android:textColor="@drawable/homepage_bar_text"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@id/notice_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|right|center"
+                    android:background="@drawable/new_notify_bg"
+                    android:gravity="center"
+                    android:paddingBottom="1.0dip"
+                    android:text="N"
+                    android:textColor="@color/white"
+                    android:textSize="11.0sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#ffffffff"
+            android:orientation="vertical"
+            >
+            
+            <com.thinksns.sociax.component.MessageRemindList
+            android:id="@id/mess_remind_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" 
+            /> 
+
+        </LinearLayout>
+    </SlidingDrawer>
+
+</FrameLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="host_not_find">目标服务器无响应</string>
+    <string name="request_key_error">请求数据串失败，请稍后再试</string>
+</resources>

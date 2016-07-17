@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/search_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/itemColor"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/secondColor" >
+
+        <com.thinksns.sociax.component.EditCancel
+            android:id="@+id/editCancel1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/body_margin_left"
+            android:layout_marginRight="@dimen/body_margin_left"
+            android:layout_marginTop="@dimen/body_margin_left" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/secondColor"
+        android:padding="8dp" >
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/search_weibo"
+                style="@style/search_radiobutton_weibo"
+                android:layout_weight="1"
+                android:checked="true"
+                android:drawableLeft="@drawable/soweibo"
+                android:text="@string/search_weibo"
+                android:textSize="16.0sp" >
+            </RadioButton>
+
+            <RadioButton
+                android:id="@+id/search_user"
+                style="@style/search_radiobutton_user"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/souser"
+                android:text="@string/search_user"
+                android:textSize="16.0sp" >
+            </RadioButton>
+        </RadioGroup>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ImageView01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line" >
+    </ImageView>
+
+    <com.thinksns.sociax.thinksnsbase.activity.widget.LoadingView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" />
+
+</LinearLayout>

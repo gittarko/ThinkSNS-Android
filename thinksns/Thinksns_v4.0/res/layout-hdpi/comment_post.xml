@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@color/bg_ios"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/et_comment_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/roundbackground_white"
+        android:gravity="top"
+        android:textSize="16sp"
+        android:textColorHint="#44202020"
+        android:hint="@string/posts_content_hint"
+        android:padding="8dp" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/word_count_limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#44202020" />
+
+</RelativeLayout>
