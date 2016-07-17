@@ -1,0 +1,952 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.thinksns.sociax.android"
+          android:versionCode="6"
+          android:versionName="4.1">
+
+    <!-- Required 自定义用来收发消息的相关Ac权限 -->
+    <permission
+        android:name="${applicationId}.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- Required 一些系统要求的权限，如访问网络等-->
+    <uses-permission android:name="${applicationId}.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <!-- 获取应用信息/清理缓存 -->
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <!--  -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!--  -->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+
+    <!-- 二维码 -->
+    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <!-- 视频录制 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- shareSDK集成需要的权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- shareSDK集成需要的权限 -->
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name="com.thinksns.sociax.t4.android.Thinksns"
+        android:allowBackup="true"
+        android:largeHeap="true"
+        android:theme="@style/AppBaseTheme"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="false"
+        tools:replace="android:icon,android:theme">
+        <!--友盟APP_KEY-->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="50f8c2c05270152c1b000004" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="tencent" />
+
+        <!--高德地图app_key-->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="f348ebbbf35c917dc72ee9dd78c5a8cc" />
+        <!--高德地图 -->
+        <service android:name="com.amap.api.location.APSService" />
+        <!--高德相关地图页面 -->
+        <activity
+            android:name="com.thinksns.tschat.map.ActivityLocation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.thinksns.sociax.t4.android.ThinksnsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.Home" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.weibo.NetActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.thinksns.sociax.android.weibo.WeiboSendActivity"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize"></activity>
+        <activity
+            android:name="com.thinksns.sociax.android.user.UserInfoDetailActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.topic.AtTopicActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity>
+
+        <activity
+            android:name="com.thinksns.sociax.android.ThinksnsStartWeb"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.thinksns.sociax.android.ThinksnsImageView"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"></activity>
+
+        <service android:name="com.thinksns.sociax.service.MessageService" />
+        <!-- 更新当前位置 -->
+        <service android:name="com.thinksns.sociax.t4.service.UpdateLocationService" />
+        <service android:name="com.thinksns.sociax.t4.service.AddRcdFriendService" />
+
+        <activity
+            android:name="com.thinksns.sociax.android.home.SettingsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Default.NoTitleBar"></activity>
+        <activity
+            android:name="com.thinksns.sociax.android.user.EditInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.thinksns.sociax.android.SociaxWebView"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.thinksns.sociax.t4.android.gift.ActivityFindGiftReceiver"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name="com.thinksns.sociax.t4.android.gift.ActivityFindGiftReceiver2"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name="com.thinksns.sociax.android.weiba.CommentPostActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name="com.thinksns.sociax.t4.android.weiba.ActivitySearchWeiba"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.thinksns.sociax.t4.android.checkin.ActivityCheckIn"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.thinksns.sociax.t4.android.setting.ActivityAboutUs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.thinksns.sociax.t4.android.setting.ActivitySettingAboutUs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.thinksns.sociax.android.xpapps.XpappsListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.thinksns.sociax.android.RegisterActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 声明SDK用到的下载服务  注意：com.umeng.common包名可能有变，如果不能下载，请检查包名，替换成正确的包名。 -->
+
+        <!--push service rich media display -->
+        <!--<activity-->
+            <!--android:name="com.baidu.android.pushservice.richmedia.MediaViewActivity"-->
+            <!--android:configChanges="orientation|keyboardHidden"-->
+            <!--android:label="MediaViewActivity"></activity>-->
+        <!--<activity-->
+            <!--android:name="com.baidu.android.pushservice.richmedia.MediaListActivity"-->
+            <!--android:configChanges="orientation|keyboardHidden"-->
+            <!--android:label="MediaListActivity"-->
+            <!--android:launchMode="singleTask"></activity>-->
+
+        <!-- push service client -->
+        <!--<receiver android:name="com.thinksns.sociax.push.PushMessageReceiver">-->
+            <!--<intent-filter>-->
+
+                <!--&lt;!&ndash; 接收push消息 &ndash;&gt;-->
+                <!--<action android:name="com.baidu.android.pushservice.action.MESSAGE" />-->
+                <!--&lt;!&ndash; 接收bind,unbind,fetch,delete等反馈消息 &ndash;&gt;-->
+                <!--<action android:name="com.baidu.android.pushservice.action.RECEIVE" />-->
+                <!--<action android:name="com.baidu.android.pushservice.action.notification.CLICK" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+
+        <!--&lt;!&ndash; push service &ndash;&gt;-->
+        <!--<receiver-->
+            <!--android:name="com.baidu.android.pushservice.PushServiceReceiver"-->
+            <!--android:process=":bdservice_v1">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.BOOT_COMPLETED" />-->
+                <!--<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />-->
+                <!--<action android:name="com.baidu.android.pushservice.action.notification.SHOW" />-->
+                <!--<action android:name="com.baidu.android.pushservice.action.media.CLICK" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+        <!--去除百度相关API-->
+        <!--<receiver-->
+            <!--android:name="com.baidu.android.pushservice.RegistrationReceiver"-->
+            <!--android:process=":bdservice_v1">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.baidu.android.pushservice.action.METHOD" />-->
+                <!--<action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />-->
+            <!--</intent-filter>-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.PACKAGE_REMOVED" />-->
+
+                <!--<data android:scheme="package" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+
+        <!--<service-->
+            <!--android:name="com.baidu.android.pushservice.PushService"-->
+            <!--android:exported="true"-->
+            <!--android:process=":bdservice_v1" />-->
+
+        <meta-data
+            android:name="api_key"
+            android:value="he9VWG6eLLnpzotGPpF2nFvP" />
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="zkRyGeZEw6awNfAuiKfbzd60" />
+
+        <!-- tencent weibo -->
+        <activity
+            android:name="com.tencent.weibo.sdk.android.component.PublishActivity"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name="com.tencent.weibo.sdk.android.component.GeneralInterfaceActivity"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name="com.tencent.weibo.sdk.android.component.ConversationActivity"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name="com.tencent.weibo.sdk.android.component.FriendActivity"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity android:name="com.tencent.weibo.sdk.android.component.Authorize"></activity>
+        <activity android:name="com.tencent.weibo.sdk.android.component.GeneralDataShowActivity"></activity>
+        <activity android:name="com.tencent.weibo.sdk.android.component.ReAddActivity"></activity>
+
+        <!--设置-修改密码-->
+        <activity
+            android:name="com.thinksns.sociax.t4.android.setting.ActivityChangePassword"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <!--微博详情/分享详情/动态详情-->
+        <activity
+            android:name="com.thinksns.sociax.t4.android.weibo.ActivityWeiboDetail"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="portrait"></activity>
+        <!--我的-设置-->
+        <activity
+            android:name="com.thinksns.sociax.t4.android.setting.ActivitySetting"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.channel.ActivityChannel"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.info.ActivityInformation"
+            android:launchMode="singleTask"
+            android:theme="@style/AppCompatTheme"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.temp.RechargeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+
+        <!-- T4积分商城 礼物中心 -->
+        <activity
+            android:name="com.thinksns.sociax.t4.android.gift.ActivityScoreShop"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <!--礼物详情-->
+        <activity
+            android:name="com.thinksns.sociax.t4.android.gift.ActivityGiftDetail"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <!--我的礼物-->
+        <activity
+            android:name="com.thinksns.sociax.t4.android.gift.ActivityMyGift"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.gift.ActivityGiftExchange"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <!--我的积分-->
+        <activity
+            android:name="com.thinksns.sociax.t4.android.gift.ActivityMyScore"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.gift.ActivityScoreTransfer"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.gift.ActivityScoreRule"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.gift.ActivityScoreDetail"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.gift.ActivityScoreTopUp"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.user.ActivityUserInfo"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.user.ActivityUserInfo_2"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.user.ActivityUserHome"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity>
+
+        <activity
+            android:name="com.thinksns.sociax.t4.android.user.ActivityUserBlackList"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.user.ActivityChangeUserInfo"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.user.ActivityMyTag"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.user.ActivityUserPhoVedlist"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.user.ActivityEditInfo"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.user.ActivityChangeSex"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.user.ActivityChangeTag"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.user.ActivityEditLocationInfo"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.temp.T4GroupActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.findpeople.ActivityFindPeople"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.thinksns.sociax.t4.android.setting.ActivityManageCount"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.setting.ActivityManagePrivacy"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.login.ActivityRegister"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.temp.T4ForgetPasswordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.login.ActivityLogin"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.erweima.CaptureActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.erweima.ActivityScan"
+            android:label="@string/title_activity_er_wei_ma"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.thinksns.sociax.t4.android.img.ActivityViewPager"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.weibo.ActivityCreateWeibo"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <!--发布微博基类-->
+        <activity
+            android:name="com.thinksns.sociax.t4.android.weibo.ActivityCreateBase"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <!--编辑草稿箱-->
+        <activity
+            android:name="com.thinksns.sociax.t4.android.weibo.ActivityEditWeiboDraft"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <!--转发微博-->
+        <activity
+            android:name="com.thinksns.sociax.t4.android.weibo.ActivityCreateTransportWeibo"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <!--编辑转发-->
+        <activity
+            android:name="com.thinksns.sociax.t4.android.weibo.ActivityEditTransportDraft"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.weibo.ActivityCreateChannelWeibo"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.weibo.ActivityCreateTopicWeibo"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.weibo.ActivityCreatePost"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.weibo.ActivityEditPostDraft"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.img.MultilPicActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.img.ImageGridActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.img.PhotoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity android:name="me.nereo.multi_image_selector.PhotoPagerActivity"
+                  android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.img.PublishedActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.video.ActivityVideoDetail"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.video.MediaRecorderActivity"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/CameraTheme">
+
+        </activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.video.RecorderVideoActivity"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name="com.thinksns.sociax.t4.android.map.ActivityGetMyLocation" />
+
+        <activity
+            android:name="com.thinksns.sociax.t4.android.video.VideoPlayerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CameraTheme"></activity>
+
+        <service android:name="com.thinksns.sociax.android.AssertService" />
+        <service android:name="com.thinksns.sociax.t4.service.ServiceUploadWeibo" />
+
+        <activity
+            android:name="com.thinksns.sociax.android.ChatPicture"
+            android:label="@string/title_activity_chat_picture"></activity>
+
+        <activity
+            android:name="com.thinksns.sociax.t4.android.findpeople.ActivityFindPeopleDetails"
+            android:label="@string/title_activity_t4_find_person_details"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.login.ActivityBindThirdLoginUser"
+            android:label="@string/title_activity_bind__user__register"></activity>
+
+        <!-- 勋章馆 -->
+        <activity
+            android:name="com.thinksns.sociax.t4.android.task.ActivityMedalPavilion"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+        
+        <!-- 分享 -->
+        <!--
+        <activity
+            android:name="com.zhishisoft.v4.android.activity.WBShareActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent" >
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.zhishisoft.v4.android.activity.WBShareResponseActivity" >
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_RESP_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100358969" />
+                <!-- 100380359 100381104 222222 -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <provider
+            android:name="com.thinksns.sociax.db.T4ContentProvider"
+            android:authorities="${applicationId}.T4ContentProvider"></provider>
+
+        <!-- ThinksnsV4.0 ***************************************** -->
+        <service android:name="com.thinksns.sociax.t4.service.ServiceUnReadMessage" />
+
+        <activity
+            android:name="com.thinksns.sociax.t4.android.topic.ActivityTopicWeibo"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.thinksns.sociax.t4.android.topic.ActivityTopicList"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.thinksns.sociax.t4.android.channel.ActivityChannelWeibo"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.thinksns.sociax.t4.android.user.ActivityFollowUser"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!--
+        <activity
+            android:name="com.thinksns.sociax.t4.android.findpeople.ActivitySelectUsertySelectUser"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+            -->
+        <activity
+            android:name="com.thinksns.sociax.t4.android.weibo.ActivityCommentMeWeibo"
+            android:theme="@style/titleTheme"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.thinksns.sociax.t4.android.weibo.ActivityAtMeWeibo"
+
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.thinksns.sociax.t4.android.weibo.ActivityDiggMeWeibo"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.thinksns.sociax.t4.android.weibo.ActivityMyWeibo"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.thinksns.sociax.t4.android.draft.ActivityMyDraft"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.thinksns.sociax.t4.android.task.ActivityTaskCenter"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.thinksns.sociax.t4.android.task.ActivityDialogMedal"
+            android:screenOrientation="portrait"
+            android:theme="@style/MedalDialog" />
+        <activity
+            android:name="com.thinksns.sociax.t4.android.task.ActivityMyTaskScore"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.thinksns.sociax.t4.android.weibo.ActivityCollectedWeibo"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.thinksns.sociax.t4.android.chat.ActivityChatInfoEdit"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.thinksns.sociax.t4.android.chat.ActivityChat"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.thinksns.sociax.t4.android.chat.ActivityChatInfoNew"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name="com.thinksns.sociax.t4.android.ActivityHome"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <!--微吧首页,包含我加入的微吧和推荐帖子-->
+        <activity
+            android:name="com.thinksns.sociax.t4.android.weiba.ActivityWeiba"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <!--微吧详情页-->
+        <activity
+            android:name="com.thinksns.sociax.t4.android.weiba.ActivityWeibaDetail"
+            android:screenOrientation="portrait"></activity>
+        <!--帖子详情页-->
+        <activity
+            android:name="com.thinksns.sociax.t4.android.weiba.ActivityPostDetail"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <!--微吧公共类,用于加载逛一逛，微吧相关的UI-->
+        <activity android:name="com.thinksns.sociax.t4.android.weiba.ActivityWeibaCommon"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.weiba.ActivityPostCommon"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.weiba.ActivityPostList"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.weiba.ActivityWeibaList"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.gift.ActivityUserGift"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.thinksns.sociax.t4.android.user.ActivityRecommendTag"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.thinksns.sociax.t4.android.user.ActivityRecommendFriend"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.thinksns.sociax.t4.android.user.ActivityRecommendChannel"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.thinksns.sociax.t4.android.weiba.ActivityPostCreat"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.thinksns.sociax.t4.android.setting.ActivityBindPhone"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.thinksns.sociax.t4.android.user.ActivityAtUserSelect"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.thinksns.sociax.t4.android.user.ActivityUserHonner"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.thinksns.sociax.t4.android.user.ActivityOtherUserBaseInfo"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.thinksns.sociax.t4.android.setting.ActivityFeedBack"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.thinksns.sociax.t4.android.setting.ActivityFeedBackType"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        
+        <!-- shareSDK -->
+        <!--
+                              如果集成QQ分享，或者使用QQ客户端来进行QQ空间的
+                              分享，须要在此处添加一个对ACTION_VIEW事件的过滤器，
+                              其中的scheme是“tencent”前缀再开发者应用的加上appId。
+                              如果此过滤器不设置，则分享结束以后不能得到正确的回调
+        -->
+        <activity
+            android:name="cn.sharesdk.framework.ShareSDKUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent1103569868" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+
+        <!--以下为极光推送相关-->
+        <!-- 激光推送Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.thinksns.sociax.android" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!-- Required SDK 核心功能-->
+        <!-- option since 2.0.5 可配置PushService，DaemonService,PushReceiver,AlarmReceiver的android:process参数 将JPush相关组件设置为一个独立进程 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":tsChatProcess">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK 核心功能 since 1.8.0 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":tsChatProcess">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+                <category android:name="com.thinksns.sociax.android" />
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":tsChatProcess">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+                <!-- Required  显示通知栏 -->
+                <category android:name="com.thinksns.sociax.android" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:process=":tsChatProcess" />
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <receiver
+            android:name="com.thinksns.sociax.t4.service.JpushBroadcastReceiver"
+            android:enabled="true"
+            android:process=":tsChatProcess">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" />
+                <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.thinksns.sociax.android" />
+            </intent-filter>
+        </receiver>
+
+
+        <!-- Required. For publish channel feature -->
+        <!-- JPUSH_CHANNEL 是为了方便开发者统计APK分发渠道。 -->
+        <!-- 例如: -->
+        <!-- 发到 Google Play 的APK可以设置为 google-play; -->
+        <!-- 发到其他市场的 APK 可以设置为 xxx-market。 -->
+        <!-- 目前这个渠道统计功能的报表还未开放。 -->
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="9603d64a85520f9d3af49325" />
+
+        <!-- </>值来自开发者平台取得的AppKey -->
+        <!--以上为极光推送相关-->
+
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:label="@string/title_activity_wxentry"
+            android:theme="@android:style/Theme.Translucent"></activity>
+
+        <activity android:name="com.thinksns.sociax.t4.android.findpeople.ActivitySelectUser"></activity>
+
+        <activity
+            android:name="com.thinksns.sociax.t4.android.findpeople.ActivitySearchUser"
+            android:screenOrientation="portrait"></activity>
+
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+        <activity
+            android:name="com.thinksns.tschat.image.MultilPicActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.thinksns.tschat.ui.ActivitySelectUser"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.thinksns.tschat.ui.ActivityChatInfo"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="com.thinksns.tschat.ui.ActivityChatInfoEdit"
+                  android:screenOrientation="portrait"/>
+        <!--图片选择器 -->
+        <activity
+            android:configChanges="orientation|screenSize"
+            android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity" />
+        <!-- 个人地区选择 -->
+        <activity
+            android:name="com.thinksns.sociax.t4.android.login.ActivitySelectCity"
+            android:screenOrientation="portrait"/>
+
+        <!--网络监听广播-->
+        <receiver
+            android:name="com.thinksns.sociax.t4.service.NetWrokConnectReceiver"
+            android:label="NetworkConnection">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        
+        <!--聊天相关类-->
+        <activity android:name="com.thinksns.tschat.ui.ActivityChatDetail"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+    </application>
+
+</manifest>
