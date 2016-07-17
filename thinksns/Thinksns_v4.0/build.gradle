@@ -42,7 +42,7 @@ android {
             keyAlias "thinksns"
             keyPassword "123456"
         }
-
+	// your release keystore
         release {
             storeFile file("thinksns")
             storePassword "2015t4"
